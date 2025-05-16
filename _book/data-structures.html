@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Data Structures | Real World Data for Clinical Research</title>
+  <meta name="description" content="4 Data Structures | Real World Data for Clinical Research" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Data Structures | Real World Data for Clinical Research" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Data Structures | Real World Data for Clinical Research" />
+  
+  
+  
+
+<meta name="author" content="Pavel Goriacko and Danielle Boyce" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sources-of-real-world-data.html"/>
+
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><i class="fa fa-check"></i><b>2</b> Introduction to Real-World Data (RWD) and Real-World Evidence (RWE)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#learning-objectives"><i class="fa fa-check"></i><b>2.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-data-rwd"><i class="fa fa-check"></i><b>2.2</b> What is Real-World Data (RWD)?</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-evidence-rwe"><i class="fa fa-check"></i><b>2.3</b> What is Real-World Evidence (RWE)?</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#why-is-rwd-important"><i class="fa fa-check"></i><b>2.4</b> Why is RWD Important?</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#applications-of-rwd-and-rwe"><i class="fa fa-check"></i><b>2.5</b> Applications of RWD and RWE</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#limitations-and-considerations"><i class="fa fa-check"></i><b>2.6</b> Limitations and Considerations</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#summary"><i class="fa fa-check"></i><b>2.7</b> Summary</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#suggested-readings"><i class="fa fa-check"></i><b>2.8</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html"><i class="fa fa-check"></i><b>3</b> Sources of Real-World Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#categories-of-rwd-sources"><i class="fa fa-check"></i><b>3.2</b> Categories of RWD Sources</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#electronic-health-records-ehr"><i class="fa fa-check"></i><b>3.2.1</b> Electronic Health Records (EHR)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#administrative-claims-data"><i class="fa fa-check"></i><b>3.2.2</b> Administrative Claims Data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#registries"><i class="fa fa-check"></i><b>3.2.3</b> Registries</a></li>
+<li class="chapter" data-level="3.2.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#patient-generated-health-data-pghd"><i class="fa fa-check"></i><b>3.2.4</b> Patient-Generated Health Data (PGHD)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#other-sources"><i class="fa fa-check"></i><b>3.2.5</b> Other Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#comparing-sources"><i class="fa fa-check"></i><b>3.3</b> Comparing Sources</a></li>
+<li class="chapter" data-level="3.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#considerations-for-researchers"><i class="fa fa-check"></i><b>3.4</b> Considerations for Researchers</a></li>
+<li class="chapter" data-level="3.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#summary-1"><i class="fa fa-check"></i><b>3.5</b> Summary</a></li>
+<li class="chapter" data-level="3.6" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#suggested-readings-1"><i class="fa fa-check"></i><b>3.6</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>4</b> Data Structures</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Real World Data for Clinical Research</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-structures" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Data Structures<a href="data-structures.html#data-structures" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We describe our methods in this chapter.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sources-of-real-world-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

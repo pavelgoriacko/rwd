@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Computable Phenotyping | Real World Data for Clinical Research</title>
+  <meta name="description" content="6 Computable Phenotyping | Real World Data for Clinical Research" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Computable Phenotyping | Real World Data for Clinical Research" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Computable Phenotyping | Real World Data for Clinical Research" />
+  
+  
+  
+
+<meta name="author" content="Pavel Goriacko and Danielle Boyce" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="common-data-models-cdms-and-standardized-vocabularies.html"/>
+
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#credits-and-acknowledgments"><i class="fa fa-check"></i><b>1.1</b> Credits and Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><i class="fa fa-check"></i><b>2</b> Introduction to Real-World Data (RWD) and Real-World Evidence (RWE)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#learning-objectives"><i class="fa fa-check"></i><b>2.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-data-rwd"><i class="fa fa-check"></i><b>2.2</b> What is Real-World Data (RWD)?</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-evidence-rwe"><i class="fa fa-check"></i><b>2.3</b> What is Real-World Evidence (RWE)?</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#why-is-rwd-important"><i class="fa fa-check"></i><b>2.4</b> Why is RWD Important?</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#applications-of-rwd-and-rwe"><i class="fa fa-check"></i><b>2.5</b> Applications of RWD and RWE</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#limitations-and-considerations"><i class="fa fa-check"></i><b>2.6</b> Limitations and Considerations</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#summary"><i class="fa fa-check"></i><b>2.7</b> Summary</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#suggested-readings"><i class="fa fa-check"></i><b>2.8</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html"><i class="fa fa-check"></i><b>3</b> Sources of Real-World Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#categories-of-rwd-sources"><i class="fa fa-check"></i><b>3.2</b> Categories of RWD Sources</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#electronic-health-records-ehr"><i class="fa fa-check"></i><b>3.2.1</b> Electronic Health Records (EHR)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#administrative-claims-data"><i class="fa fa-check"></i><b>3.2.2</b> Administrative Claims Data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#registries"><i class="fa fa-check"></i><b>3.2.3</b> Registries</a></li>
+<li class="chapter" data-level="3.2.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#patient-generated-health-data-pghd"><i class="fa fa-check"></i><b>3.2.4</b> Patient-Generated Health Data (PGHD)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#other-sources"><i class="fa fa-check"></i><b>3.2.5</b> Other Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#comparing-sources"><i class="fa fa-check"></i><b>3.3</b> Comparing Sources</a></li>
+<li class="chapter" data-level="3.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#considerations-for-researchers"><i class="fa fa-check"></i><b>3.4</b> Considerations for Researchers</a></li>
+<li class="chapter" data-level="3.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#summary-1"><i class="fa fa-check"></i><b>3.5</b> Summary</a></li>
+<li class="chapter" data-level="3.6" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#suggested-readings-1"><i class="fa fa-check"></i><b>3.6</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html"><i class="fa fa-check"></i><b>4</b> Data Structures for Real-World Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#relational-databases"><i class="fa fa-check"></i><b>4.2</b> Relational Databases</a></li>
+<li class="chapter" data-level="4.3" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#research-ready-datasets"><i class="fa fa-check"></i><b>4.3</b> Research-Ready Datasets</a></li>
+<li class="chapter" data-level="4.4" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#ehr-architecture-and-reporting-databases"><i class="fa fa-check"></i><b>4.4</b> EHR Architecture and Reporting Databases</a></li>
+<li class="chapter" data-level="4.5" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#data-access-and-security"><i class="fa fa-check"></i><b>4.5</b> Data Access and Security</a></li>
+<li class="chapter" data-level="4.6" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#querying-rwd"><i class="fa fa-check"></i><b>4.6</b> Querying RWD</a></li>
+<li class="chapter" data-level="4.7" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#data-abstraction"><i class="fa fa-check"></i><b>4.7</b> Data Abstraction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html"><i class="fa fa-check"></i><b>5</b> Common Data Models (CDMs) and Standardized Vocabularies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#overview-3"><i class="fa fa-check"></i><b>5.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#what-is-a-common-data-model"><i class="fa fa-check"></i><b>5.2</b> What is a Common Data Model?</a></li>
+<li class="chapter" data-level="5.3" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#benefits-and-tradeoffs"><i class="fa fa-check"></i><b>5.3</b> Benefits and Tradeoffs</a></li>
+<li class="chapter" data-level="5.4" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#examples-of-common-data-models"><i class="fa fa-check"></i><b>5.4</b> Examples of Common Data Models</a></li>
+<li class="chapter" data-level="5.5" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#standardized-vocabularies"><i class="fa fa-check"></i><b>5.5</b> Standardized Vocabularies</a></li>
+<li class="chapter" data-level="5.6" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#vocabulary-mapping"><i class="fa fa-check"></i><b>5.6</b> Vocabulary Mapping</a></li>
+<li class="chapter" data-level="5.7" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#summary-2"><i class="fa fa-check"></i><b>5.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html"><i class="fa fa-check"></i><b>6</b> Computable Phenotyping</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#overview-4"><i class="fa fa-check"></i><b>6.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#what-is-a-computable-phenotype"><i class="fa fa-check"></i><b>6.2</b> What is a Computable Phenotype?</a></li>
+<li class="chapter" data-level="6.3" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#types-of-phenotypes"><i class="fa fa-check"></i><b>6.3</b> Types of Phenotypes</a></li>
+<li class="chapter" data-level="6.4" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#validity-and-transportability"><i class="fa fa-check"></i><b>6.4</b> Validity and Transportability</a></li>
+<li class="chapter" data-level="6.5" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#phenotype-evaluation"><i class="fa fa-check"></i><b>6.5</b> Phenotype Evaluation</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#what-makes-a-good-phenotype"><i class="fa fa-check"></i><b>6.5.1</b> What Makes a Good Phenotype?</a></li>
+<li class="chapter" data-level="6.5.2" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#reliability-and-validity"><i class="fa fa-check"></i><b>6.5.2</b> Reliability and Validity</a></li>
+<li class="chapter" data-level="6.5.3" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#methods-of-phenotype-evaluation"><i class="fa fa-check"></i><b>6.5.3</b> Methods of Phenotype Evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#impact-on-research-validity"><i class="fa fa-check"></i><b>6.6</b> Impact on Research Validity</a></li>
+<li class="chapter" data-level="6.7" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#summary-3"><i class="fa fa-check"></i><b>6.7</b> Summary</a></li>
+<li class="chapter" data-level="6.8" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#phenotyping-tools-and-resources"><i class="fa fa-check"></i><b>6.8</b> Phenotyping Tools and Resources</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Real World Data for Clinical Research</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="computable-phenotyping" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Computable Phenotyping<a href="computable-phenotyping.html#computable-phenotyping" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-4" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Overview<a href="computable-phenotyping.html#overview-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter introduces the concept of computable phenotyping—the process of defining and identifying clinical concepts (e.g., diagnoses, exposures, outcomes) in real-world data using logic that can be implemented in a database query. Computable phenotypes are foundational to observational research because they determine who is included in a study, what exposures are measured, and how outcomes are identified.</p>
+<div id="learning-objectives-4" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Learning Objectives<a href="computable-phenotyping.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Define computable phenotyping and explain its role in observational research.</li>
+<li>Distinguish between simple code-based definitions and more complex algorithmic phenotypes.</li>
+<li>Understand the challenges in implementing reliable, valid, and transportable phenotypes.</li>
+<li>Describe common methods for evaluating phenotype validity.</li>
+<li>Identify tools and frameworks that support phenotype development and reuse.</li>
+<li>Discuss the implications of phenotype definitions for bias, validity, and reproducibility.</li>
+</ul>
+</div>
+</div>
+<div id="what-is-a-computable-phenotype" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> What is a Computable Phenotype?<a href="computable-phenotyping.html#what-is-a-computable-phenotype" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>computable phenotype</strong> is an algorithmic definition of a clinical state or characteristic—such as a disease, procedure, or medication exposure—that can be implemented on electronic health record (EHR) or other real-world data using code (e.g., SQL, Python, cohort definition tools).</p>
+<p>For example, a computable phenotype for diabetes might include:</p>
+<ul>
+<li>A diagnosis code for diabetes (e.g., SNOMED or ICD-10),</li>
+<li>A medication code for insulin or oral antidiabetics (e.g., RxNorm),</li>
+<li>Lab results such as elevated hemoglobin A1c (e.g., LOINC codes).</li>
+</ul>
+<p>Depending on the research question, phenotypes can be more or less stringent, and may combine multiple data domains (e.g., diagnoses + medications + labs).</p>
+</div>
+<div id="types-of-phenotypes" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Types of Phenotypes<a href="computable-phenotyping.html#types-of-phenotypes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>1. Code-based Phenotypes:</strong></p>
+<ul>
+<li>Defined using one or more standardized codes (e.g., SNOMED, ICD-10, RxNorm).</li>
+<li>Often implemented as concept sets or value sets.</li>
+<li>Example: A cohort of patients with a diagnosis of myocardial infarction using SNOMED codes.</li>
+</ul>
+<p><strong>2. Rule-based Phenotypes:</strong></p>
+<ul>
+<li>Defined using logical combinations of codes, dates, and clinical context.</li>
+<li>Example: Two outpatient diabetes diagnoses at least 30 days apart plus an A1c ≥ 6.5%.</li>
+</ul>
+<p><strong>3. Machine Learning or NLP-derived Phenotypes:</strong></p>
+<ul>
+<li>Identified using probabilistic models trained on labeled data (e.g., chart-reviewed gold standard).</li>
+<li>Often used when structured codes are inadequate or unreliable.</li>
+<li>Example: Phenotyping depression using narrative clinical notes and structured data features.</li>
+</ul>
+</div>
+<div id="validity-and-transportability" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Validity and Transportability<a href="computable-phenotyping.html#validity-and-transportability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Phenotype definitions can vary in:</p>
+<ul>
+<li><strong>Sensitivity</strong>: Ability to identify all true cases.</li>
+<li><strong>Specificity</strong>: Ability to exclude non-cases.</li>
+<li><strong>Positive Predictive Value (PPV)</strong>: Probability that those identified truly have the condition.</li>
+<li><strong>Transportability</strong>: Applicability across different institutions or datasets.</li>
+</ul>
+<p>Validation is critical, especially for complex or algorithmic phenotypes. Some phenotypes undergo formal validation via chart review, replication across datasets, or comparison with gold standards.</p>
+<p>Here is a revised version of the <strong>Phenotype Evaluation</strong> section that closely aligns with your notes while maintaining a clear and accessible narrative suitable for a Bookdown textbook:</p>
+<hr />
+</div>
+<div id="phenotype-evaluation" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Phenotype Evaluation<a href="computable-phenotyping.html#phenotype-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is essential to <strong>objectively evaluate and report the performance characteristics</strong> of a computable phenotype. This process helps determine whether the phenotype is appropriate for the intended research question and minimizes misclassification bias in downstream analyses.</p>
+<p>While many biases in observational research have established mitigation techniques, phenotype misclassification is often not adequately addressed or quantified. Later in the course, we’ll discuss how misclassification propagates as measurement error and affects causal inference. For now, the key point is that phenotype performance must be evaluated with care and transparency.</p>
+<div id="what-makes-a-good-phenotype" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> What Makes a Good Phenotype?<a href="computable-phenotyping.html#what-makes-a-good-phenotype" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A “good” phenotype is one that is:</p>
+<ul>
+<li><strong>Explicit</strong>: The logic and components are clearly documented.</li>
+<li><strong>Reproducible</strong>: It can be implemented by other researchers or in other datasets.</li>
+<li><strong>Reliable</strong>: It yields consistent results over time or across users.</li>
+<li><strong>Valid</strong>: It accurately reflects the intended clinical concept for its research use.</li>
+</ul>
+<p>Good phenotype definitions provide detail on all components, including data elements (e.g., diagnoses, labs, medications), inclusion/exclusion logic, value sets (e.g., code lists), and temporal constraints. These should be clearly articulated and shareable to ensure reproducibility.</p>
+<p>Remember: <strong>no phenotype is perfect</strong>. The goal is to achieve <strong>reasonable sensitivity and specificity</strong>, or <strong>positive/negative predictive value (PPV/NPV)</strong>, depending on the research goals. Highly specific phenotypes may exclude borderline cases and reduce generalizability, while highly sensitive phenotypes may increase false positives. Researchers must choose the appropriate balance based on their use case.</p>
+</div>
+<div id="reliability-and-validity" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Reliability and Validity<a href="computable-phenotyping.html#reliability-and-validity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Evaluating a phenotype typically involves comparing it to a “gold standard” — a reference set believed to represent the true clinical status of a cohort. This can involve:</p>
+<ul>
+<li><strong>Manual chart review</strong> (e.g., by clinicians),</li>
+<li><strong>Structured data proxies</strong>, or</li>
+<li><strong>Probabilistic models</strong> trained on annotated cases.</li>
+</ul>
+<p>However, defining a gold standard is difficult and subject to disagreement. For example, chart reviews themselves may only achieve ~80% inter-rater reliability, as shown in studies like Ostropolets et al. Therefore, some researchers use <strong>“silver standard”</strong> methods like constructing extreme sensitivity or specificity cohorts (xSens/xSpec) to approximate ground truth in the absence of full manual review.</p>
+<p>In addition to <strong>validity</strong> (i.e., accuracy relative to a gold standard), phenotypes should also be evaluated for <strong>reproducibility</strong> across datasets and institutions. A valid phenotype that only works in one health system may not generalize well.</p>
+</div>
+<div id="methods-of-phenotype-evaluation" class="section level3 hasAnchor" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Methods of Phenotype Evaluation<a href="computable-phenotyping.html#methods-of-phenotype-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Several approaches are available to evaluate phenotypes:</p>
+<div id="manual-chart-review" class="section level4 hasAnchor" number="6.5.3.1">
+<h4><span class="header-section-number">6.5.3.1</span> Manual Chart Review<a href="computable-phenotyping.html#manual-chart-review" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Gold standard method.</li>
+<li>Involves clinical experts reviewing the EHR to confirm true case status.</li>
+<li>Resource-intensive and often limited to small samples.</li>
+</ul>
+</div>
+<div id="structured-data-review" class="section level4 hasAnchor" number="6.5.3.2">
+<h4><span class="header-section-number">6.5.3.2</span> Structured Data Review<a href="computable-phenotyping.html#structured-data-review" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Uses other structured fields (e.g., medications, labs) to cross-check the phenotype logic.</li>
+<li>Often used in conjunction with or in place of full chart review.</li>
+</ul>
+</div>
+<div id="cohort-characteristics" class="section level4 hasAnchor" number="6.5.3.3">
+<h4><span class="header-section-number">6.5.3.3</span> Cohort Characteristics<a href="computable-phenotyping.html#cohort-characteristics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Review of descriptive statistics of the identified cohort (e.g., age, sex, comorbidities).</li>
+<li>Can highlight unexpected patterns that may signal errors or unintended logic.</li>
+<li><strong>Example tool</strong>: OHDSI’s <strong>CohortDiagnostics</strong> package, which produces detailed reports comparing phenotype logic, code sets, and output across sites.</li>
+</ul>
+</div>
+<div id="phevaluator" class="section level4 hasAnchor" number="6.5.3.4">
+<h4><span class="header-section-number">6.5.3.4</span> PheValuator<a href="computable-phenotyping.html#phevaluator" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>A tool developed by OHDSI that uses machine learning to predict the probability of a condition based on structured data.</li>
+<li>Can estimate sensitivity, specificity, PPV, and NPV without requiring manual review.</li>
+<li>Often used in conjunction with xSens/xSpec cohorts.</li>
+</ul>
+</div>
+<div id="large-language-models-llms" class="section level4 hasAnchor" number="6.5.3.5">
+<h4><span class="header-section-number">6.5.3.5</span> Large Language Models (LLMs)<a href="computable-phenotyping.html#large-language-models-llms" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Emerging technique where LLMs read through clinical notes and assess whether a patient fits a given phenotype.</li>
+<li>Can be used for sensitivity/specificity estimation, particularly for conditions not well-captured in structured data.</li>
+<li>Still under active research but offers scalable alternatives to manual review.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="impact-on-research-validity" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Impact on Research Validity<a href="computable-phenotyping.html#impact-on-research-validity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Phenotype definitions have a profound effect on study validity:</p>
+<ul>
+<li><strong>Misclassification</strong> can introduce measurement bias and distort associations.</li>
+<li><strong>Differences in data availability</strong> (e.g., presence or absence of outpatient labs) can limit phenotype portability.</li>
+<li><strong>Transparency</strong> in phenotype definitions is essential for reproducibility and peer review.</li>
+</ul>
+<p>Researchers should always describe phenotype logic in sufficient detail and, when possible, share code and concept sets to enable reuse.</p>
+</div>
+<div id="summary-3" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Summary<a href="computable-phenotyping.html#summary-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Computable phenotyping transforms messy, heterogeneous real-world data into meaningful clinical variables that drive cohort selection, exposure definitions, and outcome measurement. Designing valid, reproducible, and transparent phenotypes is a foundational skill for real-world data research and requires a mix of clinical knowledge, informatics skills, and awareness of data limitations.</p>
+</div>
+<div id="phenotyping-tools-and-resources" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Phenotyping Tools and Resources<a href="computable-phenotyping.html#phenotyping-tools-and-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Several platforms and initiatives support development and sharing of computable phenotypes:</p>
+<ul>
+<li><strong>OHDSI Atlas</strong>: A web-based tool for defining and executing cohorts using the OMOP CDM.</li>
+<li><strong>PheKB (Phenotype KnowledgeBase)</strong>: A repository of phenotyping algorithms, often for i2b2 or custom data models.</li>
+<li><strong>eMERGE Network</strong>: A collaborative effort to develop and validate phenotypes using EHR and genomic data.</li>
+<li><strong>Phenotype libraries</strong>: Many institutions maintain internal phenotype libraries, often built around their local data models.</li>
+</ul>
+<p>These tools often support cohort definition using user interfaces, standard vocabularies, and shareable JSON or SQL logic.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="common-data-models-cdms-and-standardized-vocabularies.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
