@@ -1,0 +1,152 @@
+# Computable Phenotyping
+
+## Overview
+
+This chapter introduces the concept of computable phenotyping—the process of defining and identifying clinical concepts (e.g., diagnoses, exposures, outcomes) in real-world data using logic that can be implemented in a database query. Computable phenotypes are foundational to observational research because they determine who is included in a study, what exposures are measured, and how outcomes are identified.
+
+### Learning Objectives
+
+* Define computable phenotyping and explain its role in observational research.
+* Distinguish between simple code-based definitions and more complex algorithmic phenotypes.
+* Understand the challenges in implementing reliable, valid, and transportable phenotypes.
+* Describe common methods for evaluating phenotype validity.
+* Identify tools and frameworks that support phenotype development and reuse.
+* Discuss the implications of phenotype definitions for bias, validity, and reproducibility.
+
+## What is a Computable Phenotype?
+
+A **computable phenotype** is an algorithmic definition of a clinical state or characteristic—such as a disease, procedure, or medication exposure—that can be implemented on electronic health record (EHR) or other real-world data using code (e.g., SQL, Python, cohort definition tools).
+
+For example, a computable phenotype for diabetes might include:
+
+* A diagnosis code for diabetes (e.g., SNOMED or ICD-10),
+* A medication code for insulin or oral antidiabetics (e.g., RxNorm),
+* Lab results such as elevated hemoglobin A1c (e.g., LOINC codes).
+
+Depending on the research question, phenotypes can be more or less stringent, and may combine multiple data domains (e.g., diagnoses + medications + labs).
+
+## Types of Phenotypes
+
+**1. Code-based Phenotypes:**
+
+* Defined using one or more standardized codes (e.g., SNOMED, ICD-10, RxNorm).
+* Often implemented as concept sets or value sets.
+* Example: A cohort of patients with a diagnosis of myocardial infarction using SNOMED codes.
+
+**2. Rule-based Phenotypes:**
+
+* Defined using logical combinations of codes, dates, and clinical context.
+* Example: Two outpatient diabetes diagnoses at least 30 days apart plus an A1c ≥ 6.5%.
+
+**3. Machine Learning or NLP-derived Phenotypes:**
+
+* Identified using probabilistic models trained on labeled data (e.g., chart-reviewed gold standard).
+* Often used when structured codes are inadequate or unreliable.
+* Example: Phenotyping depression using narrative clinical notes and structured data features.
+
+## Validity and Transportability
+
+Phenotype definitions can vary in:
+
+* **Sensitivity**: Ability to identify all true cases.
+* **Specificity**: Ability to exclude non-cases.
+* **Positive Predictive Value (PPV)**: Probability that those identified truly have the condition.
+* **Transportability**: Applicability across different institutions or datasets.
+
+Validation is critical, especially for complex or algorithmic phenotypes. Some phenotypes undergo formal validation via chart review, replication across datasets, or comparison with gold standards.
+
+Here is a revised version of the **Phenotype Evaluation** section that closely aligns with your notes while maintaining a clear and accessible narrative suitable for a Bookdown textbook:
+
+---
+
+## Phenotype Evaluation
+
+It is essential to **objectively evaluate and report the performance characteristics** of a computable phenotype. This process helps determine whether the phenotype is appropriate for the intended research question and minimizes misclassification bias in downstream analyses.
+
+While many biases in observational research have established mitigation techniques, phenotype misclassification is often not adequately addressed or quantified. Later in the course, we’ll discuss how misclassification propagates as measurement error and affects causal inference. For now, the key point is that phenotype performance must be evaluated with care and transparency.
+
+### What Makes a Good Phenotype?
+
+A “good” phenotype is one that is:
+
+* **Explicit**: The logic and components are clearly documented.
+* **Reproducible**: It can be implemented by other researchers or in other datasets.
+* **Reliable**: It yields consistent results over time or across users.
+* **Valid**: It accurately reflects the intended clinical concept for its research use.
+
+Good phenotype definitions provide detail on all components, including data elements (e.g., diagnoses, labs, medications), inclusion/exclusion logic, value sets (e.g., code lists), and temporal constraints. These should be clearly articulated and shareable to ensure reproducibility.
+
+Remember: **no phenotype is perfect**. The goal is to achieve **reasonable sensitivity and specificity**, or **positive/negative predictive value (PPV/NPV)**, depending on the research goals. Highly specific phenotypes may exclude borderline cases and reduce generalizability, while highly sensitive phenotypes may increase false positives. Researchers must choose the appropriate balance based on their use case.
+
+### Reliability and Validity
+
+Evaluating a phenotype typically involves comparing it to a “gold standard” — a reference set believed to represent the true clinical status of a cohort. This can involve:
+
+* **Manual chart review** (e.g., by clinicians),
+* **Structured data proxies**, or
+* **Probabilistic models** trained on annotated cases.
+
+However, defining a gold standard is difficult and subject to disagreement. For example, chart reviews themselves may only achieve \~80% inter-rater reliability, as shown in studies like Ostropolets et al. Therefore, some researchers use **“silver standard”** methods like constructing extreme sensitivity or specificity cohorts (xSens/xSpec) to approximate ground truth in the absence of full manual review.
+
+In addition to **validity** (i.e., accuracy relative to a gold standard), phenotypes should also be evaluated for **reproducibility** across datasets and institutions. A valid phenotype that only works in one health system may not generalize well.
+
+### Methods of Phenotype Evaluation
+
+Several approaches are available to evaluate phenotypes:
+
+#### Manual Chart Review
+
+* Gold standard method.
+* Involves clinical experts reviewing the EHR to confirm true case status.
+* Resource-intensive and often limited to small samples.
+
+#### Structured Data Review
+
+* Uses other structured fields (e.g., medications, labs) to cross-check the phenotype logic.
+* Often used in conjunction with or in place of full chart review.
+
+#### Cohort Characteristics
+
+* Review of descriptive statistics of the identified cohort (e.g., age, sex, comorbidities).
+* Can highlight unexpected patterns that may signal errors or unintended logic.
+* **Example tool**: OHDSI’s **CohortDiagnostics** package, which produces detailed reports comparing phenotype logic, code sets, and output across sites.
+
+#### PheValuator
+
+* A tool developed by OHDSI that uses machine learning to predict the probability of a condition based on structured data.
+* Can estimate sensitivity, specificity, PPV, and NPV without requiring manual review.
+* Often used in conjunction with xSens/xSpec cohorts.
+
+#### Large Language Models (LLMs)
+
+* Emerging technique where LLMs read through clinical notes and assess whether a patient fits a given phenotype.
+* Can be used for sensitivity/specificity estimation, particularly for conditions not well-captured in structured data.
+* Still under active research but offers scalable alternatives to manual review.
+
+
+## Impact on Research Validity
+
+Phenotype definitions have a profound effect on study validity:
+
+* **Misclassification** can introduce measurement bias and distort associations.
+* **Differences in data availability** (e.g., presence or absence of outpatient labs) can limit phenotype portability.
+* **Transparency** in phenotype definitions is essential for reproducibility and peer review.
+
+Researchers should always describe phenotype logic in sufficient detail and, when possible, share code and concept sets to enable reuse.
+
+
+
+## Summary
+
+Computable phenotyping transforms messy, heterogeneous real-world data into meaningful clinical variables that drive cohort selection, exposure definitions, and outcome measurement. Designing valid, reproducible, and transparent phenotypes is a foundational skill for real-world data research and requires a mix of clinical knowledge, informatics skills, and awareness of data limitations.
+
+## Phenotyping Tools and Resources
+
+Several platforms and initiatives support development and sharing of computable phenotypes:
+
+* **OHDSI Atlas**: A web-based tool for defining and executing cohorts using the OMOP CDM.
+* **PheKB (Phenotype KnowledgeBase)**: A repository of phenotyping algorithms, often for i2b2 or custom data models.
+* **eMERGE Network**: A collaborative effort to develop and validate phenotypes using EHR and genomic data.
+* **Phenotype libraries**: Many institutions maintain internal phenotype libraries, often built around their local data models.
+
+These tools often support cohort definition using user interfaces, standard vocabularies, and shareable JSON or SQL logic.

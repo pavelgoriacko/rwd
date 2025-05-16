@@ -1,0 +1,78 @@
+# Sources of Real-World Data
+
+## Overview
+
+This chapter covers the primary sources of real-world data (RWD), highlighting their characteristics, strengths, limitations, and appropriate use cases in clinical and translational research.
+
+### Learning Objectives
+
+* Understand the major categories of RWD sources.
+* Compare the advantages and limitations of different data sources.
+* Identify appropriate use cases for each source of RWD.
+* Recognize the implications of data provenance for study design and interpretation.
+
+## Categories of RWD Sources
+
+### Electronic Health Records (EHR)
+
+* Captured during routine clinical care.
+* Structured data (e.g., lab results, diagnosis codes) and unstructured data (e.g., clinical notes).
+* Source for detailed clinical information and longitudinal patient histories.
+* Limitations: data quality, missingness, variation across systems, not collected for research purposes.
+
+### Administrative Claims Data
+
+* Generated for billing and reimbursement purposes.
+* Includes information on diagnoses, procedures, and prescriptions.
+* National coverage (e.g., Medicare, Medicaid, private insurers).
+* Strengths: standardization, large populations, consistent coding.
+* Limitations: lacks clinical detail, potential miscoding.
+
+### Registries
+
+* Disease-specific or procedure-specific data collections.
+* Often curated with specific inclusion criteria and data standards.
+* Examples: cancer registries, transplant registries.
+* High-quality and structured, but may lack generalizability.
+
+### Patient-Generated Health Data (PGHD)
+
+* Includes data from wearable devices, apps, home monitoring tools.
+* Provides real-time insights outside of clinical settings.
+* Challenges: data volume, reliability, integration with clinical systems.
+
+### Other Sources
+
+* Public health surveillance databases.
+* Social determinants of health datasets.
+* Biobanks and genomic databases.
+* Data from pragmatic trials and learning health systems.
+
+## Comparing Sources
+
+| Data Source | Strengths                            | Limitations                              | Best Use Cases                                 |
+| ----------- | ------------------------------------ | ---------------------------------------- | ---------------------------------------------- |
+| EHR         | Rich clinical data, longitudinal     | Incomplete, messy, variable              | Clinical outcomes, phenotyping                 |
+| Claims      | Large scale, consistent coding       | Limited clinical granularity             | Utilization, economic outcomes                 |
+| Registries  | Focused, high-quality data           | Selection bias, limited population scope | Quality improvement, comparative effectiveness |
+| PGHD        | Real-world behavior, continuous data | Variable quality, integration challenges | Adherence, behavior monitoring                 |
+
+## Considerations for Researchers
+
+* **Provenance**: Understand who collected the data, how, and for what purpose (further discussed in chapter __).
+* **Data Quality**: Assess missingness, timeliness, accuracy, and validation (further discussed in chapter __).
+* **Access and Governance**: Determine legal, ethical, and institutional requirements (further discussed in chapter __).
+* **Population Representativeness**: Understand which groups may be underrepresented (further discussed in chapter __).
+
+## Summary
+
+* Different RWD sources serve different research needs.
+* Understanding their provenance, structure, and limitations is key to rigorous study design.
+* Triangulation of multiple data sources may improve validity but introduces additional complexity.
+
+## Suggested Readings
+
+* FDA Framework for RWD and RWE
+* Casey et al. (2022). "Real-world data sources in oncology research."
+* National Academy of Medicine (2021). "Electronic Health Records and Research: Possibilities and Realities."
+* Gliklich et al. (Registries for Evaluating Patient Outcomes: A User's Guide, AHRQ).

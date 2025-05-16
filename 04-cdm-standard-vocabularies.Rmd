@@ -1,0 +1,76 @@
+# Common Data Models (CDMs) and Standardized Vocabularies
+
+## Overview
+
+This chapter introduces the concept of Common Data Models (CDMs), which provide a standardized way to structure and represent real-world data across institutions. We also discuss the critical role of standardized vocabularies in enabling interoperability and reproducibility in clinical and translational research.
+
+### Learning Objectives
+
+* Define what a Common Data Model (CDM) is and explain its purpose.
+* Describe the advantages and tradeoffs of using a CDM in research.
+* Compare different CDMs (e.g., OMOP, PCORnet, Sentinel, i2b2).
+* Understand the role of standardized vocabularies in CDMs.
+* Identify examples of commonly used clinical terminologies (e.g., SNOMED, RxNorm, LOINC, ICD, CPT).
+* Understand how vocabularies are used to map diverse local codes to a shared semantic model.
+
+## What is a Common Data Model?
+
+A **Common Data Model (CDM)** is a predefined schema that structures data in a consistent format across different sites and source systems. CDMs define both the tables and fields that make up a dataset, and the relationships among them. They also specify how data should be encoded using standardized vocabularies.
+
+CDMs are designed to:
+
+* Facilitate multicenter research by enabling comparable datasets.
+* Reduce the burden of re-implementing study definitions at every site.
+* Promote the reuse of analysis tools across studies and institutions.
+
+## Benefits and Tradeoffs
+
+**Advantages:**
+
+* **Interoperability**: Different institutions can collaborate more easily using the same data structure.
+* **Reusability**: Common cohort definitions and analytic code can be shared.
+* **Transparency**: Standardized schemas promote clear documentation and reproducibility.
+
+**Challenges:**
+
+* **Data loss or distortion**: Mapping source data to a CDM can result in loss of granularity or nuances.
+* **Implementation effort**: Building and maintaining a CDM extract-transform-load (ETL) pipeline requires time and technical expertise.
+* **One-size-doesn’t-fit-all**: Not every research use case fits neatly into a CDM’s structure.
+
+## Examples of Common Data Models
+
+Several CDMs are widely used in academic and regulatory settings:
+
+* **OMOP (Observational Medical Outcomes Partnership)**: Maintained by the OHDSI collaborative; focuses heavily on standardized vocabularies and reproducible analytics.
+* **PCORnet CDM**: Used by the Patient-Centered Outcomes Research Network; includes more provenance and encounter-based structure.
+* **Sentinel CDM**: Developed by the FDA; used for regulatory safety surveillance.
+* **i2b2**: Flexible, ontology-driven model often used for cohort discovery within institutions.
+
+Each of these models has different strengths, depending on the intended use case (e.g., longitudinal safety monitoring, patient-centered research, population health, etc.).
+
+## Standardized Vocabularies
+
+To make data in a CDM meaningful and comparable across sites, CDMs rely on **standardized vocabularies**—sets of codes and concepts used consistently to represent clinical information.
+
+Some key examples include:
+
+* **SNOMED CT**: For diagnoses, conditions, and clinical findings.
+* **RxNorm**: For drugs and medications.
+* **LOINC**: For laboratory tests and measurements.
+* **ICD-9/10**: International Classification of Diseases, used for diagnoses in billing systems.
+* **CPT**: Current Procedural Terminology, used for procedures and billing.
+
+These vocabularies replace local or proprietary codes with shared concepts. For instance, the same diagnosis code for “type 2 diabetes” might appear differently in two hospital systems—but both can be mapped to the same SNOMED concept in a CDM.
+
+## Vocabulary Mapping
+
+The process of converting source codes to standard concepts is known as **vocabulary mapping**. In OMOP, for example, local codes (such as ICD-10 or CPT) are mapped to **standard concepts** using a central vocabulary table.
+
+* Each record in the clinical data includes both the source value and the mapped standard concept.
+* This mapping allows researchers to write analyses that are portable across institutions, even if their source systems differ.
+
+Mapping can be complex and imperfect—some concepts have no exact match, and local customization of vocabularies (e.g., site-specific lab codes) may require manual curation.
+
+## Summary
+
+CDMs and standardized vocabularies play a crucial role in transforming heterogeneous real-world data into a harmonized format suitable for research. While implementation is complex and not without limitations, the benefits of enabling large-scale, reproducible, and collaborative research are substantial.

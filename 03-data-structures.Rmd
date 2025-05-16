@@ -1,0 +1,76 @@
+# Data Structures for Real-World Data
+
+## Overview
+
+This chapter introduces how real-world data (RWD), especially electronic health record (EHR) and claims data, is stored and accessed. We begin with an introduction to relational databases—the standard structure for RWD—and walk through the processes by which these data are transformed into analysis-ready datasets. We then cover important topics like EHR architecture, reporting databases, query languages, and the concept of data abstraction.
+
+### Learning Objectives
+
+* Understand the concept of relational databases and how RWD is structured in multiple related tables.
+* Differentiate between relational databases and research-ready datasets.
+* Describe how EHR data is replicated for reporting and research purposes.
+* Understand the role of data models in structuring data for specific uses.
+* Recognize security and access considerations for RWD databases.
+* Learn about different query methods, including SQL and APIs.
+* Understand the concept of abstraction layers in research databases.
+
+## Relational Databases
+
+Most real-world data is stored in **relational databases**, a structure where data is distributed across multiple related tables. For example, in an EHR system:
+
+* One table may store patient demographics.
+* Another table may contain visit information.
+* A third table might include diagnosis codes, while a fourth has lab test results.
+
+These tables are “related” by shared keys (e.g., `patient_id`), allowing users to join them together to build a more complete picture of a patient's healthcare journey.
+
+## Research-Ready Datasets
+
+Researchers are often used to working with **flat files** or datasets where each row represents a subject, time point, or event. These are sometimes referred to as:
+
+* **Long format**: Each row represents a specific observation or event.
+* **Wide format**: Each row represents a subject, and columns represent repeated measures or variables.
+
+To create these from relational databases, data must be queried, joined, reshaped, and often summarized. This transformation process—from a normalized relational structure to a flat, analyzable format—is one of the most common tasks in preparing RWD for research.
+
+## EHR Architecture and Reporting Databases
+
+Most EHR systems use a **live production database** optimized for clinical workflows and frequent read-write operations. These systems are not structured for reporting or research due to complex and performance-optimized schemas.
+
+To address this, health systems often maintain one or more **replica databases**:
+
+* **Reporting databases** (e.g., Epic Caboodle) are structured to support analytics and operational reporting.
+* **Research databases** may replicate and restructure data further, sometimes into a **common data model** (discussed in later chapters).
+
+Each database has a different **data model**, depending on its intended use. Production databases prioritize performance and clinical reliability; reporting databases prioritize ease of querying and summarization.
+
+## Data Access and Security
+
+Access to RWD databases is usually restricted for privacy and compliance reasons. Important considerations include:
+
+* **Access control**: Only authorized users (e.g., institutional researchers) may have access.
+* **Network restrictions**: Access often requires connection to a secure local network or VPN.
+* **Audit logs**: All queries and data use may be logged for compliance.
+* **De-identification**: In some cases, data is de-identified before access, though many databases contain identifiable information.
+
+## Querying RWD
+
+Most relational databases are queried using **Structured Query Language (SQL)**. SQL allows users to select, filter, join, and aggregate data from different tables.
+
+However, not all data sources use SQL. For example:
+
+* **APIs (Application Programming Interfaces)** may be used to retrieve data from systems that do not support direct SQL access.
+* **Elasticsearch** is commonly used for querying unstructured data such as clinical notes and uses a **JSON-based query structure** instead of SQL.
+
+Understanding which query method applies depends on the architecture and design of the data source.
+
+## Data Abstraction
+
+To support research efficiently, many institutions develop **abstraction layers**—simplified versions of the full EHR database that are designed for specific research purposes. These often include:
+
+* A subset of patients or data elements relevant to research.
+* Restructured tables for easier querying and analysis.
+* Predefined phenotypes or cohorts.
+
+This abstraction reduces complexity and enhances usability but also limits flexibility. It’s important to understand what’s included—and excluded—in these datasets.
+
