@@ -1,0 +1,15 @@
+---
+title: "Real World Data for Clinical Research"
+author: "Pavel Goriacko and Danielle Boyce"
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preface
