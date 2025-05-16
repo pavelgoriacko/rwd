@@ -12,4 +12,22 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 # Preface
+
+Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.
+
+Despite this progress, much of the methodological knowledge required to conduct high-quality RWD research remains inaccessible to many clinician-researchers. The information is scattered across technical documentation, academic papers, online forums, and video lectures—often buried in mathematical notation or domain-specific jargon. For busy clinicians seeking to understand patterns in care or evaluate outcomes, this complexity can be a barrier to entry.
+
+The result is a frustrating paradox: those most familiar with the care processes we seek to study—clinicians—are often least equipped to leverage the full potential of modern RWD infrastructure. Too often, EHR-based research is equated with manual chart review, lacking systematic attention to issues like confounding, measurement error, and generalizability. Many studies fail to take advantage of harmonized, cross-institutional data sources and tools that promote transparency, reproducibility, and scalable discovery.
+
+As a result, we are missing opportunities to learn from the rich data generated every day in healthcare settings—data that, if used rigorously and ethically, could help us identify better treatments, reduce disparities, and improve patient outcomes.
+
+In response, we created this guide: a practical, clinician-oriented introduction to real-world data for clinical and translational research. Our goal is to make the field more accessible without sacrificing methodological rigor. We aim to demystify key concepts, explain the “why” behind complex workflows, and highlight modern tools and frameworks in a way that feels relevant and actionable to clinician-researchers.
+
+This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.
+
+
+## Credits and Acknowledgments 
+
+(TBD)
