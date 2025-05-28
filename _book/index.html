@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Real World Data for Clinical Research</title>
+  <meta name="description" content="Real World Data for Clinical Research" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Real World Data for Clinical Research" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Real World Data for Clinical Research" />
+  
+  
+  
+
+<meta name="author" content="Pavel Goriacko and Danielle Boyce" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"/>
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#credits-and-acknowledgments"><i class="fa fa-check"></i><b>1.1</b> Credits and Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><i class="fa fa-check"></i><b>2</b> Introduction to Real-World Data (RWD) and Real-World Evidence (RWE)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#learning-objectives"><i class="fa fa-check"></i><b>2.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-data-rwd"><i class="fa fa-check"></i><b>2.2</b> What is Real-World Data (RWD)?</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-evidence-rwe"><i class="fa fa-check"></i><b>2.3</b> What is Real-World Evidence (RWE)?</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#why-is-rwd-important"><i class="fa fa-check"></i><b>2.4</b> Why is RWD Important?</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#applications-of-rwd-and-rwe"><i class="fa fa-check"></i><b>2.5</b> Applications of RWD and RWE</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#limitations-and-considerations"><i class="fa fa-check"></i><b>2.6</b> Limitations and Considerations</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#summary"><i class="fa fa-check"></i><b>2.7</b> Summary</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#suggested-readings"><i class="fa fa-check"></i><b>2.8</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html"><i class="fa fa-check"></i><b>3</b> Sources of Real-World Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#categories-of-rwd-sources"><i class="fa fa-check"></i><b>3.2</b> Categories of RWD Sources</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#electronic-health-records-ehr"><i class="fa fa-check"></i><b>3.2.1</b> Electronic Health Records (EHR)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#administrative-claims-data"><i class="fa fa-check"></i><b>3.2.2</b> Administrative Claims Data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#registries"><i class="fa fa-check"></i><b>3.2.3</b> Registries</a></li>
+<li class="chapter" data-level="3.2.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#patient-generated-health-data-pghd"><i class="fa fa-check"></i><b>3.2.4</b> Patient-Generated Health Data (PGHD)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#other-sources"><i class="fa fa-check"></i><b>3.2.5</b> Other Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#comparing-sources"><i class="fa fa-check"></i><b>3.3</b> Comparing Sources</a></li>
+<li class="chapter" data-level="3.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#considerations-for-researchers"><i class="fa fa-check"></i><b>3.4</b> Considerations for Researchers</a></li>
+<li class="chapter" data-level="3.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#summary-1"><i class="fa fa-check"></i><b>3.5</b> Summary</a></li>
+<li class="chapter" data-level="3.6" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#suggested-readings-1"><i class="fa fa-check"></i><b>3.6</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html"><i class="fa fa-check"></i><b>4</b> Data Structures for Real-World Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#relational-databases"><i class="fa fa-check"></i><b>4.2</b> Relational Databases</a></li>
+<li class="chapter" data-level="4.3" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#research-ready-datasets"><i class="fa fa-check"></i><b>4.3</b> Research-Ready Datasets</a></li>
+<li class="chapter" data-level="4.4" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#ehr-architecture-and-reporting-databases"><i class="fa fa-check"></i><b>4.4</b> EHR Architecture and Reporting Databases</a></li>
+<li class="chapter" data-level="4.5" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#data-access-and-security"><i class="fa fa-check"></i><b>4.5</b> Data Access and Security</a></li>
+<li class="chapter" data-level="4.6" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#querying-rwd"><i class="fa fa-check"></i><b>4.6</b> Querying RWD</a></li>
+<li class="chapter" data-level="4.7" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#data-abstraction"><i class="fa fa-check"></i><b>4.7</b> Data Abstraction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html"><i class="fa fa-check"></i><b>5</b> Common Data Models (CDMs) and Standardized Vocabularies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#overview-3"><i class="fa fa-check"></i><b>5.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#what-is-a-common-data-model"><i class="fa fa-check"></i><b>5.2</b> What is a Common Data Model?</a></li>
+<li class="chapter" data-level="5.3" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#benefits-and-tradeoffs"><i class="fa fa-check"></i><b>5.3</b> Benefits and Tradeoffs</a></li>
+<li class="chapter" data-level="5.4" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#examples-of-common-data-models"><i class="fa fa-check"></i><b>5.4</b> Examples of Common Data Models</a></li>
+<li class="chapter" data-level="5.5" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#standardized-vocabularies"><i class="fa fa-check"></i><b>5.5</b> Standardized Vocabularies</a></li>
+<li class="chapter" data-level="5.6" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#vocabulary-mapping"><i class="fa fa-check"></i><b>5.6</b> Vocabulary Mapping</a></li>
+<li class="chapter" data-level="5.7" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#summary-2"><i class="fa fa-check"></i><b>5.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html"><i class="fa fa-check"></i><b>6</b> Computable Phenotyping</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#overview-4"><i class="fa fa-check"></i><b>6.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#what-is-a-computable-phenotype"><i class="fa fa-check"></i><b>6.2</b> What is a Computable Phenotype?</a></li>
+<li class="chapter" data-level="6.3" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#types-of-phenotypes"><i class="fa fa-check"></i><b>6.3</b> Types of Phenotypes</a></li>
+<li class="chapter" data-level="6.4" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#validity-and-transportability"><i class="fa fa-check"></i><b>6.4</b> Validity and Transportability</a></li>
+<li class="chapter" data-level="6.5" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#phenotype-evaluation"><i class="fa fa-check"></i><b>6.5</b> Phenotype Evaluation</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#what-makes-a-good-phenotype"><i class="fa fa-check"></i><b>6.5.1</b> What Makes a Good Phenotype?</a></li>
+<li class="chapter" data-level="6.5.2" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#reliability-and-validity"><i class="fa fa-check"></i><b>6.5.2</b> Reliability and Validity</a></li>
+<li class="chapter" data-level="6.5.3" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#methods-of-phenotype-evaluation"><i class="fa fa-check"></i><b>6.5.3</b> Methods of Phenotype Evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#impact-on-research-validity"><i class="fa fa-check"></i><b>6.6</b> Impact on Research Validity</a></li>
+<li class="chapter" data-level="6.7" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#summary-3"><i class="fa fa-check"></i><b>6.7</b> Summary</a></li>
+<li class="chapter" data-level="6.8" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#phenotyping-tools-and-resources"><i class="fa fa-check"></i><b>6.8</b> Phenotyping Tools and Resources</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Real World Data for Clinical Research</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Real World Data for Clinical Research</h1>
+<p class="author"><em>Pavel Goriacko and Danielle Boyce</em></p>
+</div>
+<div id="preface" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.</p>
+<p>Despite this progress, much of the methodological knowledge required to conduct high-quality RWD research remains inaccessible to many clinician-researchers. The information is scattered across technical documentation, academic papers, online forums, and video lectures—often buried in mathematical notation or domain-specific jargon. For busy clinicians seeking to understand patterns in care or evaluate outcomes, this complexity can be a barrier to entry.</p>
+<p>The result is a frustrating paradox: those most familiar with the care processes we seek to study—clinicians—are often least equipped to leverage the full potential of modern RWD infrastructure. Too often, EHR-based research is equated with manual chart review, lacking systematic attention to issues like confounding, measurement error, and generalizability. Many studies fail to take advantage of harmonized, cross-institutional data sources and tools that promote transparency, reproducibility, and scalable discovery.</p>
+<p>As a result, we are missing opportunities to learn from the rich data generated every day in healthcare settings—data that, if used rigorously and ethically, could help us identify better treatments, reduce disparities, and improve patient outcomes.</p>
+<p>In response, we created this guide: a practical, clinician-oriented introduction to real-world data for clinical and translational research. Our goal is to make the field more accessible without sacrificing methodological rigor. We aim to demystify key concepts, explain the “why” behind complex workflows, and highlight modern tools and frameworks in a way that feels relevant and actionable to clinician-researchers.</p>
+<p>This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.</p>
+<div id="credits-and-acknowledgments" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Credits and Acknowledgments<a href="index.html#credits-and-acknowledgments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>(TBD)</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

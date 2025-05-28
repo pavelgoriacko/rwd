@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Common Data Models (CDMs) and Standardized Vocabularies | Real World Data for Clinical Research</title>
+  <meta name="description" content="5 Common Data Models (CDMs) and Standardized Vocabularies | Real World Data for Clinical Research" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Common Data Models (CDMs) and Standardized Vocabularies | Real World Data for Clinical Research" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Common Data Models (CDMs) and Standardized Vocabularies | Real World Data for Clinical Research" />
+  
+  
+  
+
+<meta name="author" content="Pavel Goriacko and Danielle Boyce" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-structures-for-real-world-data.html"/>
+<link rel="next" href="computable-phenotyping.html"/>
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#credits-and-acknowledgments"><i class="fa fa-check"></i><b>1.1</b> Credits and Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><i class="fa fa-check"></i><b>2</b> Introduction to Real-World Data (RWD) and Real-World Evidence (RWE)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#learning-objectives"><i class="fa fa-check"></i><b>2.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-data-rwd"><i class="fa fa-check"></i><b>2.2</b> What is Real-World Data (RWD)?</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#what-is-real-world-evidence-rwe"><i class="fa fa-check"></i><b>2.3</b> What is Real-World Evidence (RWE)?</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#why-is-rwd-important"><i class="fa fa-check"></i><b>2.4</b> Why is RWD Important?</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#applications-of-rwd-and-rwe"><i class="fa fa-check"></i><b>2.5</b> Applications of RWD and RWE</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#limitations-and-considerations"><i class="fa fa-check"></i><b>2.6</b> Limitations and Considerations</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#summary"><i class="fa fa-check"></i><b>2.7</b> Summary</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"><a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html#suggested-readings"><i class="fa fa-check"></i><b>2.8</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html"><i class="fa fa-check"></i><b>3</b> Sources of Real-World Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#categories-of-rwd-sources"><i class="fa fa-check"></i><b>3.2</b> Categories of RWD Sources</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#electronic-health-records-ehr"><i class="fa fa-check"></i><b>3.2.1</b> Electronic Health Records (EHR)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#administrative-claims-data"><i class="fa fa-check"></i><b>3.2.2</b> Administrative Claims Data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#registries"><i class="fa fa-check"></i><b>3.2.3</b> Registries</a></li>
+<li class="chapter" data-level="3.2.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#patient-generated-health-data-pghd"><i class="fa fa-check"></i><b>3.2.4</b> Patient-Generated Health Data (PGHD)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#other-sources"><i class="fa fa-check"></i><b>3.2.5</b> Other Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#comparing-sources"><i class="fa fa-check"></i><b>3.3</b> Comparing Sources</a></li>
+<li class="chapter" data-level="3.4" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#considerations-for-researchers"><i class="fa fa-check"></i><b>3.4</b> Considerations for Researchers</a></li>
+<li class="chapter" data-level="3.5" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#summary-1"><i class="fa fa-check"></i><b>3.5</b> Summary</a></li>
+<li class="chapter" data-level="3.6" data-path="sources-of-real-world-data.html"><a href="sources-of-real-world-data.html#suggested-readings-1"><i class="fa fa-check"></i><b>3.6</b> Suggested Readings</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html"><i class="fa fa-check"></i><b>4</b> Data Structures for Real-World Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#relational-databases"><i class="fa fa-check"></i><b>4.2</b> Relational Databases</a></li>
+<li class="chapter" data-level="4.3" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#research-ready-datasets"><i class="fa fa-check"></i><b>4.3</b> Research-Ready Datasets</a></li>
+<li class="chapter" data-level="4.4" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#ehr-architecture-and-reporting-databases"><i class="fa fa-check"></i><b>4.4</b> EHR Architecture and Reporting Databases</a></li>
+<li class="chapter" data-level="4.5" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#data-access-and-security"><i class="fa fa-check"></i><b>4.5</b> Data Access and Security</a></li>
+<li class="chapter" data-level="4.6" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#querying-rwd"><i class="fa fa-check"></i><b>4.6</b> Querying RWD</a></li>
+<li class="chapter" data-level="4.7" data-path="data-structures-for-real-world-data.html"><a href="data-structures-for-real-world-data.html#data-abstraction"><i class="fa fa-check"></i><b>4.7</b> Data Abstraction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html"><i class="fa fa-check"></i><b>5</b> Common Data Models (CDMs) and Standardized Vocabularies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#overview-3"><i class="fa fa-check"></i><b>5.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#what-is-a-common-data-model"><i class="fa fa-check"></i><b>5.2</b> What is a Common Data Model?</a></li>
+<li class="chapter" data-level="5.3" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#benefits-and-tradeoffs"><i class="fa fa-check"></i><b>5.3</b> Benefits and Tradeoffs</a></li>
+<li class="chapter" data-level="5.4" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#examples-of-common-data-models"><i class="fa fa-check"></i><b>5.4</b> Examples of Common Data Models</a></li>
+<li class="chapter" data-level="5.5" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#standardized-vocabularies"><i class="fa fa-check"></i><b>5.5</b> Standardized Vocabularies</a></li>
+<li class="chapter" data-level="5.6" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#vocabulary-mapping"><i class="fa fa-check"></i><b>5.6</b> Vocabulary Mapping</a></li>
+<li class="chapter" data-level="5.7" data-path="common-data-models-cdms-and-standardized-vocabularies.html"><a href="common-data-models-cdms-and-standardized-vocabularies.html#summary-2"><i class="fa fa-check"></i><b>5.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html"><i class="fa fa-check"></i><b>6</b> Computable Phenotyping</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#overview-4"><i class="fa fa-check"></i><b>6.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1.1</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#what-is-a-computable-phenotype"><i class="fa fa-check"></i><b>6.2</b> What is a Computable Phenotype?</a></li>
+<li class="chapter" data-level="6.3" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#types-of-phenotypes"><i class="fa fa-check"></i><b>6.3</b> Types of Phenotypes</a></li>
+<li class="chapter" data-level="6.4" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#validity-and-transportability"><i class="fa fa-check"></i><b>6.4</b> Validity and Transportability</a></li>
+<li class="chapter" data-level="6.5" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#phenotype-evaluation"><i class="fa fa-check"></i><b>6.5</b> Phenotype Evaluation</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#what-makes-a-good-phenotype"><i class="fa fa-check"></i><b>6.5.1</b> What Makes a Good Phenotype?</a></li>
+<li class="chapter" data-level="6.5.2" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#reliability-and-validity"><i class="fa fa-check"></i><b>6.5.2</b> Reliability and Validity</a></li>
+<li class="chapter" data-level="6.5.3" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#methods-of-phenotype-evaluation"><i class="fa fa-check"></i><b>6.5.3</b> Methods of Phenotype Evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#impact-on-research-validity"><i class="fa fa-check"></i><b>6.6</b> Impact on Research Validity</a></li>
+<li class="chapter" data-level="6.7" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#summary-3"><i class="fa fa-check"></i><b>6.7</b> Summary</a></li>
+<li class="chapter" data-level="6.8" data-path="computable-phenotyping.html"><a href="computable-phenotyping.html#phenotyping-tools-and-resources"><i class="fa fa-check"></i><b>6.8</b> Phenotyping Tools and Resources</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Real World Data for Clinical Research</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="common-data-models-cdms-and-standardized-vocabularies" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Common Data Models (CDMs) and Standardized Vocabularies<a href="common-data-models-cdms-and-standardized-vocabularies.html#common-data-models-cdms-and-standardized-vocabularies" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-3" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Overview<a href="common-data-models-cdms-and-standardized-vocabularies.html#overview-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter introduces the concept of Common Data Models (CDMs), which provide a standardized way to structure and represent real-world data across institutions. We also discuss the critical role of standardized vocabularies in enabling interoperability and reproducibility in clinical and translational research.</p>
+<div id="learning-objectives-3" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Learning Objectives<a href="common-data-models-cdms-and-standardized-vocabularies.html#learning-objectives-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Define what a Common Data Model (CDM) is and explain its purpose.</li>
+<li>Describe the advantages and tradeoffs of using a CDM in research.</li>
+<li>Compare different CDMs (e.g., OMOP, PCORnet, Sentinel, i2b2).</li>
+<li>Understand the role of standardized vocabularies in CDMs.</li>
+<li>Identify examples of commonly used clinical terminologies (e.g., SNOMED, RxNorm, LOINC, ICD, CPT).</li>
+<li>Understand how vocabularies are used to map diverse local codes to a shared semantic model.</li>
+</ul>
+</div>
+</div>
+<div id="what-is-a-common-data-model" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> What is a Common Data Model?<a href="common-data-models-cdms-and-standardized-vocabularies.html#what-is-a-common-data-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>Common Data Model (CDM)</strong> is a predefined schema that structures data in a consistent format across different sites and source systems. CDMs define both the tables and fields that make up a dataset, and the relationships among them. They also specify how data should be encoded using standardized vocabularies.</p>
+<p>CDMs are designed to:</p>
+<ul>
+<li>Facilitate multicenter research by enabling comparable datasets.</li>
+<li>Reduce the burden of re-implementing study definitions at every site.</li>
+<li>Promote the reuse of analysis tools across studies and institutions.</li>
+</ul>
+</div>
+<div id="benefits-and-tradeoffs" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Benefits and Tradeoffs<a href="common-data-models-cdms-and-standardized-vocabularies.html#benefits-and-tradeoffs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Interoperability</strong>: Different institutions can collaborate more easily using the same data structure.</li>
+<li><strong>Reusability</strong>: Common cohort definitions and analytic code can be shared.</li>
+<li><strong>Transparency</strong>: Standardized schemas promote clear documentation and reproducibility.</li>
+</ul>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><strong>Data loss or distortion</strong>: Mapping source data to a CDM can result in loss of granularity or nuances.</li>
+<li><strong>Implementation effort</strong>: Building and maintaining a CDM extract-transform-load (ETL) pipeline requires time and technical expertise.</li>
+<li><strong>One-size-doesn’t-fit-all</strong>: Not every research use case fits neatly into a CDM’s structure.</li>
+</ul>
+</div>
+<div id="examples-of-common-data-models" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Examples of Common Data Models<a href="common-data-models-cdms-and-standardized-vocabularies.html#examples-of-common-data-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Several CDMs are widely used in academic and regulatory settings:</p>
+<ul>
+<li><strong>OMOP (Observational Medical Outcomes Partnership)</strong>: Maintained by the OHDSI collaborative; focuses heavily on standardized vocabularies and reproducible analytics.</li>
+<li><strong>PCORnet CDM</strong>: Used by the Patient-Centered Outcomes Research Network; includes more provenance and encounter-based structure.</li>
+<li><strong>Sentinel CDM</strong>: Developed by the FDA; used for regulatory safety surveillance.</li>
+<li><strong>i2b2</strong>: Flexible, ontology-driven model often used for cohort discovery within institutions.</li>
+</ul>
+<p>Each of these models has different strengths, depending on the intended use case (e.g., longitudinal safety monitoring, patient-centered research, population health, etc.).</p>
+</div>
+<div id="standardized-vocabularies" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Standardized Vocabularies<a href="common-data-models-cdms-and-standardized-vocabularies.html#standardized-vocabularies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To make data in a CDM meaningful and comparable across sites, CDMs rely on <strong>standardized vocabularies</strong>—sets of codes and concepts used consistently to represent clinical information.</p>
+<p>Some key examples include:</p>
+<ul>
+<li><strong>SNOMED CT</strong>: For diagnoses, conditions, and clinical findings.</li>
+<li><strong>RxNorm</strong>: For drugs and medications.</li>
+<li><strong>LOINC</strong>: For laboratory tests and measurements.</li>
+<li><strong>ICD-9/10</strong>: International Classification of Diseases, used for diagnoses in billing systems.</li>
+<li><strong>CPT</strong>: Current Procedural Terminology, used for procedures and billing.</li>
+</ul>
+<p>These vocabularies replace local or proprietary codes with shared concepts. For instance, the same diagnosis code for “type 2 diabetes” might appear differently in two hospital systems—but both can be mapped to the same SNOMED concept in a CDM.</p>
+</div>
+<div id="vocabulary-mapping" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Vocabulary Mapping<a href="common-data-models-cdms-and-standardized-vocabularies.html#vocabulary-mapping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The process of converting source codes to standard concepts is known as <strong>vocabulary mapping</strong>. In OMOP, for example, local codes (such as ICD-10 or CPT) are mapped to <strong>standard concepts</strong> using a central vocabulary table.</p>
+<ul>
+<li>Each record in the clinical data includes both the source value and the mapped standard concept.</li>
+<li>This mapping allows researchers to write analyses that are portable across institutions, even if their source systems differ.</li>
+</ul>
+<p>Mapping can be complex and imperfect—some concepts have no exact match, and local customization of vocabularies (e.g., site-specific lab codes) may require manual curation.</p>
+</div>
+<div id="summary-2" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Summary<a href="common-data-models-cdms-and-standardized-vocabularies.html#summary-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>CDMs and standardized vocabularies play a crucial role in transforming heterogeneous real-world data into a harmonized format suitable for research. While implementation is complex and not without limitations, the benefits of enabling large-scale, reproducible, and collaborative research are substantial.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-structures-for-real-world-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="computable-phenotyping.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
