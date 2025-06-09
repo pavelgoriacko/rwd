@@ -41,10 +41,10 @@ CDMs are designed to:
 
 Several CDMs are widely used in academic and regulatory settings:
 
-* **OMOP (Observational Medical Outcomes Partnership)**: Maintained by the OHDSI collaborative; focuses heavily on standardized vocabularies and reproducible analytics.
-* **PCORnet CDM**: Used by the Patient-Centered Outcomes Research Network; includes more provenance and encounter-based structure.
-* **Sentinel CDM**: Developed by the FDA; used for regulatory safety surveillance.
-* **i2b2**: Flexible, ontology-driven model often used for cohort discovery within institutions.
+* **[OMOP (Observational Medical Outcomes Partnership)](https://ohdsi.github.io/CommonDataModel/index.html)**: Maintained by the OHDSI collaborative; focuses heavily on standardized vocabularies and reproducible analytics.  
+* **[PCORnet CDM](https://pcornet.org/data/common-data-model/)**: Used by the Patient-Centered Outcomes Research Network; includes more provenance and encounter-based structure.  
+* **[Sentinel CDM](https://www.sentinelinitiative.org/methods-data-tools/sentinel-common-data-model)**: Developed by the FDA; used for regulatory safety surveillance.  
+* **[i2b2](https://www.i2b2.org/)**: Flexible, ontology-driven model often used for cohort discovery within institutions.
 
 Each of these models has different strengths, depending on the intended use case (e.g., longitudinal safety monitoring, patient-centered research, population health, etc.).
 
@@ -54,11 +54,11 @@ To make data in a CDM meaningful and comparable across sites, CDMs rely on **sta
 
 Some key examples include:
 
-* **SNOMED CT**: For diagnoses, conditions, and clinical findings.
-* **RxNorm**: For drugs and medications.
-* **LOINC**: For laboratory tests and measurements.
-* **ICD-9/10**: International Classification of Diseases, used for diagnoses in billing systems.
-* **CPT**: Current Procedural Terminology, used for procedures and billing.
+* **[SNOMED CT](https://www.snomed.org/what-is-snomed-ct)**: For diagnoses, conditions, and clinical findings.
+* **[RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/)**: For drugs and medications.
+* **[LOINC](https://loinc.org/)**: For laboratory tests and measurements.
+* **[ICD-9/10](https://www.cdc.gov/nchs/icd/?CDC_AAref_Val=https://www.cdc.gov/nchs/icd/index.htm)**: International Classification of Diseases, used for diagnoses in billing systems.
+* **[CPT](https://www.ama-assn.org/practice-management/cpt-current-procedural-terminology)**: Current Procedural Terminology, used for procedures and billing.
 
 These vocabularies replace local or proprietary codes with shared concepts. For instance, the same diagnosis code for “type 2 diabetes” might appear differently in two hospital systems—but both can be mapped to the same SNOMED concept in a CDM.
 

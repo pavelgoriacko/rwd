@@ -72,7 +72,10 @@ This chapter covers the primary sources of real-world data (RWD), highlighting t
 
 ## Suggested Readings
 
-* FDA Framework for RWD and RWE
+*  [FDA Framework for RWD and RWE](https://www.fda.gov/media/120060/download)
+<!-- NOTE TO PAVEL: Could not find an online source for:
 * Casey et al. (2022). "Real-world data sources in oncology research."
 * National Academy of Medicine (2021). "Electronic Health Records and Research: Possibilities and Realities."
+-->
 * Gliklich et al. (Registries for Evaluating Patient Outcomes: A User's Guide, AHRQ).
+  [Link to PDF](https://effectivehealthcare.ahrq.gov/sites/default/files/pdf/registries-evaluating-patient-outcomes-4th-edition.pdf)
