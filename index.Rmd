@@ -12,7 +12,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Disclaimer
+# Introduction
+
+## Disclaimer
 
 This book is a **living draft** and part of an ongoing effort to make real-world data (RWD) methods more accessible to clinician-researchers. We are sharing it publicly as part of a “work in public” philosophy—prioritizing openness, collaboration, and early feedback over polished perfection.
 
@@ -31,7 +33,7 @@ If you have suggestions, corrections, or feedback, we’d love to hear from you.
 Thank you for joining us in this process.
 
 
-# Preface
+## Preface
 
 Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.
 

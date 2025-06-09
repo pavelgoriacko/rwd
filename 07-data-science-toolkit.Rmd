@@ -1,0 +1,183 @@
+# Data Science Toolkit for Real-World Data
+
+## Overview
+
+Modern real-world data (RWD) research is built on a foundation of computational tools and workflows. Gone are the days when datasets could be opened in Excel, manually cleaned, and exported to statistical software. Today’s research increasingly takes place within secure environments, uses massive datasets that cannot be downloaded, and relies on code-based workflows to ensure transparency, reproducibility, and collaboration.
+
+This chapter introduces the **essential tools** used in real-world evidence (RWE) generation—**R, SQL, and Git**—and explains why they are central to the future of clinical and translational research.
+
+## Learning Objectives
+
+* Explain why traditional tools like Excel are not sufficient for working with RWD.
+* Describe the benefits of code-based, literate programming approaches.
+* Identify the roles of R, SQL, and Git in data science workflows.
+* Understand the importance of reproducibility, collaboration, and auditability in research.
+* Introduce the concept of “tidy data” and the role of data wrangling in analysis.
+
+---
+
+## Why Learn Modern Tools?
+
+### The Limits of Excel
+
+Excel is still the most commonly used tool for data management in clinical research, but it introduces several risks and limitations, especially when working with complex, high-volume RWD:
+
+* It can **alter data types**, dates, or numeric precision (e.g., converting gene names into dates).
+* It has **row limits** and performance issues with large files.
+* Excel files are not standardized—formatting and behavior may differ by version or user.
+* It does not support reproducible workflows: each analysis step is hidden and difficult to trace or reproduce.
+
+### Working with Remote Data Repositories
+
+Most RWD is **stored on secure servers** due to patient privacy concerns. For this reason, researchers are not allowed to download data to their local machines. Instead, they must:
+
+* **Connect remotely** to a database.
+* **Write code** (usually in SQL and R) to extract and analyze data.
+* Work within **institutional firewalls** or **virtual environments** that are audited and access-controlled.
+
+Many tools—especially those from the OHDSI community—are designed specifically for these environments. For example, OHDSI’s entire analytics stack is written in R, hosted on GitHub, and supports standardized analyses across distributed data networks.
+
+### Literate Programming and Reproducible Research
+
+Modern tools support **literate programming**, a principle where code and narrative are woven together in a transparent, human-readable form (e.g., R Markdown). This approach enables:
+
+* **Reproducibility**: Anyone can re-run the code and get the same results.
+* **Auditability**: All steps are documented and can be reviewed.
+* **Transparency**: Decisions, assumptions, and logic are clearly stated.
+* **Open Science**: Sharing your code allows others to critique, reuse, and extend your work.
+
+### Collaboration
+
+Real-world research is often collaborative and distributed. Using code-based tools allows researchers to:
+
+* Share workflows, packages, and functions across institutions.
+* Use platforms like GitHub to track contributions and review changes.
+* Participate in community-based initiatives like OHDSI, which provides open-source tools for RWD analytics.
+
+---
+
+## Core Tools: R, SQL, and Git
+
+### R
+
+* **R** is a programming language designed for data analysis and statistical computing.
+* It has become one of the most widely used tools in RWD research, alongside Python.
+* Researchers use **RStudio**, an integrated development environment (IDE), to write, debug, and run R code.
+* R's strength lies in its **ecosystem of packages**—modular libraries for importing, cleaning, analyzing, and visualizing data.
+* Most OHDSI tools (e.g., CohortDiagnostics, PatientLevelPrediction) are written in R.
+
+### SQL
+
+* **SQL (Structured Query Language)** is the standard language for querying relational databases.
+* It allows you to extract specific data elements from large datasets based on precise criteria.
+* SQL is **declarative**: you describe what data you want, and the database engine figures out how to get it.
+* While SQL syntax is generally consistent, different databases have dialects (e.g., PostgreSQL, Oracle, SQL Server).
+
+  * OHDSI’s **SqlRender** package helps standardize code across dialects.
+* Understanding **database schemas** and **standard vocabularies** is essential for writing effective SQL queries in RWD contexts.
+
+### Git
+
+* **Git** is a version control system that tracks changes to code and documents over time.
+* GitHub (or GitLab) is a platform where researchers can host, share, and collaborate on code.
+* Benefits of using Git:
+
+  * Revert to prior versions of a script.
+  * Collaborate with others asynchronously.
+  * Submit or review code contributions (pull requests).
+  * Document work as it evolves.
+
+---
+
+Thank you — your structure is very clear and aligns well with how real-world data science is actually practiced. Below is a revised version of the **“Data Science in Practice”** section that integrates your suggestions more explicitly. It emphasizes the two major analytic approaches up front, organizes the workflow into steps, and adds detail on what each path looks like in practical terms.
+
+---
+
+## Data Science in Practice
+
+### Two Analytic Approaches: Standardized vs Custom Workflows
+
+Real-world data science involves navigating large, complex, and sensitive clinical datasets in a way that produces valid, reproducible, and meaningful evidence. To do this effectively, researchers tend to follow one of two analytic approaches:
+
+* **Standardized Analytics Pipelines**
+  These use pre-defined, validated tools (like OHDSI’s HADES packages) that encode best practices into reproducible study packages. They require minimal custom coding and are especially useful for large-scale studies or network research across multiple institutions.
+
+* **Custom Data Science Workflows**
+  These offer greater flexibility and granularity, allowing researchers to define custom analyses in R or Python. These workflows are often used in exploratory studies, hypothesis generation, or when unique study designs or data transformations are required.
+
+Understanding when and how to use each approach is critical. Most projects begin with a similar first step and then diverge depending on the needs of the research question and the maturity of the available tools.
+
+---
+
+### Step 1: Foundation-Building Tasks Shared by All Approaches
+
+Regardless of the analytic pathway chosen, the initial stages of a real-world data (RWD) study generally include:
+
+* **Assessing the Data Source**
+  Evaluating data completeness, timing, availability of key variables, and general fitness for answering the research question.
+
+* **Phenotype Development and Evaluation**
+  Creating reproducible logic for defining exposures, outcomes, inclusion/exclusion criteria, and covariates, followed by evaluation of their performance characteristics (see earlier chapter on computable phenotyping).
+
+* **Cohort Logic Construction**
+  Translating the inclusion/exclusion logic into code that can be applied to the database, either manually (via SQL or cohort definition tools) or automatically (via platforms like OHDSI ATLAS).
+
+Once these foundations are in place, the researcher decides between a standardized or custom approach to analysis.
+
+---
+
+### Step 2A: Standardized Analytics
+
+In a standardized workflow, the researcher either:
+
+* **Creates a new study package** using tools like **OHDSI ATLAS** and **HADES**, or
+* **Adopts an existing study package** (e.g., from GitHub or the OHDSI community)
+
+These packages follow a specific structure and allow the researcher to:
+
+1. **Define the cohorts and covariates** using standard concept sets and cohort definitions.
+2. **Point the package to the local OMOP CDM database** by editing a single configuration file (usually `settings.json` or `Renviron`).
+3. **Specify all study parameters in one place**, including cohort IDs, inclusion criteria, outcome definitions, time-at-risk windows, analysis strategies, and more.
+4. **Run the study locally** or remotely on a secure database, without needing to extract raw data.
+
+The output typically includes:
+
+* Baseline characteristics (e.g., demographics, comorbidities)
+* Cohort attrition and flow diagrams
+* Effect estimates and confidence intervals
+* Diagnostic plots and tables for study evaluation
+
+This approach minimizes programming burden, promotes reproducibility, and allows institutions to share results without sharing patient-level data.
+
+---
+
+### Step 2B: Custom Data Science Workflows
+
+When more flexibility is needed—such as in early-phase exploratory work, novel study designs, or advanced modeling—researchers take a more customized approach. This involves:
+
+1. **Extracting the cohort** from the database using SQL or cohort-building tools.
+2. **Tidying and transforming the data**, including:
+
+   * Filtering for relevant time periods
+   * Joining tables (e.g., demographics, drug exposures, diagnoses)
+   * Creating derived variables or longitudinal features
+3. **Validating the data**, checking for missingness, implausible values, or inconsistencies.
+4. **Conducting analyses** using R packages tailored for:
+
+   * Descriptive statistics
+   * Prediction modeling
+   * Causal inference (e.g., propensity score matching, regression, survival analysis)
+5. **Documenting the workflow** using tools like RMarkdown and version control (e.g., GitHub) to ensure transparency and reproducibility.
+
+While this approach offers greater flexibility, it requires technical fluency and careful attention to reproducibility and versioning.
+
+---
+
+## Summary
+
+In RWD research, most of the work occurs **before** traditional statistical analysis begins. From evaluating data sources and developing phenotypes to deciding on a workflow path, these tasks require both methodological rigor and technical skills.
+
+Two major pathways—**standardized analytic pipelines** and **custom programming workflows**—serve different roles. Standardized tools like OHDSI HADES make it easy to run consistent, reproducible studies across institutions, while custom workflows allow for flexibility and innovation.
+
+A successful RWD researcher understands both approaches and can choose the right tool for the right task.
+

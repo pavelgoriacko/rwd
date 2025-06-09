@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Data Structures for Real-World Data | Real World Data for Clinical Research</title>
-  <meta name="description" content="4 Data Structures for Real-World Data | Real World Data for Clinical Research" />
+  <title>7 Study Designs for Real-World Evidence Generation | Real World Data for Clinical Research</title>
+  <meta name="description" content="7 Study Designs for Real-World Evidence Generation | Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Data Structures for Real-World Data | Real World Data for Clinical Research" />
+  <meta property="og:title" content="7 Study Designs for Real-World Evidence Generation | Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Data Structures for Real-World Data | Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="7 Study Designs for Real-World Evidence Generation | Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sources-of-real-world-data.html"/>
-<link rel="next" href="common-data-models-cdms-and-standardized-vocabularies.html"/>
+<link rel="prev" href="computable-phenotyping.html"/>
+<link rel="next" href="data-science-toolkit-for-real-world-data.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -219,82 +219,134 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-structures-for-real-world-data" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Data Structures for Real-World Data<a href="data-structures-for-real-world-data.html#data-structures-for-real-world-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="overview-2" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Overview<a href="data-structures-for-real-world-data.html#overview-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This chapter introduces how real-world data (RWD), especially electronic health record (EHR) and claims data, is stored and accessed. We begin with an introduction to relational databases—the standard structure for RWD—and walk through the processes by which these data are transformed into analysis-ready datasets. We then cover important topics like EHR architecture, reporting databases, query languages, and the concept of data abstraction.</p>
-<div id="learning-objectives-2" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Learning Objectives<a href="data-structures-for-real-world-data.html#learning-objectives-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="study-designs-for-real-world-evidence-generation" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Study Designs for Real-World Evidence Generation<a href="study-designs-for-real-world-evidence-generation.html#study-designs-for-real-world-evidence-generation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-5" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Overview<a href="study-designs-for-real-world-evidence-generation.html#overview-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once a computable phenotype has been defined and validated, the next step in a real-world data (RWD) study is to apply that phenotype in the context of a well-designed research question. The goal is to generate valid, reliable real-world evidence (RWE) from observational data. This chapter introduces foundational study designs and frameworks that help researchers minimize bias and enhance the validity of their findings.</p>
+<p>We focus primarily on <strong>cohort studies</strong> using <strong>logic-based phenotyping</strong>, which are the most common designs in RWD research. We also introduce basic graphical notation (e.g., DAGs) to illustrate key concepts.</p>
+</div>
+<div id="learning-objectives-5" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Learning Objectives<a href="study-designs-for-real-world-evidence-generation.html#learning-objectives-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Understand the concept of relational databases and how RWD is structured in multiple related tables.</li>
-<li>Differentiate between relational databases and research-ready datasets.</li>
-<li>Describe how EHR data is replicated for reporting and research purposes.</li>
-<li>Understand the role of data models in structuring data for specific uses.</li>
-<li>Recognize security and access considerations for RWD databases.</li>
-<li>Learn about different query methods, including SQL and APIs.</li>
-<li>Understand the concept of abstraction layers in research databases.</li>
+<li>Differentiate between major observational study designs.</li>
+<li>Describe key sources of bias in observational research.</li>
+<li>Explain the importance of the target trial emulation (TTE) framework.</li>
+<li>Understand how cohort studies are constructed in ATLAS.</li>
+<li>Identify techniques to mitigate confounding, selection bias, and measurement error.</li>
 </ul>
+<hr />
+</div>
+<div id="observational-study-designs" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Observational Study Designs<a href="study-designs-for-real-world-evidence-generation.html#observational-study-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are several types of observational studies, each suited to different research questions and data contexts:</p>
+<ul>
+<li><strong>Cross-sectional studies</strong>: Assess exposure and outcome at a single point in time.</li>
+<li><strong>Prospective cohort studies</strong>: Follow individuals over time from a defined starting point.</li>
+<li><strong>Retrospective cohort studies</strong>: Use historical data to define cohorts and follow-up periods.</li>
+<li><strong>Case-control studies</strong>: Identify subjects with an outcome of interest (cases) and compare their prior exposures to those without the outcome (controls).</li>
+</ul>
+<p>Among these, <strong>cohort studies</strong> are the most commonly used in real-world evidence generation, particularly when using common data models and tools like OHDSI’s ATLAS.</p>
+<hr />
+</div>
+<div id="key-challenges-in-observational-research" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Key Challenges in Observational Research<a href="study-designs-for-real-world-evidence-generation.html#key-challenges-in-observational-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Unlike randomized trials, observational studies face several threats to internal validity. The most common sources of bias include:</p>
+<ul>
+<li><strong>Confounding</strong>: Differences in baseline characteristics between exposed and unexposed groups that affect outcomes.</li>
+<li><strong>Selection bias</strong>: Systematic differences in who is included or excluded from the cohort.</li>
+<li><strong>Measurement error</strong>: Misclassification of exposures, outcomes, or covariates, often due to limitations of real-world data sources or phenotype definitions.</li>
+</ul>
+<hr />
+</div>
+<div id="cohort-studies" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Cohort Studies<a href="study-designs-for-real-world-evidence-generation.html#cohort-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>cohort</strong> is a set of individuals who meet one or more inclusion criteria over a defined period. Cohort studies observe these individuals forward in time to assess the occurrence of outcomes. Importantly:</p>
+<ul>
+<li>A clinical trial is a type of cohort study with randomized exposure.</li>
+<li>In observational research, exposures are not randomly assigned, so careful design is essential to draw valid conclusions.</li>
+</ul>
+<div id="graphical-representation" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Graphical Representation<a href="study-designs-for-real-world-evidence-generation.html#graphical-representation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cohort entry and time-at-risk can be visualized using timelines. The following image shows how events are anchored to the <strong>earliest qualifying event</strong>, which determines cohort entry:</p>
+<div class="float">
+<img src="../assets/EarliestEventExplained_1741104011510_0.png" alt="EarliestEventExplained.png" />
+<div class="figcaption">EarliestEventExplained.png</div>
+</div>
+<hr />
 </div>
 </div>
-<div id="relational-databases" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Relational Databases<a href="data-structures-for-real-world-data.html#relational-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most real-world data is stored in <strong>relational databases</strong>, a structure where data is distributed across multiple related tables. For example, in an EHR system:</p>
+<div id="target-trial-emulation-tte" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Target Trial Emulation (TTE)<a href="study-designs-for-real-world-evidence-generation.html#target-trial-emulation-tte" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>target trial emulation</strong> framework encourages researchers to explicitly design their observational studies to mimic a hypothetical randomized trial. This includes defining:</p>
 <ul>
-<li>One table may store patient demographics.</li>
-<li>Another table may contain visit information.</li>
-<li>A third table might include diagnosis codes, while a fourth has lab test results.</li>
+<li>Eligibility criteria</li>
+<li>Treatment strategies</li>
+<li>Assignment procedures (hypothetical, in the observational context)</li>
+<li>Follow-up period</li>
+<li>Outcome definition</li>
+<li>Causal contrast of interest</li>
+<li>Analysis plan</li>
 </ul>
-<p>These tables are “related” by shared keys (e.g., <code>patient_id</code>), allowing users to join them together to build a more complete picture of a patient’s healthcare journey.</p>
+<p>TTE is especially useful for reducing <strong>selection bias</strong> and clarifying the timing of exposures and outcomes—often referred to as <strong>time zero</strong>.</p>
+<hr />
 </div>
-<div id="research-ready-datasets" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Research-Ready Datasets<a href="data-structures-for-real-world-data.html#research-ready-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Researchers are often used to working with <strong>flat files</strong> or datasets where each row represents a subject, time point, or event. These are sometimes referred to as:</p>
+<div id="the-atlas-framework" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> The ATLAS Framework<a href="study-designs-for-real-world-evidence-generation.html#the-atlas-framework" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>OHDSI’s <strong>ATLAS</strong> platform provides a visual interface for constructing cohort-based studies. It enables:</p>
 <ul>
-<li><strong>Long format</strong>: Each row represents a specific observation or event.</li>
-<li><strong>Wide format</strong>: Each row represents a subject, and columns represent repeated measures or variables.</li>
+<li>Defining exposure and outcome cohorts using logic-based phenotyping.</li>
+<li>Specifying time-at-risk windows.</li>
+<li>Visualizing inclusion/exclusion criteria.</li>
+<li>Exporting study specifications for execution in distributed network studies.</li>
 </ul>
-<p>To create these from relational databases, data must be queried, joined, reshaped, and often summarized. This transformation process—from a normalized relational structure to a flat, analyzable format—is one of the most common tasks in preparing RWD for research.</p>
+<p>ATLAS helps standardize study designs and encourages reproducibility by aligning closely with the TTE framework.</p>
+<hr />
 </div>
-<div id="ehr-architecture-and-reporting-databases" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> EHR Architecture and Reporting Databases<a href="data-structures-for-real-world-data.html#ehr-architecture-and-reporting-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most EHR systems use a <strong>live production database</strong> optimized for clinical workflows and frequent read-write operations. These systems are not structured for reporting or research due to complex and performance-optimized schemas.</p>
-<p>To address this, health systems often maintain one or more <strong>replica databases</strong>:</p>
+<div id="addressing-bias-and-threats-to-validity" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Addressing Bias and Threats to Validity<a href="study-designs-for-real-world-evidence-generation.html#addressing-bias-and-threats-to-validity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="selection-bias" class="section level3 hasAnchor" number="7.8.1">
+<h3><span class="header-section-number">7.8.1</span> Selection Bias<a href="study-designs-for-real-world-evidence-generation.html#selection-bias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><strong>Reporting databases</strong> (e.g., Epic Caboodle) are structured to support analytics and operational reporting.</li>
-<li><strong>Research databases</strong> may replicate and restructure data further, sometimes into a <strong>common data model</strong> (discussed in later chapters).</li>
-</ul>
-<p>Each database has a different <strong>data model</strong>, depending on its intended use. Production databases prioritize performance and clinical reliability; reporting databases prioritize ease of querying and summarization.</p>
-</div>
-<div id="data-access-and-security" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Data Access and Security<a href="data-structures-for-real-world-data.html#data-access-and-security" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Access to RWD databases is usually restricted for privacy and compliance reasons. Important considerations include:</p>
-<ul>
-<li><strong>Access control</strong>: Only authorized users (e.g., institutional researchers) may have access.</li>
-<li><strong>Network restrictions</strong>: Access often requires connection to a secure local network or VPN.</li>
-<li><strong>Audit logs</strong>: All queries and data use may be logged for compliance.</li>
-<li><strong>De-identification</strong>: In some cases, data is de-identified before access, though many databases contain identifiable information.</li>
+<li>Choose time zero carefully (e.g., date of diagnosis vs. date of treatment).</li>
+<li>Use the TTE framework to clearly define eligibility and avoid immortal time bias.</li>
+<li>Assess how inclusion/exclusion criteria affect generalizability.</li>
 </ul>
 </div>
-<div id="querying-rwd" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Querying RWD<a href="data-structures-for-real-world-data.html#querying-rwd" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most relational databases are queried using <strong>Structured Query Language (SQL)</strong>. SQL allows users to select, filter, join, and aggregate data from different tables.</p>
-<p>However, not all data sources use SQL. For example:</p>
+<div id="confounding" class="section level3 hasAnchor" number="7.8.2">
+<h3><span class="header-section-number">7.8.2</span> Confounding<a href="study-designs-for-real-world-evidence-generation.html#confounding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><strong>APIs (Application Programming Interfaces)</strong> may be used to retrieve data from systems that do not support direct SQL access.</li>
-<li><strong>Elasticsearch</strong> is commonly used for querying unstructured data such as clinical notes and uses a <strong>JSON-based query structure</strong> instead of SQL.</li>
+<li><p>Identify confounders using domain expertise and tools like DAGs.</p></li>
+<li><p>Address confounding using:</p>
+<ul>
+<li>Stratification</li>
+<li>Matching (e.g., propensity score)</li>
+<li>Multivariable regression</li>
+<li>Inverse probability of treatment weighting (IPTW)</li>
+</ul></li>
 </ul>
-<p>Understanding which query method applies depends on the architecture and design of the data source.</p>
 </div>
-<div id="data-abstraction" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Data Abstraction<a href="data-structures-for-real-world-data.html#data-abstraction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To support research efficiently, many institutions develop <strong>abstraction layers</strong>—simplified versions of the full EHR database that are designed for specific research purposes. These often include:</p>
+<div id="measurement-error" class="section level3 hasAnchor" number="7.8.3">
+<h3><span class="header-section-number">7.8.3</span> Measurement Error<a href="study-designs-for-real-world-evidence-generation.html#measurement-error" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>A subset of patients or data elements relevant to research.</li>
-<li>Restructured tables for easier querying and analysis.</li>
-<li>Predefined phenotypes or cohorts.</li>
+<li>Evaluate the performance characteristics of phenotype definitions.</li>
+<li>Use sensitivity and specificity estimates to adjust results or interpret limitations.</li>
+<li>Conduct <strong>quantitative bias analysis</strong> when feasible.</li>
 </ul>
-<p>This abstraction reduces complexity and enhances usability but also limits flexibility. It’s important to understand what’s included—and excluded—in these datasets.</p>
+</div>
+<div id="additional-tools" class="section level3 hasAnchor" number="7.8.4">
+<h3><span class="header-section-number">7.8.4</span> Additional Tools<a href="study-designs-for-real-world-evidence-generation.html#additional-tools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Sensitivity analyses</strong>: Test robustness of results under varying assumptions.</li>
+<li><strong>P-value calibration</strong>: Adjust for multiple testing and observational bias.</li>
+<li><strong>Positive and negative controls</strong>: Benchmark your design against known outcomes.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="summary-4" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Summary<a href="study-designs-for-real-world-evidence-generation.html#summary-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Designing a high-quality RWD study requires more than defining a cohort—it demands attention to bias, careful emulation of randomized trials, and thoughtful evaluation of validity. Cohort studies, supported by the TTE framework and tools like ATLAS, provide a powerful foundation for generating credible real-world evidence when designed and executed rigorously.</p>
 
 </div>
 </div>
@@ -303,8 +355,8 @@
           </div>
         </div>
       </div>
-<a href="sources-of-real-world-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="common-data-models-cdms-and-standardized-vocabularies.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="computable-phenotyping.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-science-toolkit-for-real-world-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Data Structures for Real-World Data | Real World Data for Clinical Research</title>
-  <meta name="description" content="4 Data Structures for Real-World Data | Real World Data for Clinical Research" />
+  <title>8 Data Science Toolkit for Real-World Data | Real World Data for Clinical Research</title>
+  <meta name="description" content="8 Data Science Toolkit for Real-World Data | Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Data Structures for Real-World Data | Real World Data for Clinical Research" />
+  <meta property="og:title" content="8 Data Science Toolkit for Real-World Data | Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Data Structures for Real-World Data | Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="8 Data Science Toolkit for Real-World Data | Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sources-of-real-world-data.html"/>
-<link rel="next" href="common-data-models-cdms-and-standardized-vocabularies.html"/>
+<link rel="prev" href="study-designs-for-real-world-evidence-generation.html"/>
+
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -219,82 +219,191 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-structures-for-real-world-data" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Data Structures for Real-World Data<a href="data-structures-for-real-world-data.html#data-structures-for-real-world-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="overview-2" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Overview<a href="data-structures-for-real-world-data.html#overview-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This chapter introduces how real-world data (RWD), especially electronic health record (EHR) and claims data, is stored and accessed. We begin with an introduction to relational databases—the standard structure for RWD—and walk through the processes by which these data are transformed into analysis-ready datasets. We then cover important topics like EHR architecture, reporting databases, query languages, and the concept of data abstraction.</p>
-<div id="learning-objectives-2" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Learning Objectives<a href="data-structures-for-real-world-data.html#learning-objectives-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="data-science-toolkit-for-real-world-data" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Data Science Toolkit for Real-World Data<a href="data-science-toolkit-for-real-world-data.html#data-science-toolkit-for-real-world-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-6" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Overview<a href="data-science-toolkit-for-real-world-data.html#overview-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Modern real-world data (RWD) research is built on a foundation of computational tools and workflows. Gone are the days when datasets could be opened in Excel, manually cleaned, and exported to statistical software. Today’s research increasingly takes place within secure environments, uses massive datasets that cannot be downloaded, and relies on code-based workflows to ensure transparency, reproducibility, and collaboration.</p>
+<p>This chapter introduces the <strong>essential tools</strong> used in real-world evidence (RWE) generation—<strong>R, SQL, and Git</strong>—and explains why they are central to the future of clinical and translational research.</p>
+</div>
+<div id="learning-objectives-6" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Learning Objectives<a href="data-science-toolkit-for-real-world-data.html#learning-objectives-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Understand the concept of relational databases and how RWD is structured in multiple related tables.</li>
-<li>Differentiate between relational databases and research-ready datasets.</li>
-<li>Describe how EHR data is replicated for reporting and research purposes.</li>
-<li>Understand the role of data models in structuring data for specific uses.</li>
-<li>Recognize security and access considerations for RWD databases.</li>
-<li>Learn about different query methods, including SQL and APIs.</li>
-<li>Understand the concept of abstraction layers in research databases.</li>
+<li>Explain why traditional tools like Excel are not sufficient for working with RWD.</li>
+<li>Describe the benefits of code-based, literate programming approaches.</li>
+<li>Identify the roles of R, SQL, and Git in data science workflows.</li>
+<li>Understand the importance of reproducibility, collaboration, and auditability in research.</li>
+<li>Introduce the concept of “tidy data” and the role of data wrangling in analysis.</li>
+</ul>
+<hr />
+</div>
+<div id="why-learn-modern-tools" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Why Learn Modern Tools?<a href="data-science-toolkit-for-real-world-data.html#why-learn-modern-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-limits-of-excel" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> The Limits of Excel<a href="data-science-toolkit-for-real-world-data.html#the-limits-of-excel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Excel is still the most commonly used tool for data management in clinical research, but it introduces several risks and limitations, especially when working with complex, high-volume RWD:</p>
+<ul>
+<li>It can <strong>alter data types</strong>, dates, or numeric precision (e.g., converting gene names into dates).</li>
+<li>It has <strong>row limits</strong> and performance issues with large files.</li>
+<li>Excel files are not standardized—formatting and behavior may differ by version or user.</li>
+<li>It does not support reproducible workflows: each analysis step is hidden and difficult to trace or reproduce.</li>
 </ul>
 </div>
-</div>
-<div id="relational-databases" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Relational Databases<a href="data-structures-for-real-world-data.html#relational-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most real-world data is stored in <strong>relational databases</strong>, a structure where data is distributed across multiple related tables. For example, in an EHR system:</p>
+<div id="working-with-remote-data-repositories" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Working with Remote Data Repositories<a href="data-science-toolkit-for-real-world-data.html#working-with-remote-data-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Most RWD is <strong>stored on secure servers</strong> due to patient privacy concerns. For this reason, researchers are not allowed to download data to their local machines. Instead, they must:</p>
 <ul>
-<li>One table may store patient demographics.</li>
-<li>Another table may contain visit information.</li>
-<li>A third table might include diagnosis codes, while a fourth has lab test results.</li>
+<li><strong>Connect remotely</strong> to a database.</li>
+<li><strong>Write code</strong> (usually in SQL and R) to extract and analyze data.</li>
+<li>Work within <strong>institutional firewalls</strong> or <strong>virtual environments</strong> that are audited and access-controlled.</li>
 </ul>
-<p>These tables are “related” by shared keys (e.g., <code>patient_id</code>), allowing users to join them together to build a more complete picture of a patient’s healthcare journey.</p>
+<p>Many tools—especially those from the OHDSI community—are designed specifically for these environments. For example, OHDSI’s entire analytics stack is written in R, hosted on GitHub, and supports standardized analyses across distributed data networks.</p>
 </div>
-<div id="research-ready-datasets" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Research-Ready Datasets<a href="data-structures-for-real-world-data.html#research-ready-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Researchers are often used to working with <strong>flat files</strong> or datasets where each row represents a subject, time point, or event. These are sometimes referred to as:</p>
+<div id="literate-programming-and-reproducible-research" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Literate Programming and Reproducible Research<a href="data-science-toolkit-for-real-world-data.html#literate-programming-and-reproducible-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Modern tools support <strong>literate programming</strong>, a principle where code and narrative are woven together in a transparent, human-readable form (e.g., R Markdown). This approach enables:</p>
 <ul>
-<li><strong>Long format</strong>: Each row represents a specific observation or event.</li>
-<li><strong>Wide format</strong>: Each row represents a subject, and columns represent repeated measures or variables.</li>
-</ul>
-<p>To create these from relational databases, data must be queried, joined, reshaped, and often summarized. This transformation process—from a normalized relational structure to a flat, analyzable format—is one of the most common tasks in preparing RWD for research.</p>
-</div>
-<div id="ehr-architecture-and-reporting-databases" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> EHR Architecture and Reporting Databases<a href="data-structures-for-real-world-data.html#ehr-architecture-and-reporting-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most EHR systems use a <strong>live production database</strong> optimized for clinical workflows and frequent read-write operations. These systems are not structured for reporting or research due to complex and performance-optimized schemas.</p>
-<p>To address this, health systems often maintain one or more <strong>replica databases</strong>:</p>
-<ul>
-<li><strong>Reporting databases</strong> (e.g., Epic Caboodle) are structured to support analytics and operational reporting.</li>
-<li><strong>Research databases</strong> may replicate and restructure data further, sometimes into a <strong>common data model</strong> (discussed in later chapters).</li>
-</ul>
-<p>Each database has a different <strong>data model</strong>, depending on its intended use. Production databases prioritize performance and clinical reliability; reporting databases prioritize ease of querying and summarization.</p>
-</div>
-<div id="data-access-and-security" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Data Access and Security<a href="data-structures-for-real-world-data.html#data-access-and-security" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Access to RWD databases is usually restricted for privacy and compliance reasons. Important considerations include:</p>
-<ul>
-<li><strong>Access control</strong>: Only authorized users (e.g., institutional researchers) may have access.</li>
-<li><strong>Network restrictions</strong>: Access often requires connection to a secure local network or VPN.</li>
-<li><strong>Audit logs</strong>: All queries and data use may be logged for compliance.</li>
-<li><strong>De-identification</strong>: In some cases, data is de-identified before access, though many databases contain identifiable information.</li>
+<li><strong>Reproducibility</strong>: Anyone can re-run the code and get the same results.</li>
+<li><strong>Auditability</strong>: All steps are documented and can be reviewed.</li>
+<li><strong>Transparency</strong>: Decisions, assumptions, and logic are clearly stated.</li>
+<li><strong>Open Science</strong>: Sharing your code allows others to critique, reuse, and extend your work.</li>
 </ul>
 </div>
-<div id="querying-rwd" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Querying RWD<a href="data-structures-for-real-world-data.html#querying-rwd" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most relational databases are queried using <strong>Structured Query Language (SQL)</strong>. SQL allows users to select, filter, join, and aggregate data from different tables.</p>
-<p>However, not all data sources use SQL. For example:</p>
+<div id="collaboration" class="section level3 hasAnchor" number="8.3.4">
+<h3><span class="header-section-number">8.3.4</span> Collaboration<a href="data-science-toolkit-for-real-world-data.html#collaboration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Real-world research is often collaborative and distributed. Using code-based tools allows researchers to:</p>
 <ul>
-<li><strong>APIs (Application Programming Interfaces)</strong> may be used to retrieve data from systems that do not support direct SQL access.</li>
-<li><strong>Elasticsearch</strong> is commonly used for querying unstructured data such as clinical notes and uses a <strong>JSON-based query structure</strong> instead of SQL.</li>
+<li>Share workflows, packages, and functions across institutions.</li>
+<li>Use platforms like GitHub to track contributions and review changes.</li>
+<li>Participate in community-based initiatives like OHDSI, which provides open-source tools for RWD analytics.</li>
 </ul>
-<p>Understanding which query method applies depends on the architecture and design of the data source.</p>
+<hr />
 </div>
-<div id="data-abstraction" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Data Abstraction<a href="data-structures-for-real-world-data.html#data-abstraction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To support research efficiently, many institutions develop <strong>abstraction layers</strong>—simplified versions of the full EHR database that are designed for specific research purposes. These often include:</p>
+</div>
+<div id="core-tools-r-sql-and-git" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Core Tools: R, SQL, and Git<a href="data-science-toolkit-for-real-world-data.html#core-tools-r-sql-and-git" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="r" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> R<a href="data-science-toolkit-for-real-world-data.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>A subset of patients or data elements relevant to research.</li>
-<li>Restructured tables for easier querying and analysis.</li>
-<li>Predefined phenotypes or cohorts.</li>
+<li><strong>R</strong> is a programming language designed for data analysis and statistical computing.</li>
+<li>It has become one of the most widely used tools in RWD research, alongside Python.</li>
+<li>Researchers use <strong>RStudio</strong>, an integrated development environment (IDE), to write, debug, and run R code.</li>
+<li>R’s strength lies in its <strong>ecosystem of packages</strong>—modular libraries for importing, cleaning, analyzing, and visualizing data.</li>
+<li>Most OHDSI tools (e.g., CohortDiagnostics, PatientLevelPrediction) are written in R.</li>
 </ul>
-<p>This abstraction reduces complexity and enhances usability but also limits flexibility. It’s important to understand what’s included—and excluded—in these datasets.</p>
+</div>
+<div id="sql" class="section level3 hasAnchor" number="8.4.2">
+<h3><span class="header-section-number">8.4.2</span> SQL<a href="data-science-toolkit-for-real-world-data.html#sql" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>SQL (Structured Query Language)</strong> is the standard language for querying relational databases.</p></li>
+<li><p>It allows you to extract specific data elements from large datasets based on precise criteria.</p></li>
+<li><p>SQL is <strong>declarative</strong>: you describe what data you want, and the database engine figures out how to get it.</p></li>
+<li><p>While SQL syntax is generally consistent, different databases have dialects (e.g., PostgreSQL, Oracle, SQL Server).</p>
+<ul>
+<li>OHDSI’s <strong>SqlRender</strong> package helps standardize code across dialects.</li>
+</ul></li>
+<li><p>Understanding <strong>database schemas</strong> and <strong>standard vocabularies</strong> is essential for writing effective SQL queries in RWD contexts.</p></li>
+</ul>
+</div>
+<div id="git" class="section level3 hasAnchor" number="8.4.3">
+<h3><span class="header-section-number">8.4.3</span> Git<a href="data-science-toolkit-for-real-world-data.html#git" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Git</strong> is a version control system that tracks changes to code and documents over time.</p></li>
+<li><p>GitHub (or GitLab) is a platform where researchers can host, share, and collaborate on code.</p></li>
+<li><p>Benefits of using Git:</p>
+<ul>
+<li>Revert to prior versions of a script.</li>
+<li>Collaborate with others asynchronously.</li>
+<li>Submit or review code contributions (pull requests).</li>
+<li>Document work as it evolves.</li>
+</ul></li>
+</ul>
+<hr />
+<p>Thank you — your structure is very clear and aligns well with how real-world data science is actually practiced. Below is a revised version of the <strong>“Data Science in Practice”</strong> section that integrates your suggestions more explicitly. It emphasizes the two major analytic approaches up front, organizes the workflow into steps, and adds detail on what each path looks like in practical terms.</p>
+<hr />
+</div>
+</div>
+<div id="data-science-in-practice" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Data Science in Practice<a href="data-science-toolkit-for-real-world-data.html#data-science-in-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="two-analytic-approaches-standardized-vs-custom-workflows" class="section level3 hasAnchor" number="8.5.1">
+<h3><span class="header-section-number">8.5.1</span> Two Analytic Approaches: Standardized vs Custom Workflows<a href="data-science-toolkit-for-real-world-data.html#two-analytic-approaches-standardized-vs-custom-workflows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Real-world data science involves navigating large, complex, and sensitive clinical datasets in a way that produces valid, reproducible, and meaningful evidence. To do this effectively, researchers tend to follow one of two analytic approaches:</p>
+<ul>
+<li><p><strong>Standardized Analytics Pipelines</strong>
+These use pre-defined, validated tools (like OHDSI’s HADES packages) that encode best practices into reproducible study packages. They require minimal custom coding and are especially useful for large-scale studies or network research across multiple institutions.</p></li>
+<li><p><strong>Custom Data Science Workflows</strong>
+These offer greater flexibility and granularity, allowing researchers to define custom analyses in R or Python. These workflows are often used in exploratory studies, hypothesis generation, or when unique study designs or data transformations are required.</p></li>
+</ul>
+<p>Understanding when and how to use each approach is critical. Most projects begin with a similar first step and then diverge depending on the needs of the research question and the maturity of the available tools.</p>
+<hr />
+</div>
+<div id="step-1-foundation-building-tasks-shared-by-all-approaches" class="section level3 hasAnchor" number="8.5.2">
+<h3><span class="header-section-number">8.5.2</span> Step 1: Foundation-Building Tasks Shared by All Approaches<a href="data-science-toolkit-for-real-world-data.html#step-1-foundation-building-tasks-shared-by-all-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Regardless of the analytic pathway chosen, the initial stages of a real-world data (RWD) study generally include:</p>
+<ul>
+<li><p><strong>Assessing the Data Source</strong>
+Evaluating data completeness, timing, availability of key variables, and general fitness for answering the research question.</p></li>
+<li><p><strong>Phenotype Development and Evaluation</strong>
+Creating reproducible logic for defining exposures, outcomes, inclusion/exclusion criteria, and covariates, followed by evaluation of their performance characteristics (see earlier chapter on computable phenotyping).</p></li>
+<li><p><strong>Cohort Logic Construction</strong>
+Translating the inclusion/exclusion logic into code that can be applied to the database, either manually (via SQL or cohort definition tools) or automatically (via platforms like OHDSI ATLAS).</p></li>
+</ul>
+<p>Once these foundations are in place, the researcher decides between a standardized or custom approach to analysis.</p>
+<hr />
+</div>
+<div id="step-2a-standardized-analytics" class="section level3 hasAnchor" number="8.5.3">
+<h3><span class="header-section-number">8.5.3</span> Step 2A: Standardized Analytics<a href="data-science-toolkit-for-real-world-data.html#step-2a-standardized-analytics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In a standardized workflow, the researcher either:</p>
+<ul>
+<li><strong>Creates a new study package</strong> using tools like <strong>OHDSI ATLAS</strong> and <strong>HADES</strong>, or</li>
+<li><strong>Adopts an existing study package</strong> (e.g., from GitHub or the OHDSI community)</li>
+</ul>
+<p>These packages follow a specific structure and allow the researcher to:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Define the cohorts and covariates</strong> using standard concept sets and cohort definitions.</li>
+<li><strong>Point the package to the local OMOP CDM database</strong> by editing a single configuration file (usually <code>settings.json</code> or <code>Renviron</code>).</li>
+<li><strong>Specify all study parameters in one place</strong>, including cohort IDs, inclusion criteria, outcome definitions, time-at-risk windows, analysis strategies, and more.</li>
+<li><strong>Run the study locally</strong> or remotely on a secure database, without needing to extract raw data.</li>
+</ol>
+<p>The output typically includes:</p>
+<ul>
+<li>Baseline characteristics (e.g., demographics, comorbidities)</li>
+<li>Cohort attrition and flow diagrams</li>
+<li>Effect estimates and confidence intervals</li>
+<li>Diagnostic plots and tables for study evaluation</li>
+</ul>
+<p>This approach minimizes programming burden, promotes reproducibility, and allows institutions to share results without sharing patient-level data.</p>
+<hr />
+</div>
+<div id="step-2b-custom-data-science-workflows" class="section level3 hasAnchor" number="8.5.4">
+<h3><span class="header-section-number">8.5.4</span> Step 2B: Custom Data Science Workflows<a href="data-science-toolkit-for-real-world-data.html#step-2b-custom-data-science-workflows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When more flexibility is needed—such as in early-phase exploratory work, novel study designs, or advanced modeling—researchers take a more customized approach. This involves:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Extracting the cohort</strong> from the database using SQL or cohort-building tools.</p></li>
+<li><p><strong>Tidying and transforming the data</strong>, including:</p>
+<ul>
+<li>Filtering for relevant time periods</li>
+<li>Joining tables (e.g., demographics, drug exposures, diagnoses)</li>
+<li>Creating derived variables or longitudinal features</li>
+</ul></li>
+<li><p><strong>Validating the data</strong>, checking for missingness, implausible values, or inconsistencies.</p></li>
+<li><p><strong>Conducting analyses</strong> using R packages tailored for:</p>
+<ul>
+<li>Descriptive statistics</li>
+<li>Prediction modeling</li>
+<li>Causal inference (e.g., propensity score matching, regression, survival analysis)</li>
+</ul></li>
+<li><p><strong>Documenting the workflow</strong> using tools like RMarkdown and version control (e.g., GitHub) to ensure transparency and reproducibility.</p></li>
+</ol>
+<p>While this approach offers greater flexibility, it requires technical fluency and careful attention to reproducibility and versioning.</p>
+<hr />
+</div>
+</div>
+<div id="summary-5" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Summary<a href="data-science-toolkit-for-real-world-data.html#summary-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In RWD research, most of the work occurs <strong>before</strong> traditional statistical analysis begins. From evaluating data sources and developing phenotypes to deciding on a workflow path, these tasks require both methodological rigor and technical skills.</p>
+<p>Two major pathways—<strong>standardized analytic pipelines</strong> and <strong>custom programming workflows</strong>—serve different roles. Standardized tools like OHDSI HADES make it easy to run consistent, reproducible studies across institutions, while custom workflows allow for flexibility and innovation.</p>
+<p>A successful RWD researcher understands both approaches and can choose the right tool for the right task.</p>
 
 </div>
 </div>
@@ -303,8 +412,8 @@
           </div>
         </div>
       </div>
-<a href="sources-of-real-world-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="common-data-models-cdms-and-standardized-vocabularies.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="study-designs-for-real-world-evidence-generation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
