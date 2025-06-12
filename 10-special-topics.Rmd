@@ -1,0 +1,95 @@
+# Expanding the Boundaries of Real-World Data: Special Topics and Emerging Frontiers
+
+Real-world data (RWD) research is evolving rapidly, encompassing an expanding array of clinical domains, data types, and methodological innovations. This chapter explores specialized contexts where RWD is either uniquely promising or especially challenging. These include rare diseases, synthetic controls for single-arm trials, wearable devices, underrepresented clinical areas, high-dimensional data types like waveforms and imaging, and unstructured text from clinical notes. Each section highlights both the potential and the pitfalls of working in these domains, along with practical and ethical considerations for researchers.
+
+## Rare Diseases and Small Populations
+
+Rare diseases present distinct challenges for RWD research:
+
+* **Misdiagnosis and underreporting**: Rare conditions are frequently misdiagnosed or miscoded, leading to fragmented or inaccurate data.
+* **Limited data availability**: Most RWD sources lack the sample size needed for robust statistical analysis.
+* **Reliance on registries**: Rare disease studies often depend on disease-specific registries or patient advocacy datasets, which may not be linked to broader EHR systems.
+
+Researchers can address these challenges by:
+
+* Sharing data across sites and building federated networks
+* Using Bayesian or hierarchical models to borrow strength across subgroups
+* Integrating genomic or family history data to refine case identification
+
+## External Controls and Synthetic Comparators
+
+RWD can be used to construct external control arms for single-arm clinical trials, particularly in oncology and rare diseases:
+
+* **Approaches**: Propensity score matching, synthetic controls, and digital twins aim to create comparable non-intervention groups.
+* **Risks**: Lack of protocol harmonization, unmeasured confounding, and differing outcome definitions can compromise validity.
+
+To improve rigor:
+
+* Pre-specify endpoints and inclusion criteria aligned with the trial
+* Conduct sensitivity analyses and transparency reporting
+* Use regulatory guidance to ensure acceptability
+
+## Wearables and Device-Generated Data
+
+Wearable sensors and devices produce continuous, high-frequency data on activity, vital signs, and behaviors:
+
+* **Challenges**:
+
+  * Data is typically generated outside clinical settings and stored in proprietary formats
+  * There is often no standard way to integrate it into the EHR
+  * Quality can vary based on context and user behavior
+
+* **Opportunities**:
+
+  * Detect early clinical deterioration
+  * Understand behavior and adherence
+  * Supplement traditional clinical endpoints with real-time patient-generated data
+
+Researchers should consider working with informaticians and engineers to develop pipelines for cleaning, summarizing, and contextualizing device data.
+
+## Underrepresented Clinical Domains
+
+Certain clinical areas are poorly represented in mainstream RWD research:
+
+* **Dentistry**: Often stored in separate systems with limited linkage to medical EHRs
+* **Ophthalmology**: Relies heavily on imaging and specialized documentation tools
+* **Behavioral health**: Data may be narrative, coded differently, or subject to higher privacy protections
+
+To make progress:
+
+* Use domain-specific vocabularies and standards (e.g., SNODENT, DICOM)
+* Work with specialists to interpret data in context
+* Explore crosswalks and linkage strategies between clinical domains
+
+## High-Dimensional and Non-Tabular Data Types
+
+RWD is increasingly incorporating non-tabular data:
+
+* **Waveform data**: EKGs, EEGs, and respiratory signals often stored as raw time-series data
+* **Imaging data**: CT, MRI, and retinal imaging can contain rich diagnostic information
+
+These data types require:
+
+* Specialized infrastructure for storage and compute
+* Advanced analysis methods (e.g., signal processing, computer vision, deep learning)
+* Integration with clinical context for labeling and interpretation
+
+## Clinical Notes and Unstructured Text
+
+Free-text clinical documentation contains essential insights not captured in structured fields:
+
+* **Advantages**:
+
+  * Provides reasoning, nuance, and context
+  * Captures social, behavioral, and environmental factors
+* **Challenges**:
+
+  * Inconsistent language, misspellings, and abbreviations
+  * Difficult to deidentify reliably
+  * Requires NLP techniques for extraction
+
+Effective use of clinical notes involves:
+
+* Applying natural language processing (NLP) methods such as named entity recognition, negation detection, and temporal reasoning
+* Validating text-derived features against structured data
+* Balancing extraction quality with privacy protection

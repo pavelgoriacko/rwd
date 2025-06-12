@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Computable Phenotyping | Guide to Real World Data for Clinical Research</title>
-  <meta name="description" content="6 Computable Phenotyping | Guide to Real World Data for Clinical Research" />
+  <title>10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research</title>
+  <meta name="description" content="10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Computable Phenotyping | Guide to Real World Data for Clinical Research" />
+  <meta property="og:title" content="10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Computable Phenotyping | Guide to Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="common-data-models-cdms-and-standardized-vocabularies.html"/>
-<link rel="next" href="study-designs-for-real-world-evidence-generation.html"/>
+<link rel="prev" href="working-with-data-repositories.html"/>
+<link rel="next" href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -265,163 +265,70 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="computable-phenotyping" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Computable Phenotyping<a href="computable-phenotyping.html#computable-phenotyping" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="overview-4" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Overview<a href="computable-phenotyping.html#overview-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This chapter introduces the concept of computable phenotyping—the process of defining and identifying clinical concepts (e.g., diagnoses, exposures, outcomes) in real-world data using logic that can be implemented in a database query. Computable phenotypes are foundational to observational research because they determine who is included in a study, what exposures are measured, and how outcomes are identified.</p>
-<div id="learning-objectives-4" class="section level3 hasAnchor" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> Learning Objectives<a href="computable-phenotyping.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ethical-issues-in-real-world-data-use" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Ethical Issues in Real-World Data Use<a href="ethical-issues-in-real-world-data-use.html#ethical-issues-in-real-world-data-use" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Real-world data (RWD) offers tremendous promise for advancing clinical and translational research, but it also introduces a range of ethical challenges that differ from those in traditional randomized controlled trials (RCTs). RWD is observational by nature and is often collected for clinical, administrative, or operational purposes—not research. As such, it may be incomplete, inconsistently recorded, or subject to numerous biases. Unlike RCTs, most RWD studies do not obtain informed consent from individuals, which opens up additional challenges related to privacy, transparency, and community trust.</p>
+<p>This chapter explores the ethical dimensions of working with RWD, including methodological rigor, representation and equity, privacy, algorithmic bias, and public trust. Because RWD tends to reflect healthcare systems in wealthy, industrialized countries, and primarily includes individuals who access care at academic or large healthcare institutions, it can systematically exclude populations who face barriers to care, stigmatization, or live in under-resourced regions. Ethical stewardship of RWD therefore requires both rigorous methodological practices and community-centered governance frameworks.</p>
+<div id="methodological-bias-and-data-integrity" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Methodological Bias and Data Integrity<a href="ethical-issues-in-real-world-data-use.html#methodological-bias-and-data-integrity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Observational research using RWD is more prone to confounding, selection bias, and missing data compared to RCTs:</p>
 <ul>
-<li>Define computable phenotyping and explain its role in observational research.</li>
-<li>Distinguish between simple code-based definitions and more complex algorithmic phenotypes.</li>
-<li>Understand the challenges in implementing reliable, valid, and transportable phenotypes.</li>
-<li>Describe common methods for evaluating phenotype validity.</li>
-<li>Identify tools and frameworks that support phenotype development and reuse.</li>
-<li>Discuss the implications of phenotype definitions for bias, validity, and reproducibility.</li>
+<li><p><strong>Confounding</strong>: Failing to adequately control for variables associated with both treatment selection and outcomes can lead to incorrect conclusions. For instance, early observational studies suggested a benefit of vitamin E supplementation for cardiovascular health, but these findings were later contradicted by RCTs. Emulating target trials and applying advanced methods such as inverse probability weighting or instrumental variables can mitigate this.</p></li>
+<li><p><strong>Selection bias</strong>: This occurs when study populations differ from the target population. A notable example is hormone replacement therapy, where initial observational data (e.g., Nurses’ Health Study) showed benefit, but later RCTs (e.g., Women’s Health Initiative) showed harm—partly because observational studies selected for healthy, adherent patients. Designing studies with representative inclusion criteria and validating findings across datasets can help address this.</p></li>
+<li><p><strong>Missing data</strong>: Missingness is not random—it often reflects disparities in access to care. For example, an undocumented health condition may indicate the event never happened—or that the person lacked access to care, and the event went unrecorded. Imputation strategies and sensitivity analyses can reduce bias but should be carefully justified.</p></li>
+<li><p><strong>Data dredging (or p-hacking)</strong>: Because RWD studies do not typically require protocol registration or pre-specification of endpoints, researchers can be tempted (intentionally or not) to analyze data in ways that confirm their hypotheses. Even when studies are pre-registered, nothing prevents researchers from exploring outcomes using different methodologies before finalizing the protocol. Strategies to address this include committing to open science practices such as pre-registration, publishing study protocols and analytic code, and using the framework of target trial emulation to define methods before seeing results.</p></li>
 </ul>
 </div>
-</div>
-<div id="what-is-a-computable-phenotype" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> What is a Computable Phenotype?<a href="computable-phenotyping.html#what-is-a-computable-phenotype" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A <strong>computable phenotype</strong> is an algorithmic definition of a clinical state or characteristic—such as a disease, procedure, or medication exposure—that can be implemented on electronic health record (EHR) or other real-world data using code (e.g., SQL, Python, cohort definition tools).</p>
-<p>For example, a computable phenotype for diabetes might include:</p>
+<div id="representation-and-equity" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Representation and Equity<a href="ethical-issues-in-real-world-data-use.html#representation-and-equity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RWD can reinforce structural inequities in healthcare:</p>
 <ul>
-<li>A diagnosis code for diabetes (e.g., SNOMED or ICD-10),</li>
-<li>A medication code for insulin or oral antidiabetics (e.g., RxNorm),</li>
-<li>Lab results such as elevated hemoglobin A1c (e.g., LOINC codes).</li>
-</ul>
-<p>Depending on the research question, phenotypes can be more or less stringent, and may combine multiple data domains (e.g., diagnoses + medications + labs).</p>
-</div>
-<div id="types-of-phenotypes" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Types of Phenotypes<a href="computable-phenotyping.html#types-of-phenotypes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>1. Code-based Phenotypes:</strong></p>
-<ul>
-<li>Defined using one or more standardized codes (e.g., SNOMED, ICD-10, RxNorm).</li>
-<li>Often implemented as concept sets or value sets.</li>
-<li>Example: A cohort of patients with a diagnosis of myocardial infarction using SNOMED codes.</li>
-</ul>
-<p><strong>2. Rule-based Phenotypes:</strong></p>
-<ul>
-<li>Defined using logical combinations of codes, dates, and clinical context.</li>
-<li>Example: Two outpatient diabetes diagnoses at least 30 days apart plus an A1c ≥ 6.5%.</li>
-</ul>
-<p><strong>3. Machine Learning or NLP-derived Phenotypes:</strong></p>
-<ul>
-<li>Identified using probabilistic models trained on labeled data (e.g., chart-reviewed gold standard).</li>
-<li>Often used when structured codes are inadequate or unreliable.</li>
-<li>Example: Phenotyping depression using narrative clinical notes and structured data features.</li>
+<li><p><strong>Systematic exclusion</strong>: Patients with poor access to care, stigmatized conditions, or who avoid healthcare systems are often missing from RWD. This limits generalizability and may entrench disparities. Researchers should assess population coverage and consider linking to supplementary data sources to improve inclusiveness.</p></li>
+<li><p><strong>Non-representative sampling</strong>: RWD often reflects WEIRD populations—Western, Educated, Industrialized, Rich, and Democratic. Non-English speakers, rural populations, and those without insurance are often underrepresented. Collaborating with diverse healthcare settings and applying sampling weights or subgroup analyses can help.</p></li>
+<li><p><strong>Lack of detailed demographic data</strong>: Important dimensions of identity—such as language preference, sexual orientation, or multi-racial identity—are often incompletely or inaccurately captured, limiting the ability to study health disparities. Researchers should transparently describe data limitations and advocate for more inclusive data collection.</p></li>
 </ul>
 </div>
-<div id="validity-and-transportability" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Validity and Transportability<a href="computable-phenotyping.html#validity-and-transportability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Phenotype definitions can vary in:</p>
+<div id="algorithmic-bias" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Algorithmic Bias<a href="ethical-issues-in-real-world-data-use.html#algorithmic-bias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Machine learning models built on RWD can reproduce and amplify existing biases:</p>
 <ul>
-<li><strong>Sensitivity</strong>: Ability to identify all true cases.</li>
-<li><strong>Specificity</strong>: Ability to exclude non-cases.</li>
-<li><strong>Positive Predictive Value (PPV)</strong>: Probability that those identified truly have the condition.</li>
-<li><strong>Transportability</strong>: Applicability across different institutions or datasets.</li>
-</ul>
-<p>Validation is critical, especially for complex or algorithmic phenotypes. Some phenotypes undergo formal validation via chart review, replication across datasets, or comparison with gold standards.</p>
-<p>Here is a revised version of the <strong>Phenotype Evaluation</strong> section that closely aligns with your notes while maintaining a clear and accessible narrative suitable for a Bookdown textbook:</p>
-<hr />
-</div>
-<div id="phenotype-evaluation" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Phenotype Evaluation<a href="computable-phenotyping.html#phenotype-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>It is essential to <strong>objectively evaluate and report the performance characteristics</strong> of a computable phenotype. This process helps determine whether the phenotype is appropriate for the intended research question and minimizes misclassification bias in downstream analyses.</p>
-<p>While many biases in observational research have established mitigation techniques, phenotype misclassification is often not adequately addressed or quantified. Later in the course, we’ll discuss how misclassification propagates as measurement error and affects causal inference. For now, the key point is that phenotype performance must be evaluated with care and transparency.</p>
-<div id="what-makes-a-good-phenotype" class="section level3 hasAnchor" number="6.5.1">
-<h3><span class="header-section-number">6.5.1</span> What Makes a Good Phenotype?<a href="computable-phenotyping.html#what-makes-a-good-phenotype" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A “good” phenotype is one that is:</p>
-<ul>
-<li><strong>Explicit</strong>: The logic and components are clearly documented.</li>
-<li><strong>Reproducible</strong>: It can be implemented by other researchers or in other datasets.</li>
-<li><strong>Reliable</strong>: It yields consistent results over time or across users.</li>
-<li><strong>Valid</strong>: It accurately reflects the intended clinical concept for its research use.</li>
-</ul>
-<p>Good phenotype definitions provide detail on all components, including data elements (e.g., diagnoses, labs, medications), inclusion/exclusion logic, value sets (e.g., code lists), and temporal constraints. These should be clearly articulated and shareable to ensure reproducibility.</p>
-<p>Remember: <strong>no phenotype is perfect</strong>. The goal is to achieve <strong>reasonable sensitivity and specificity</strong>, or <strong>positive/negative predictive value (PPV/NPV)</strong>, depending on the research goals. Highly specific phenotypes may exclude borderline cases and reduce generalizability, while highly sensitive phenotypes may increase false positives. Researchers must choose the appropriate balance based on their use case.</p>
-</div>
-<div id="reliability-and-validity" class="section level3 hasAnchor" number="6.5.2">
-<h3><span class="header-section-number">6.5.2</span> Reliability and Validity<a href="computable-phenotyping.html#reliability-and-validity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Evaluating a phenotype typically involves comparing it to a “gold standard” — a reference set believed to represent the true clinical status of a cohort. This can involve:</p>
-<ul>
-<li><strong>Manual chart review</strong> (e.g., by clinicians),</li>
-<li><strong>Structured data proxies</strong>, or</li>
-<li><strong>Probabilistic models</strong> trained on annotated cases.</li>
-</ul>
-<p>However, defining a gold standard is difficult and subject to disagreement. For example, chart reviews themselves may only achieve ~80% inter-rater reliability, as shown in studies like Ostropolets et al. Therefore, some researchers use <strong>“silver standard”</strong> methods like constructing extreme sensitivity or specificity cohorts (xSens/xSpec) to approximate ground truth in the absence of full manual review.</p>
-<p>In addition to <strong>validity</strong> (i.e., accuracy relative to a gold standard), phenotypes should also be evaluated for <strong>reproducibility</strong> across datasets and institutions. A valid phenotype that only works in one health system may not generalize well.</p>
-</div>
-<div id="methods-of-phenotype-evaluation" class="section level3 hasAnchor" number="6.5.3">
-<h3><span class="header-section-number">6.5.3</span> Methods of Phenotype Evaluation<a href="computable-phenotyping.html#methods-of-phenotype-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Several approaches are available to evaluate phenotypes:</p>
-<div id="manual-chart-review" class="section level4 hasAnchor" number="6.5.3.1">
-<h4><span class="header-section-number">6.5.3.1</span> Manual Chart Review<a href="computable-phenotyping.html#manual-chart-review" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>Gold standard method.</li>
-<li>Involves clinical experts reviewing the EHR to confirm true case status.</li>
-<li>Resource-intensive and often limited to small samples.</li>
+<li><p><strong>Biases in proxy variables</strong>: Convenient surrogates for outcomes or health needs can inadvertently encode structural inequities. For example, a widely cited study by Obermeyer et al. showed that healthcare spending was used as a proxy for health needs, but at the same risk score, Black patients were significantly sicker than White patients. Careful validation of proxies and consultation with domain experts and community members can mitigate this risk.</p></li>
+<li><p><strong>Reinforcing unequal access</strong>: Predictive algorithms trained on historical care patterns may limit access to future care for already-marginalized groups. Transparency about algorithm design, public model documentation, and impact audits can help ensure fairness.</p></li>
 </ul>
 </div>
-<div id="structured-data-review" class="section level4 hasAnchor" number="6.5.3.2">
-<h4><span class="header-section-number">6.5.3.2</span> Structured Data Review<a href="computable-phenotyping.html#structured-data-review" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="privacy-and-data-protection" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Privacy and Data Protection<a href="ethical-issues-in-real-world-data-use.html#privacy-and-data-protection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The sensitivity of health data raises serious privacy concerns:</p>
 <ul>
-<li>Uses other structured fields (e.g., medications, labs) to cross-check the phenotype logic.</li>
-<li>Often used in conjunction with or in place of full chart review.</li>
+<li><p><strong>Risk of re-identification</strong>: Even deidentified data can sometimes be re-identified, especially when combined with other data sets. This is particularly concerning for stigmatized conditions such as HIV, disability, or autism. Applying rigorous deidentification techniques (e.g., date shifting, truncation of ZIP codes) and conducting re-identification risk assessments are important safeguards.</p></li>
+<li><p><strong>Misuse by third parties</strong>: Health data could be accessed or purchased by insurers, employers, or government agencies and used to discriminate. Clear data use agreements and access policies are essential.</p></li>
+<li><p><strong>Building public trust</strong>: It is essential to foster trust through rigorous data stewardship and governance processes that are transparent and inclusive. Institutions should communicate openly about data protections and provide mechanisms for concerns or opt-outs where feasible.</p></li>
 </ul>
 </div>
-<div id="cohort-characteristics" class="section level4 hasAnchor" number="6.5.3.3">
-<h4><span class="header-section-number">6.5.3.3</span> Cohort Characteristics<a href="computable-phenotyping.html#cohort-characteristics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="informed-consent-social-license-and-public-trust" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Informed Consent, Social License, and Public Trust<a href="ethical-issues-in-real-world-data-use.html#informed-consent-social-license-and-public-trust" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most RWD studies do not obtain informed consent from individuals, relying instead on waivers approved by institutional review boards (IRBs) under regulations like 45 CFR 46.116(d). These waivers are granted when the research poses minimal risk and cannot practicably be carried out with consent due to scale.</p>
+<p>However, this regulatory framework does not fully address broader social and ethical concerns. Patients may object to their data being used for politically motivated or stigmatizing research, even if deidentified and IRB-approved. This raises the issue of <strong>social license</strong>—the informal but essential approval from the public that data use aligns with community values and expectations.</p>
 <ul>
-<li>Review of descriptive statistics of the identified cohort (e.g., age, sex, comorbidities).</li>
-<li>Can highlight unexpected patterns that may signal errors or unintended logic.</li>
-<li><strong>Example tool</strong>: OHDSI’s <strong>CohortDiagnostics</strong> package, which produces detailed reports comparing phenotype logic, code sets, and output across sites.</li>
+<li><strong>Empowering communities</strong>: Large-scale data use should involve representative stakeholders in governance decisions, especially when studying sensitive or marginalized populations. Community advisory boards and patient representatives can guide research design and ensure cultural sensitivity.</li>
+<li><strong>Preventing social harm</strong>: Even deidentified data use can perpetuate stigma or discrimination, especially if the research implies that certain identities or conditions are pathological. Ethical review should assess not only individual risk but also social harm.</li>
+<li><strong>Transparency</strong>: Researchers must be clear about how data is used, shared, and protected—and ensure that studies do not inadvertently undermine trust in the healthcare system. Public-facing summaries and open communication can enhance accountability.</li>
 </ul>
-</div>
-<div id="phevaluator" class="section level4 hasAnchor" number="6.5.3.4">
-<h4><span class="header-section-number">6.5.3.4</span> PheValuator<a href="computable-phenotyping.html#phevaluator" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="case-study-autism-database-proposal" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Case Study: Autism Database Proposal<a href="ethical-issues-in-real-world-data-use.html#case-study-autism-database-proposal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In 2024, Health Secretary Robert F. Kennedy Jr. faced criticism for his plan to create a national autism registry. While registries are common in RWD research, this proposal raised alarm due to its framing of autism as a disease to be tracked, fueling fears of stigma and surveillance. The controversy highlights several key ethical concerns:</p>
 <ul>
-<li>A tool developed by OHDSI that uses machine learning to predict the probability of a condition based on structured data.</li>
-<li>Can estimate sensitivity, specificity, PPV, and NPV without requiring manual review.</li>
-<li>Often used in conjunction with xSens/xSpec cohorts.</li>
+<li><strong>Framing and harm</strong>: Labeling autism as a preventable disease can undermine the neurodiversity movement and harm people who identify as autistic.</li>
+<li><strong>Consent and governance</strong>: Many individuals do not want their data used for politically charged or scientifically unsupported research.</li>
+<li><strong>Deidentification and fear</strong>: Even if data is deidentified, there were concerns that individuals with autism could be tracked or targeted.</li>
 </ul>
-</div>
-<div id="large-language-models-llms" class="section level4 hasAnchor" number="6.5.3.5">
-<h4><span class="header-section-number">6.5.3.5</span> Large Language Models (LLMs)<a href="computable-phenotyping.html#large-language-models-llms" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>Emerging technique where LLMs read through clinical notes and assess whether a patient fits a given phenotype.</li>
-<li>Can be used for sensitivity/specificity estimation, particularly for conditions not well-captured in structured data.</li>
-<li>Still under active research but offers scalable alternatives to manual review.</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="impact-on-research-validity" class="section level2 hasAnchor" number="6.6">
-<h2><span class="header-section-number">6.6</span> Impact on Research Validity<a href="computable-phenotyping.html#impact-on-research-validity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Phenotype definitions have a profound effect on study validity:</p>
-<ul>
-<li><strong>Misclassification</strong> can introduce measurement bias and distort associations.</li>
-<li><strong>Differences in data availability</strong> (e.g., presence or absence of outpatient labs) can limit phenotype portability.</li>
-<li><strong>Transparency</strong> in phenotype definitions is essential for reproducibility and peer review.</li>
-</ul>
-<p>Researchers should always describe phenotype logic in sufficient detail and, when possible, share code and concept sets to enable reuse.</p>
-</div>
-<div id="summary-3" class="section level2 hasAnchor" number="6.7">
-<h2><span class="header-section-number">6.7</span> Summary<a href="computable-phenotyping.html#summary-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Computable phenotyping transforms messy, heterogeneous real-world data into meaningful clinical variables that drive cohort selection, exposure definitions, and outcome measurement. Designing valid, reproducible, and transparent phenotypes is a foundational skill for real-world data research and requires a mix of clinical knowledge, informatics skills, and awareness of data limitations.</p>
-</div>
-<div id="phenotyping-tools-and-resources" class="section level2 hasAnchor" number="6.8">
-<h2><span class="header-section-number">6.8</span> Phenotyping Tools and Resources<a href="computable-phenotyping.html#phenotyping-tools-and-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Several platforms and initiatives support development and sharing of computable phenotypes:</p>
-<ul>
-<li><strong>OHDSI Atlas</strong>: A web-based tool for defining and executing cohorts using the OMOP CDM.</li>
-<li><strong>PheKB (Phenotype KnowledgeBase)</strong>: A repository of phenotyping algorithms, often for i2b2 or custom data models.</li>
-<li><strong>eMERGE Network</strong>: A collaborative effort to develop and validate phenotypes using EHR and genomic data.</li>
-<li><strong>Phenotype libraries</strong>: Many institutions maintain internal phenotype libraries, often built around their local data models.</li>
-</ul>
-<p>These tools often support cohort definition using user interfaces, standard vocabularies, and shareable JSON or SQL logic.</p>
+<p><strong>Reflection Question:</strong></p>
+<blockquote>
+<p>Should individuals have a say in how their health data is used—even if the data is deidentified and the research is IRB-approved? How can we ensure ethical oversight for politically or socially sensitive studies?</p>
+</blockquote>
+<p>Real-world data holds enormous potential to advance health and equity—but only if used ethically and responsibly. This requires not only technical excellence but also moral clarity, humility, and a commitment to the communities behind the data.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -429,8 +336,8 @@
           </div>
         </div>
       </div>
-<a href="common-data-models-cdms-and-standardized-vocabularies.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="study-designs-for-real-world-evidence-generation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-with-data-repositories.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
