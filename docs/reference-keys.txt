@@ -1,6 +1,7 @@
 introduction
 disclaimer
 preface
+license
 credits-and-acknowledgments
 introduction-to-real-world-data-rwd-and-real-world-evidence-rwe
 overview
