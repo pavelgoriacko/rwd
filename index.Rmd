@@ -1,6 +1,6 @@
 ---
 title: "Guide to Real World Data for Clinical Research"
-author: "Pavel Goriacko and Danielle Boyce"
+author: "Pavel Goriacko, PharmD, MPH and Danielle Boyce, DPA, MPH"
 site: "bookdown::bookdown_site"
 output:
   bookdown::gitbook:
