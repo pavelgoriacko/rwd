@@ -89,10 +89,6 @@ Real-world research is often collaborative and distributed. Using code-based too
 
 ---
 
-Thank you — your structure is very clear and aligns well with how real-world data science is actually practiced. Below is a revised version of the **“Data Science in Practice”** section that integrates your suggestions more explicitly. It emphasizes the two major analytic approaches up front, organizes the workflow into steps, and adds detail on what each path looks like in practical terms.
-
----
-
 ## Data Science in Practice
 
 ### Two Analytic Approaches: Standardized vs Custom Workflows
