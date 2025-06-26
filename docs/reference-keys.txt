@@ -8,7 +8,6 @@ overview
 learning-objectives
 what-is-real-world-data-rwd
 what-is-real-world-evidence-rwe
-why-is-rwd-important
 applications-of-rwd-and-rwe
 limitations-and-considerations
 summary

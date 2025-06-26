@@ -1,3 +1,7 @@
+---
+bibliography: references.bib
+---
+
 # Introduction to Real-World Data (RWD) and Real-World Evidence (RWE)
 
 ## Overview
@@ -6,62 +10,48 @@ This chapter introduces the foundational concepts of real-world data (RWD) and r
 
 ### Learning Objectives
 
-* Define RWD and RWE
-* Understand the importance of RWD in clinical and translational research
-* Identify key applications of RWD and RWE
-* Distinguish between different types of real-world data sources
+-   Define RWD and RWE
+-   Understand the importance of RWD in clinical and translational research
+-   Identify key applications of RWD and RWE
+-   Distinguish between different types of real-world data sources
 
 ## What is Real-World Data (RWD)?
 
-Real-world data refers to data relating to patient health status and/or the delivery of health care routinely collected from a variety of sources. Common types include:
+Real-world data (RWD) refers to information about patient health and healthcare delivery that is collected during the routine course of care, rather than through carefully controlled experimental settings like randomized controlled trials. Unlike data gathered for the explicit purpose of testing a hypothesis under strict protocols, RWD is generated and captured as a result of day-to-day operation of the healthcare system.
 
-* Electronic Health Records (EHRs)
-* Medical claims and billing data
-* Product and disease registries
-* Patient-generated data (e.g., through mobile devices or surveys)
-* Data from digital health technologies
+Sources of real-world data are diverse. One of the most prominent is the electronic health record (EHR), which captures clinical notes, diagnoses, medications, lab results, and procedures during patient encounters. Medical claims and billing data are also commonly used; these capture healthcare utilization, diagnoses, and procedures submitted for reimbursement, and are often available across large populations. Product and disease registries offer structured data about patients with specific conditions or exposures, often across multiple institutions. In addition, the scope of RWD has been expanding to the growing body of patient-generated data, collected through surveys, mobile devices, wearable sensors, or home monitoring equipment. Digital health technologies—such as telemedicine platforms and patient portals—are also increasingly contributing to the RWD ecosystem.
 
-Each have their distinct advantages and drawbacks and must be carefully evaluated for their fit to answer the research question at hand. 
+Each of these sources has distinct advantages and limitations for research. Some offer breadth, covering large populations over long periods of time, while others provide clinical detail at the individual level. Importantly, none of these sources are purpose-built for research, and each must be carefully evaluated for relevance, accuracy, and completeness in relation to the question being asked. For example, EHR data may offer granular clinical insights but are often plagued by missing or inconsistently documented information. Claims data may capture large populations and longitudinal follow-up, but typically lack clinical nuance and are subject to billing conventions rather than clinical judgment. Repurposing these data for research requires careful attention to data quality, thoughtful study design, and analytic approaches that account for inherent biases.
 
 ## What is Real-World Evidence (RWE)?
 
-Real-world evidence is the clinical evidence regarding the usage and potential benefits or risks of a medical product derived from analysis of RWD. It can support:
+Real-world evidence (RWE) refers to clinical evidence about the use, effectiveness, or safety of medical products and interventions, derived from the analysis of real-world data (RWD). Unlike evidence generated from randomized controlled trials, which are conducted under highly controlled conditions, RWE reflects what happens in routine clinical settings. It captures how interventions perform across broader patient populations, varied clinical workflows, and the constraints of everyday practice.
 
-* Regulatory decision-making
-* Clinical guideline development
-* Health technology assessments
-* Quality improvement
+While randomized trials remain the gold standard for evaluating efficacy of clinical interventions, they are not always feasible. Trials can be expensive, time-consuming, and in some cases, ethically problematic—for example, when randomizing patients to a treatment known to be inferior. In these situations, real-world data can provide a practical alternative. By analyzing information already collected during routine care, researchers can generate meaningful evidence to inform clinical decisions, health policy, and regulatory evaluation when conducting a randomized trial would not be possible.
 
-## Why is RWD Important?
+### Applications of RWD and RWE
 
-* Complements traditional clinical trials by reflecting broader and more diverse patient populations
-* Offers insights into real-world effectiveness, safety, and utilization
-* Enables learning health systems to continuously improve care
+The growing availability and utility of RWD have led to a wide range of applications for real-world evidence. Regulatory agencies such as the U.S. Food and Drug Administration are increasingly incorporating RWE into decisions about drug approvals, label modifications, and post-market safety monitoring. Clinical guideline developers use RWE to inform recommendations in areas where randomized trials are lacking or limited in generalizability.
 
-## Applications of RWD and RWE
+RWE also plays a central role in health technology assessments, helping evaluate the real-world value and cost-effectiveness of new therapies. Within health systems, RWD supports quality improvement efforts by identifying care gaps, tracking performance metrics, and guiding targeted interventions.
 
-* Drug safety monitoring and post-market surveillance
-* Comparative effectiveness research
-* Observational studies to support hypothesis generation
-* Pragmatic clinical trials
-* Health equity research
+In research contexts, RWD enables observational studies, hypothesis generation, and comparative effectiveness research. It can support pragmatic clinical trials by streamlining patient recruitment and outcome assessment using existing data infrastructure. Increasingly, it is also being leveraged to study health equity, helping identify and address disparities in care access and outcomes.
 
+### Limitations and Considerations
 
+Despite its potential, the use of RWD and RWE comes with important challenges. Data quality and completeness can vary widely, especially when information is recorded primarily for clinical or administrative purposes rather than research. Key variables may be missing, inconsistently documented, or difficult to interpret.
 
-## Limitations and Considerations
+Analyses using RWD are also susceptible to confounding and bias, since treatment assignment is not randomized. Robust study design and analytic methods are essential to mitigate these risks and generate valid, credible findings.
 
-* Data quality and completeness
-* Potential biases and confounding
-* Privacy and governance issues
-* Varying data structures and lack of standardization
+Additionally, researchers must navigate issues of data privacy, governance, and interoperability. Ensuring responsible data use requires clear policies, secure infrastructure, and compliance with legal and ethical standards. The lack of data standardization across sources can further complicate integration and analysis.
 
-## Summary
+### Summary
 
-Real-world data and real-world evidence play an increasingly central role in modern clinical and translational research. Understanding their strengths, limitations, and appropriate applications is essential for designing impactful studies that improve health outcomes.
+Real-world data and real-world evidence are reshaping how we study and improve healthcare. By capturing what happens outside of clinical trials, they offer insights that are more generalizable, timely, and relevant to real-world practice. At the same time, using these data effectively requires a clear understanding of their strengths, limitations, and appropriate applications. For clinicians and researchers, developing fluency in RWD and RWE is now an essential part of conducting meaningful and impactful health research.
 
 ## Suggested Readings
 
-* FDA Framework for RWE
-* NICE RWE Framework
-* Report from the NIH Pragmatic Trials Collaboratory on EHR data use
-* Khozin et al., 2022: Applications of RWD in oncology research
+-   [Framework for FDA’s Real-World Evidence Program](https://www.fda.gov/media/120060/download?attachment)
+-   [NICE Real World Evidence Framework](https://www.nice.org.uk/corporate/ecd9/resources/nice-realworld-evidence-framework-pdf-1124020816837)
+-   [Rethinking Clinical Trials: Using Electronic Health Record Data in Pragmatic Clinical Trials](https://rethinkingclinicaltrials.org/chapters/design/using-electronic-health-record-data-pragmatic-clinical-trials-top/using-electronic-health-record-data-in-pragmatic-clinical-trials-introduction/)
+-   [Khozin et al., 2017: Real-world Data for Clinical Evidence Generation in Oncology](https://pubmed.ncbi.nlm.nih.gov/29059439/)
