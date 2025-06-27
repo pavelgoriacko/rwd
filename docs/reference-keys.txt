@@ -15,14 +15,11 @@ suggested-readings
 sources-of-real-world-data
 overview-1
 learning-objectives-1
-categories-of-rwd-sources
 electronic-health-records-ehr
 administrative-claims-data
-registries
 patient-generated-health-data-pghd
 other-sources
-comparing-sources
-considerations-for-researchers
+matching-the-data-source-to-the-research-question
 summary-1
 suggested-readings-1
 data-structures-for-real-world-data
