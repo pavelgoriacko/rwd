@@ -8,11 +8,11 @@ This chapter introduces the primary sources of real-world data (RWD), each with 
 
 By the end of this chapter, readers will be able to:
 
--    Understand the major categories of RWD sources.
+-   Understand the major categories of RWD sources.
 
--    Compare the advantages and limitations of different data sources.
+-   Compare the advantages and limitations of different data sources.
 
--    Identify appropriate use cases for each source of RWD.
+-   Identify appropriate use cases for each source of RWD.
 
 -   Recognize the implications of data provenance for study design and interpretation.
 
@@ -32,13 +32,13 @@ For studies that require detailed clinical information—such as disease phenoty
 
 ## Administrative Claims Data
 
-Administrative claims data are generated during the process of billing and reimbursement for healthcare services. Unlike EHRs, which document the full clinical encounter, claims are structured around the submission of charges for diagnoses, procedures, and medications, and therefore reflect the services that were actually delivered and paid for.
+Administrative claims data are generated during the process of billing and reimbursement for healthcare services. Unlike EHRs, which document the full clinical encounter, claims are structured around the submission of charges for diagnoses, procedures, and medications, and therefore reflect the services that were actually delivered and paid for. The Centers for Medicare and Medicaid Services (CMS) maintain one of the most commonly utilized claims databases in the United States and provide freely accessible [synthetic data files](https://data.cms.gov/collection/synthetic-medicare-enrollment-fee-for-service-claims-and-prescription-drug-event) for researchers to learn and explore claims data structure.
 
 Because they are used for reimbursement, claims data capture **performed actions**—for example, procedures completed, medications dispensed, and services rendered. This makes them particularly reliable for assessing healthcare utilization, treatment patterns, and costs. Importantly, they do not capture clinical **intent**—there is no record of what a clinician considered or ordered unless that action resulted in a reimbursable service. For instance, a medication prescribed in the EHR will only appear in claims data if it was actually filled and billed through a pharmacy benefit manager.
 
 Claims data are typically highly structured and use standardized coding systems such as ICD (diagnoses), CPT or HCPCS (procedures), and NDC (medications). This standardization makes claims well suited for large-scale, multisite, or longitudinal studies, especially those focused on service utilization, payment, or population health management.
 
-Another key strength of claims data is that they often capture care delivered across **multiple health systems**. A patient’s claims history, particularly in datasets from large payers like Medicare or Medicaid, may include encounters from hospitals, clinics, pharmacies, and other providers—regardless of affiliation—so long as the services were reimbursed. This gives claims a broader view of healthcare delivery than a single EHR system can typically provide.
+Another key strength of claims data is that they often capture care delivered across multiple health systems. A patient’s claims history, particularly in datasets from large payers like Medicare or Medicaid, may include encounters from hospitals, clinics, pharmacies, and other providers—regardless of affiliation—so long as the services were reimbursed. This gives claims a broader view of healthcare delivery than a single EHR system can typically provide.
 
 However, claims data come with important limitations. They lack clinical granularity: vital signs, laboratory results, disease severity, imaging findings, and patient-reported outcomes are not available. In addition, claims data usually lack detailed timestamps. Diagnoses and procedures are often recorded for the entire encounter, with little information about their precise timing or sequence. For example, a patient hospitalized for two weeks may have a billing claim that includes a diagnosis of venous thromboembolism (VTE), but the claim won’t indicate whether the VTE was present on admission or occurred later during the hospital stay. This limitation makes it difficult to establish temporal relationships or assess causality without supplementary data sources.
 
@@ -83,7 +83,7 @@ Timing is another key consideration. Claims data typically summarize services at
 In general, EHRs offer clinical depth, claims provide population scale and continuity, and registries ensure data quality for focused conditions. Understanding these differences—and aligning the data source to the needs of the question—is essential for designing rigorous and feasible real-world evidence studies.
 
 | Data Source | Strengths | Limitations | Best Use Cases |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | EHR | Rich clinical data, longitudinal | Incomplete, messy, variable | Clinical outcomes, phenotyping |
 | Claims | Large scale, consistent coding | Limited clinical granularity | Utilization, economic outcomes |
 | Registries | Focused, high-quality data | Selection bias, limited population scope, limited number of variables | Rare diseases, descriptive studies, linking to more comprehensive datasets |
@@ -95,9 +95,7 @@ Each source of real-world data has its own strengths and limitations, shaped by 
 
 ## Suggested Readings
 
--   [Selection of Data Sources](https://effectivehealthcare.ahrq.gov/sites/default/files/ch_8-user-guide-to-ocer_130129.pdf) Developing an Observational CER Protocol: A USer's Guide, AHRQ <!-- NOTE TO PAVEL: Could not find an online source for:
-    * Penberthy LT, Rivera DR, Lund JL, Bruno MA, Meyer AM. [An overview of real-world data sources for oncology and considerations for research](https://doi.org/10.3322/caac.21714). CA Cancer J Clin. 2022. 
-    * National Academy of Medicine (2021). "Electronic Health Records and Research: Possibilities and Realities."
-    -->
+-   [Selection of Data Sources](https://effectivehealthcare.ahrq.gov/sites/default/files/ch_8-user-guide-to-ocer_130129.pdf) Developing an Observational CER Protocol: A User's Guide, AHRQ
 -   [Electronic Health Record Data for Research at UCSF (Video)](https://www.youtube.com/watch?v=hFTLD0HEiCw)
 -   Gliklich et al. [Registries for Evaluating Patient Outcomes: A User's Guide, AHRQ](https://effectivehealthcare.ahrq.gov/sites/default/files/pdf/registries-evaluating-patient-outcomes-4th-edition.pdf).
+-   [Synthetic Medicare Enrollment, Fee-for-Service Claims, and Prescription Drug Event](https://data.cms.gov/collection/synthetic-medicare-enrollment-fee-for-service-claims-and-prescription-drug-event)
