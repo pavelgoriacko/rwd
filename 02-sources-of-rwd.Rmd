@@ -83,7 +83,7 @@ Timing is another key consideration. Claims data typically summarize services at
 In general, EHRs offer clinical depth, claims provide population scale and continuity, and registries ensure data quality for focused conditions. Understanding these differences—and aligning the data source to the needs of the question—is essential for designing rigorous and feasible real-world evidence studies.
 
 | Data Source | Strengths | Limitations | Best Use Cases |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | EHR | Rich clinical data, longitudinal | Incomplete, messy, variable | Clinical outcomes, phenotyping |
 | Claims | Large scale, consistent coding | Limited clinical granularity | Utilization, economic outcomes |
 | Registries | Focused, high-quality data | Selection bias, limited population scope, limited number of variables | Rare diseases, descriptive studies, linking to more comprehensive datasets |
