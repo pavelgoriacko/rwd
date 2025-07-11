@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Guide to Real World Data for Clinical Research</title>
-  <meta name="description" content="Guide to Real World Data for Clinical Research" />
+  <title>7 Study Designs for Real-World Evidence Generation | Guide to Real World Data for Clinical Research</title>
+  <meta name="description" content="7 Study Designs for Real-World Evidence Generation | Guide to Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Guide to Real World Data for Clinical Research" />
+  <meta property="og:title" content="7 Study Designs for Real-World Evidence Generation | Guide to Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Guide to Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="7 Study Designs for Real-World Evidence Generation | Guide to Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"/>
+<link rel="prev" href="computable-phenotyping.html"/>
+<link rel="next" href="data-science-toolkit-for-real-world-data.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -260,50 +260,134 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Guide to Real World Data for Clinical Research</h1>
-<p class="author"><em>Pavel Goriacko, PharmD, MPH and Danielle Boyce, DPA, MPH</em></p>
+<div id="study-designs-for-real-world-evidence-generation" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Study Designs for Real-World Evidence Generation<a href="study-designs-for-real-world-evidence-generation.html#study-designs-for-real-world-evidence-generation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-5" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Overview<a href="study-designs-for-real-world-evidence-generation.html#overview-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once a computable phenotype has been defined and validated, the next step in a real-world data (RWD) study is to apply that phenotype in the context of a well-designed research question. The goal is to generate valid, reliable real-world evidence (RWE) from observational data. This chapter introduces foundational study designs and frameworks that help researchers minimize bias and enhance the validity of their findings.</p>
+<p>We focus primarily on <strong>cohort studies</strong> using <strong>logic-based phenotyping</strong>, which are the most common designs in RWD research. We also introduce basic graphical notation (e.g., DAGs) to illustrate key concepts.</p>
 </div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="disclaimer" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Disclaimer<a href="index.html#disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is a <strong>living draft</strong> and part of an ongoing effort to make real-world data (RWD) methods more accessible to clinician-researchers. We are sharing it publicly as part of a “work in public” philosophy—prioritizing openness, collaboration, and early feedback over polished perfection.</p>
-<p>As such, please be aware of the following:</p>
+<div id="learning-objectives-5" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Learning Objectives<a href="study-designs-for-real-world-evidence-generation.html#learning-objectives-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><strong>The content is incomplete.</strong> Many sections are still in development, and you may encounter missing examples, rough outlines, or placeholders.</li>
-<li><strong>There may be inaccuracies.</strong> Some statements have not yet been fully reviewed or fact-checked. Do not treat this draft as a definitive reference.</li>
-<li><strong>Formatting and organization are evolving.</strong> You may notice inconsistencies in layout, language, or style as we continue editing and revising the material.</li>
-<li><strong>Citations may be informal or missing.</strong> While we aim to acknowledge relevant prior work, we may reference ideas or studies without formal citations in early drafts. All sources will be properly cited in a final, polished version.</li>
-<li><strong>The content may change frequently.</strong> Sections may be restructured, rewritten, or replaced as the work progresses and as we receive input from peers and collaborators.</li>
+<li>Differentiate between major observational study designs.</li>
+<li>Describe key sources of bias in observational research.</li>
+<li>Explain the importance of the target trial emulation (TTE) framework.</li>
+<li>Understand how cohort studies are constructed in ATLAS.</li>
+<li>Identify techniques to mitigate confounding, selection bias, and measurement error.</li>
 </ul>
-<p>This draft is not intended to serve as a formal educational resource or authoritative guide—at least not yet. Instead, it is a starting point for discussion. We are sharing it early because we believe that better ideas emerge when development is open, visible, and collaborative.</p>
-<p>If you have suggestions, corrections, or feedback, we’d love to hear from you. Whether you are a researcher, educator, student, or practitioner, your perspective can help us shape this book into a more useful and rigorous resource for the community. Please reach out to us at <a href="mailto:contact@goriacko.xyz" class="email">contact@goriacko.xyz</a> and <a href="mailto:danielle@boycedatascience.com" class="email">danielle@boycedatascience.com</a> with your comments, suggestions, and contributions.</p>
-<p>Thank you for joining us in this process.</p>
+<hr />
 </div>
-<div id="preface" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.</p>
-<p>Despite this progress, much of the methodological knowledge required to conduct high-quality RWD research remains inaccessible to many clinician-researchers. The information is scattered across technical documentation, academic papers, online forums, and video lectures—often buried in mathematical notation or domain-specific jargon. For busy clinicians seeking to understand patterns in care or evaluate outcomes, this complexity can be a barrier to entry.</p>
-<p>The result is a frustrating paradox: those most familiar with the care processes we seek to study—clinicians—are often least equipped to leverage the full potential of modern RWD infrastructure. Too often, EHR-based research is equated with manual chart review, lacking systematic attention to issues like confounding, measurement error, and generalizability. Many studies fail to take advantage of harmonized, cross-institutional data sources and tools that promote transparency, reproducibility, and scalable discovery.</p>
-<p>As a result, we are missing opportunities to learn from the rich data generated every day in healthcare settings—data that, if used rigorously and ethically, could help us identify better treatments, reduce disparities, and improve patient outcomes.</p>
-<p>In response, we created this guide: a practical, clinician-oriented introduction to real-world data for clinical and translational research. Our goal is to make the field more accessible without sacrificing methodological rigor. We aim to demystify key concepts, explain the “why” behind complex workflows, and highlight modern tools and frameworks in a way that feels relevant and actionable to clinician-researchers.</p>
-<p>This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.</p>
+<div id="observational-study-designs" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Observational Study Designs<a href="study-designs-for-real-world-evidence-generation.html#observational-study-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are several types of observational studies, each suited to different research questions and data contexts:</p>
+<ul>
+<li><strong>Cross-sectional studies</strong>: Assess exposure and outcome at a single point in time.</li>
+<li><strong>Prospective cohort studies</strong>: Follow individuals over time from a defined starting point.</li>
+<li><strong>Retrospective cohort studies</strong>: Use historical data to define cohorts and follow-up periods.</li>
+<li><strong>Case-control studies</strong>: Identify subjects with an outcome of interest (cases) and compare their prior exposures to those without the outcome (controls).</li>
+</ul>
+<p>Among these, <strong>cohort studies</strong> are the most commonly used in real-world evidence generation, particularly when using common data models and tools like OHDSI’s ATLAS.</p>
+<hr />
 </div>
-<div id="about-the-authors" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> About the Authors<a href="index.html#about-the-authors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Pavel Goriacko, PharmD, MPH</strong> is the co-director of the Health Informatics Core at the Montefiore Einstein Institute of Clinical and Translational Research and serves as an Assistant Professor in the Department of Epidemiology and Population Health. His work focuses on the intersection of data science, clinical research informatics, and healthcare delivery, with a particular emphasis on learning health systems and real-world evidence generation.</p>
-<p>Pavel has served as co-investigator on a range of federally and industry-funded research projects, including the PCORI-funded INSIGHT network to support cross-institutional EHR data infrastructure. He was a scholar in the AHRQ/PCORI K12 Learning Health Systems Research Program and currently leads or collaborates on initiatives to advance the use of OMOP and Epic EHR data for observational studies, causal inference, and pragmatic quality improvement. He is also working with Clinical and Translational Science Institutes (CTSIs) to develop standardized curricula for real-world data education and training.</p>
-<p>He is an active contributor to the OHDSI community and brings experience across academic research, health system operations, and policy-oriented analytics. His background in clinical pharmacy and public health supports a pragmatic approach to using healthcare data in ways that are both methodologically rigorous and grounded in clinical practice.</p>
-<p>Pavel earned his Doctor of Pharmacy (PharmD) from Long Island University’s Arnold and Marie Schwartz College of Pharmacy, completed a pharmacy residency at Montefiore Medical Center, and earned a Master of Public Health (MPH) from Columbia University’s Mailman School of Public Health.</p>
-<p><strong>Danielle Boyce, DPA, MPH</strong> is Principal Investigator for Real World Evidence at the ALS Therapy Development Institute, where she co-leads a CDC-funded project investigating risk factors for amyotrophic lateral sclerosis (ALS). Her expertise focuses on the intersection of data science and regulatory oversight of patient registries and EHR data.</p>
-<p>Previously, Danielle was the lead technical consultant for the CURE Drug Repurposing Collaboratory, a public-private partnership between the Critical Path Institute and the FDA. She holds part-time faculty roles as a lecturer in Biomedical Informatics and Data Science at Johns Hopkins University School of Medicine and as Education Director of the Biomedical and Health Data Sciences Collaborative at Tufts University School of Medicine. At Tufts, she leads a data science team developing reproducible methodologies for utilizing EHR data as external controls and digital twins in neonates.</p>
-<p>Danielle is actively involved in the OHDSI community, co-leading a Work Group, nominated twice for the Titan Award, and contributing to the Book of OHDSI. She has served on numerous advisory panels in academia, industry, government, and nonprofits, including the Patient-Centered Outcomes Research Institute and Duke-Margolis Center for Health Policy. Additionally, she is a member of the Leavitt Partners’ Pediatric Inclusion Alliance, which advocates for early inclusion of children in clinical trials across all conditions without compromising safety.</p>
-<p>The first woman in her family to graduate from college, Danielle earned her Master of Public Health (MPH) from SUNY Albany and Doctor of Public Administration (DPA) from West Chester University. Her work is inspired by her son, Charlie, who had a rare and severe form of epilepsy called infantile spasms and now lives with multiple disabilities.</p>
+<div id="key-challenges-in-observational-research" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Key Challenges in Observational Research<a href="study-designs-for-real-world-evidence-generation.html#key-challenges-in-observational-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Unlike randomized trials, observational studies face several threats to internal validity. The most common sources of bias include:</p>
+<ul>
+<li><strong>Confounding</strong>: Differences in baseline characteristics between exposed and unexposed groups that affect outcomes.</li>
+<li><strong>Selection bias</strong>: Systematic differences in who is included or excluded from the cohort.</li>
+<li><strong>Measurement error</strong>: Misclassification of exposures, outcomes, or covariates, often due to limitations of real-world data sources or phenotype definitions.</li>
+</ul>
+<hr />
 </div>
-<div id="license" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike (CC BY-SA 4.0)</a> license. We want this content to be used, shared, and distributed as freely and widely as possible—while ensuring that no further restrictions can be placed on its use. If this license presents a barrier to using or adapting the material in your setting, please reach out to us; we welcome collaboration and will do our best to accommodate your needs.</p>
+<div id="cohort-studies" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Cohort Studies<a href="study-designs-for-real-world-evidence-generation.html#cohort-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>cohort</strong> is a set of individuals who meet one or more inclusion criteria over a defined period. Cohort studies observe these individuals forward in time to assess the occurrence of outcomes. Importantly:</p>
+<ul>
+<li>A clinical trial is a type of cohort study with randomized exposure.</li>
+<li>In observational research, exposures are not randomly assigned, so careful design is essential to draw valid conclusions.</li>
+</ul>
+<div id="graphical-representation" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Graphical Representation<a href="study-designs-for-real-world-evidence-generation.html#graphical-representation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cohort entry and time-at-risk can be visualized using timelines. The following image shows how events are anchored to the <strong>earliest qualifying event</strong>, which determines cohort entry:</p>
+<div class="float">
+<img src="../assets/EarliestEventExplained_1741104011510_0.png" alt="EarliestEventExplained.png" />
+<div class="figcaption">EarliestEventExplained.png</div>
+</div>
+<hr />
+</div>
+</div>
+<div id="target-trial-emulation-tte" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Target Trial Emulation (TTE)<a href="study-designs-for-real-world-evidence-generation.html#target-trial-emulation-tte" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>target trial emulation</strong> framework encourages researchers to explicitly design their observational studies to mimic a hypothetical randomized trial. This includes defining:</p>
+<ul>
+<li>Eligibility criteria</li>
+<li>Treatment strategies</li>
+<li>Assignment procedures (hypothetical, in the observational context)</li>
+<li>Follow-up period</li>
+<li>Outcome definition</li>
+<li>Causal contrast of interest</li>
+<li>Analysis plan</li>
+</ul>
+<p>TTE is especially useful for reducing <strong>selection bias</strong> and clarifying the timing of exposures and outcomes—often referred to as <strong>time zero</strong>.</p>
+<hr />
+</div>
+<div id="the-atlas-framework" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> The ATLAS Framework<a href="study-designs-for-real-world-evidence-generation.html#the-atlas-framework" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>OHDSI’s <strong>ATLAS</strong> platform provides a visual interface for constructing cohort-based studies. It enables:</p>
+<ul>
+<li>Defining exposure and outcome cohorts using logic-based phenotyping.</li>
+<li>Specifying time-at-risk windows.</li>
+<li>Visualizing inclusion/exclusion criteria.</li>
+<li>Exporting study specifications for execution in distributed network studies.</li>
+</ul>
+<p>ATLAS helps standardize study designs and encourages reproducibility by aligning closely with the TTE framework.</p>
+<hr />
+</div>
+<div id="addressing-bias-and-threats-to-validity" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Addressing Bias and Threats to Validity<a href="study-designs-for-real-world-evidence-generation.html#addressing-bias-and-threats-to-validity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="selection-bias" class="section level3 hasAnchor" number="7.8.1">
+<h3><span class="header-section-number">7.8.1</span> Selection Bias<a href="study-designs-for-real-world-evidence-generation.html#selection-bias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Choose time zero carefully (e.g., date of diagnosis vs. date of treatment).</li>
+<li>Use the TTE framework to clearly define eligibility and avoid immortal time bias.</li>
+<li>Assess how inclusion/exclusion criteria affect generalizability.</li>
+</ul>
+</div>
+<div id="confounding" class="section level3 hasAnchor" number="7.8.2">
+<h3><span class="header-section-number">7.8.2</span> Confounding<a href="study-designs-for-real-world-evidence-generation.html#confounding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Identify confounders using domain expertise and tools like DAGs.</p></li>
+<li><p>Address confounding using:</p>
+<ul>
+<li>Stratification</li>
+<li>Matching (e.g., propensity score)</li>
+<li>Multivariable regression</li>
+<li>Inverse probability of treatment weighting (IPTW)</li>
+</ul></li>
+</ul>
+</div>
+<div id="measurement-error" class="section level3 hasAnchor" number="7.8.3">
+<h3><span class="header-section-number">7.8.3</span> Measurement Error<a href="study-designs-for-real-world-evidence-generation.html#measurement-error" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Evaluate the performance characteristics of phenotype definitions.</li>
+<li>Use sensitivity and specificity estimates to adjust results or interpret limitations.</li>
+<li>Conduct <strong>quantitative bias analysis</strong> when feasible.</li>
+</ul>
+</div>
+<div id="additional-tools" class="section level3 hasAnchor" number="7.8.4">
+<h3><span class="header-section-number">7.8.4</span> Additional Tools<a href="study-designs-for-real-world-evidence-generation.html#additional-tools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Sensitivity analyses</strong>: Test robustness of results under varying assumptions.</li>
+<li><strong>P-value calibration</strong>: Adjust for multiple testing and observational bias.</li>
+<li><strong>Positive and negative controls</strong>: Benchmark your design against known outcomes.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="summary-4" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Summary<a href="study-designs-for-real-world-evidence-generation.html#summary-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Designing a high-quality RWD study requires more than defining a cohort—it demands attention to bias, careful emulation of randomized trials, and thoughtful evaluation of validity. Cohort studies, supported by the TTE framework and tools like ATLAS, provide a powerful foundation for generating credible real-world evidence when designed and executed rigorously.</p>
 
 </div>
 </div>
@@ -312,8 +396,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="computable-phenotyping.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-science-toolkit-for-real-world-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

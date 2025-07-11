@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Guide to Real World Data for Clinical Research</title>
-  <meta name="description" content="Guide to Real World Data for Clinical Research" />
+  <title>11 Expanding the Boundaries of Real-World Data: Special Topics and Emerging Frontiers | Guide to Real World Data for Clinical Research</title>
+  <meta name="description" content="11 Expanding the Boundaries of Real-World Data: Special Topics and Emerging Frontiers | Guide to Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Guide to Real World Data for Clinical Research" />
+  <meta property="og:title" content="11 Expanding the Boundaries of Real-World Data: Special Topics and Emerging Frontiers | Guide to Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Guide to Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="11 Expanding the Boundaries of Real-World Data: Special Topics and Emerging Frontiers | Guide to Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="ethical-issues-in-real-world-data-use.html"/>
 
-<link rel="next" href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -260,50 +260,108 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Guide to Real World Data for Clinical Research</h1>
-<p class="author"><em>Pavel Goriacko, PharmD, MPH and Danielle Boyce, DPA, MPH</em></p>
-</div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="disclaimer" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Disclaimer<a href="index.html#disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is a <strong>living draft</strong> and part of an ongoing effort to make real-world data (RWD) methods more accessible to clinician-researchers. We are sharing it publicly as part of a “work in public” philosophy—prioritizing openness, collaboration, and early feedback over polished perfection.</p>
-<p>As such, please be aware of the following:</p>
+<div id="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Expanding the Boundaries of Real-World Data: Special Topics and Emerging Frontiers<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Real-world data (RWD) research is evolving rapidly, encompassing an expanding array of clinical domains, data types, and methodological innovations. This chapter explores specialized contexts where RWD is either uniquely promising or especially challenging. These include rare diseases, synthetic controls for single-arm trials, wearable devices, underrepresented clinical areas, high-dimensional data types like waveforms and imaging, and unstructured text from clinical notes. Each section highlights both the potential and the pitfalls of working in these domains, along with practical and ethical considerations for researchers.</p>
+<div id="rare-diseases-and-small-populations" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Rare Diseases and Small Populations<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#rare-diseases-and-small-populations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Rare diseases present distinct challenges for RWD research:</p>
 <ul>
-<li><strong>The content is incomplete.</strong> Many sections are still in development, and you may encounter missing examples, rough outlines, or placeholders.</li>
-<li><strong>There may be inaccuracies.</strong> Some statements have not yet been fully reviewed or fact-checked. Do not treat this draft as a definitive reference.</li>
-<li><strong>Formatting and organization are evolving.</strong> You may notice inconsistencies in layout, language, or style as we continue editing and revising the material.</li>
-<li><strong>Citations may be informal or missing.</strong> While we aim to acknowledge relevant prior work, we may reference ideas or studies without formal citations in early drafts. All sources will be properly cited in a final, polished version.</li>
-<li><strong>The content may change frequently.</strong> Sections may be restructured, rewritten, or replaced as the work progresses and as we receive input from peers and collaborators.</li>
+<li><strong>Misdiagnosis and underreporting</strong>: Rare conditions are frequently misdiagnosed or miscoded, leading to fragmented or inaccurate data.</li>
+<li><strong>Limited data availability</strong>: Most RWD sources lack the sample size needed for robust statistical analysis.</li>
+<li><strong>Reliance on registries</strong>: Rare disease studies often depend on disease-specific registries or patient advocacy datasets, which may not be linked to broader EHR systems.</li>
 </ul>
-<p>This draft is not intended to serve as a formal educational resource or authoritative guide—at least not yet. Instead, it is a starting point for discussion. We are sharing it early because we believe that better ideas emerge when development is open, visible, and collaborative.</p>
-<p>If you have suggestions, corrections, or feedback, we’d love to hear from you. Whether you are a researcher, educator, student, or practitioner, your perspective can help us shape this book into a more useful and rigorous resource for the community. Please reach out to us at <a href="mailto:contact@goriacko.xyz" class="email">contact@goriacko.xyz</a> and <a href="mailto:danielle@boycedatascience.com" class="email">danielle@boycedatascience.com</a> with your comments, suggestions, and contributions.</p>
-<p>Thank you for joining us in this process.</p>
+<p>Researchers can address these challenges by:</p>
+<ul>
+<li>Sharing data across sites and building federated networks</li>
+<li>Using Bayesian or hierarchical models to borrow strength across subgroups</li>
+<li>Integrating genomic or family history data to refine case identification</li>
+</ul>
 </div>
-<div id="preface" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.</p>
-<p>Despite this progress, much of the methodological knowledge required to conduct high-quality RWD research remains inaccessible to many clinician-researchers. The information is scattered across technical documentation, academic papers, online forums, and video lectures—often buried in mathematical notation or domain-specific jargon. For busy clinicians seeking to understand patterns in care or evaluate outcomes, this complexity can be a barrier to entry.</p>
-<p>The result is a frustrating paradox: those most familiar with the care processes we seek to study—clinicians—are often least equipped to leverage the full potential of modern RWD infrastructure. Too often, EHR-based research is equated with manual chart review, lacking systematic attention to issues like confounding, measurement error, and generalizability. Many studies fail to take advantage of harmonized, cross-institutional data sources and tools that promote transparency, reproducibility, and scalable discovery.</p>
-<p>As a result, we are missing opportunities to learn from the rich data generated every day in healthcare settings—data that, if used rigorously and ethically, could help us identify better treatments, reduce disparities, and improve patient outcomes.</p>
-<p>In response, we created this guide: a practical, clinician-oriented introduction to real-world data for clinical and translational research. Our goal is to make the field more accessible without sacrificing methodological rigor. We aim to demystify key concepts, explain the “why” behind complex workflows, and highlight modern tools and frameworks in a way that feels relevant and actionable to clinician-researchers.</p>
-<p>This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.</p>
+<div id="external-controls-and-synthetic-comparators" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> External Controls and Synthetic Comparators<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#external-controls-and-synthetic-comparators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RWD can be used to construct external control arms for single-arm clinical trials, particularly in oncology and rare diseases:</p>
+<ul>
+<li><strong>Approaches</strong>: Propensity score matching, synthetic controls, and digital twins aim to create comparable non-intervention groups.</li>
+<li><strong>Risks</strong>: Lack of protocol harmonization, unmeasured confounding, and differing outcome definitions can compromise validity.</li>
+</ul>
+<p>To improve rigor:</p>
+<ul>
+<li>Pre-specify endpoints and inclusion criteria aligned with the trial</li>
+<li>Conduct sensitivity analyses and transparency reporting</li>
+<li>Use regulatory guidance to ensure acceptability</li>
+</ul>
 </div>
-<div id="about-the-authors" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> About the Authors<a href="index.html#about-the-authors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Pavel Goriacko, PharmD, MPH</strong> is the co-director of the Health Informatics Core at the Montefiore Einstein Institute of Clinical and Translational Research and serves as an Assistant Professor in the Department of Epidemiology and Population Health. His work focuses on the intersection of data science, clinical research informatics, and healthcare delivery, with a particular emphasis on learning health systems and real-world evidence generation.</p>
-<p>Pavel has served as co-investigator on a range of federally and industry-funded research projects, including the PCORI-funded INSIGHT network to support cross-institutional EHR data infrastructure. He was a scholar in the AHRQ/PCORI K12 Learning Health Systems Research Program and currently leads or collaborates on initiatives to advance the use of OMOP and Epic EHR data for observational studies, causal inference, and pragmatic quality improvement. He is also working with Clinical and Translational Science Institutes (CTSIs) to develop standardized curricula for real-world data education and training.</p>
-<p>He is an active contributor to the OHDSI community and brings experience across academic research, health system operations, and policy-oriented analytics. His background in clinical pharmacy and public health supports a pragmatic approach to using healthcare data in ways that are both methodologically rigorous and grounded in clinical practice.</p>
-<p>Pavel earned his Doctor of Pharmacy (PharmD) from Long Island University’s Arnold and Marie Schwartz College of Pharmacy, completed a pharmacy residency at Montefiore Medical Center, and earned a Master of Public Health (MPH) from Columbia University’s Mailman School of Public Health.</p>
-<p><strong>Danielle Boyce, DPA, MPH</strong> is Principal Investigator for Real World Evidence at the ALS Therapy Development Institute, where she co-leads a CDC-funded project investigating risk factors for amyotrophic lateral sclerosis (ALS). Her expertise focuses on the intersection of data science and regulatory oversight of patient registries and EHR data.</p>
-<p>Previously, Danielle was the lead technical consultant for the CURE Drug Repurposing Collaboratory, a public-private partnership between the Critical Path Institute and the FDA. She holds part-time faculty roles as a lecturer in Biomedical Informatics and Data Science at Johns Hopkins University School of Medicine and as Education Director of the Biomedical and Health Data Sciences Collaborative at Tufts University School of Medicine. At Tufts, she leads a data science team developing reproducible methodologies for utilizing EHR data as external controls and digital twins in neonates.</p>
-<p>Danielle is actively involved in the OHDSI community, co-leading a Work Group, nominated twice for the Titan Award, and contributing to the Book of OHDSI. She has served on numerous advisory panels in academia, industry, government, and nonprofits, including the Patient-Centered Outcomes Research Institute and Duke-Margolis Center for Health Policy. Additionally, she is a member of the Leavitt Partners’ Pediatric Inclusion Alliance, which advocates for early inclusion of children in clinical trials across all conditions without compromising safety.</p>
-<p>The first woman in her family to graduate from college, Danielle earned her Master of Public Health (MPH) from SUNY Albany and Doctor of Public Administration (DPA) from West Chester University. Her work is inspired by her son, Charlie, who had a rare and severe form of epilepsy called infantile spasms and now lives with multiple disabilities.</p>
+<div id="wearables-and-device-generated-data" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Wearables and Device-Generated Data<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#wearables-and-device-generated-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wearable sensors and devices produce continuous, high-frequency data on activity, vital signs, and behaviors:</p>
+<ul>
+<li><p><strong>Challenges</strong>:</p>
+<ul>
+<li>Data is typically generated outside clinical settings and stored in proprietary formats</li>
+<li>There is often no standard way to integrate it into the EHR</li>
+<li>Quality can vary based on context and user behavior</li>
+</ul></li>
+<li><p><strong>Opportunities</strong>:</p>
+<ul>
+<li>Detect early clinical deterioration</li>
+<li>Understand behavior and adherence</li>
+<li>Supplement traditional clinical endpoints with real-time patient-generated data</li>
+</ul></li>
+</ul>
+<p>Researchers should consider working with informaticians and engineers to develop pipelines for cleaning, summarizing, and contextualizing device data.</p>
 </div>
-<div id="license" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike (CC BY-SA 4.0)</a> license. We want this content to be used, shared, and distributed as freely and widely as possible—while ensuring that no further restrictions can be placed on its use. If this license presents a barrier to using or adapting the material in your setting, please reach out to us; we welcome collaboration and will do our best to accommodate your needs.</p>
+<div id="underrepresented-clinical-domains" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Underrepresented Clinical Domains<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#underrepresented-clinical-domains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Certain clinical areas are poorly represented in mainstream RWD research:</p>
+<ul>
+<li><strong>Dentistry</strong>: Often stored in separate systems with limited linkage to medical EHRs</li>
+<li><strong>Ophthalmology</strong>: Relies heavily on imaging and specialized documentation tools</li>
+<li><strong>Behavioral health</strong>: Data may be narrative, coded differently, or subject to higher privacy protections</li>
+</ul>
+<p>To make progress:</p>
+<ul>
+<li>Use domain-specific vocabularies and standards (e.g., SNODENT, DICOM)</li>
+<li>Work with specialists to interpret data in context</li>
+<li>Explore crosswalks and linkage strategies between clinical domains</li>
+</ul>
+</div>
+<div id="high-dimensional-and-non-tabular-data-types" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> High-Dimensional and Non-Tabular Data Types<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#high-dimensional-and-non-tabular-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RWD is increasingly incorporating non-tabular data:</p>
+<ul>
+<li><strong>Waveform data</strong>: EKGs, EEGs, and respiratory signals often stored as raw time-series data</li>
+<li><strong>Imaging data</strong>: CT, MRI, and retinal imaging can contain rich diagnostic information</li>
+</ul>
+<p>These data types require:</p>
+<ul>
+<li>Specialized infrastructure for storage and compute</li>
+<li>Advanced analysis methods (e.g., signal processing, computer vision, deep learning)</li>
+<li>Integration with clinical context for labeling and interpretation</li>
+</ul>
+</div>
+<div id="clinical-notes-and-unstructured-text" class="section level2 hasAnchor" number="11.6">
+<h2><span class="header-section-number">11.6</span> Clinical Notes and Unstructured Text<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html#clinical-notes-and-unstructured-text" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Free-text clinical documentation contains essential insights not captured in structured fields:</p>
+<ul>
+<li><p><strong>Advantages</strong>:</p>
+<ul>
+<li>Provides reasoning, nuance, and context</li>
+<li>Captures social, behavioral, and environmental factors</li>
+</ul></li>
+<li><p><strong>Challenges</strong>:</p>
+<ul>
+<li>Inconsistent language, misspellings, and abbreviations</li>
+<li>Difficult to deidentify reliably</li>
+<li>Requires NLP techniques for extraction</li>
+</ul></li>
+</ul>
+<p>Effective use of clinical notes involves:</p>
+<ul>
+<li>Applying natural language processing (NLP) methods such as named entity recognition, negation detection, and temporal reasoning</li>
+<li>Validating text-derived features against structured data</li>
+<li>Balancing extraction quality with privacy protection</li>
+</ul>
 
 </div>
 </div>
@@ -312,8 +370,8 @@
           </div>
         </div>
       </div>
+<a href="ethical-issues-in-real-world-data-use.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

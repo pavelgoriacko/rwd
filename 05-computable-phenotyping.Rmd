@@ -55,9 +55,6 @@ Phenotype definitions can vary in:
 
 Validation is critical, especially for complex or algorithmic phenotypes. Some phenotypes undergo formal validation via chart review, replication across datasets, or comparison with gold standards.
 
-Here is a revised version of the **Phenotype Evaluation** section that closely aligns with your notes while maintaining a clear and accessible narrative suitable for a Bookdown textbook:
-
----
 
 ## Phenotype Evaluation
 

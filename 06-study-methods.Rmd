@@ -1,0 +1,122 @@
+# Study Designs for Real-World Evidence Generation
+
+## Overview
+
+Once a computable phenotype has been defined and validated, the next step in a real-world data (RWD) study is to apply that phenotype in the context of a well-designed research question. The goal is to generate valid, reliable real-world evidence (RWE) from observational data. This chapter introduces foundational study designs and frameworks that help researchers minimize bias and enhance the validity of their findings.
+
+We focus primarily on **cohort studies** using **logic-based phenotyping**, which are the most common designs in RWD research. We also introduce basic graphical notation (e.g., DAGs) to illustrate key concepts.
+
+## Learning Objectives
+
+* Differentiate between major observational study designs.
+* Describe key sources of bias in observational research.
+* Explain the importance of the target trial emulation (TTE) framework.
+* Understand how cohort studies are constructed in ATLAS.
+* Identify techniques to mitigate confounding, selection bias, and measurement error.
+
+---
+
+## Observational Study Designs
+
+There are several types of observational studies, each suited to different research questions and data contexts:
+
+* **Cross-sectional studies**: Assess exposure and outcome at a single point in time.
+* **Prospective cohort studies**: Follow individuals over time from a defined starting point.
+* **Retrospective cohort studies**: Use historical data to define cohorts and follow-up periods.
+* **Case-control studies**: Identify subjects with an outcome of interest (cases) and compare their prior exposures to those without the outcome (controls).
+
+Among these, **cohort studies** are the most commonly used in real-world evidence generation, particularly when using common data models and tools like OHDSI's ATLAS.
+
+---
+
+## Key Challenges in Observational Research
+
+Unlike randomized trials, observational studies face several threats to internal validity. The most common sources of bias include:
+
+* **Confounding**: Differences in baseline characteristics between exposed and unexposed groups that affect outcomes.
+* **Selection bias**: Systematic differences in who is included or excluded from the cohort.
+* **Measurement error**: Misclassification of exposures, outcomes, or covariates, often due to limitations of real-world data sources or phenotype definitions.
+
+---
+
+## Cohort Studies
+
+A **cohort** is a set of individuals who meet one or more inclusion criteria over a defined period. Cohort studies observe these individuals forward in time to assess the occurrence of outcomes. Importantly:
+
+* A clinical trial is a type of cohort study with randomized exposure.
+* In observational research, exposures are not randomly assigned, so careful design is essential to draw valid conclusions.
+
+### Graphical Representation
+
+Cohort entry and time-at-risk can be visualized using timelines. The following image shows how events are anchored to the **earliest qualifying event**, which determines cohort entry:
+
+![EarliestEventExplained.png](../assets/EarliestEventExplained_1741104011510_0.png)
+
+---
+
+## Target Trial Emulation (TTE)
+
+The **target trial emulation** framework encourages researchers to explicitly design their observational studies to mimic a hypothetical randomized trial. This includes defining:
+
+* Eligibility criteria
+* Treatment strategies
+* Assignment procedures (hypothetical, in the observational context)
+* Follow-up period
+* Outcome definition
+* Causal contrast of interest
+* Analysis plan
+
+TTE is especially useful for reducing **selection bias** and clarifying the timing of exposures and outcomes—often referred to as **time zero**.
+
+---
+
+## The ATLAS Framework
+
+OHDSI’s **ATLAS** platform provides a visual interface for constructing cohort-based studies. It enables:
+
+* Defining exposure and outcome cohorts using logic-based phenotyping.
+* Specifying time-at-risk windows.
+* Visualizing inclusion/exclusion criteria.
+* Exporting study specifications for execution in distributed network studies.
+
+ATLAS helps standardize study designs and encourages reproducibility by aligning closely with the TTE framework.
+
+---
+
+## Addressing Bias and Threats to Validity
+
+### Selection Bias
+
+* Choose time zero carefully (e.g., date of diagnosis vs. date of treatment).
+* Use the TTE framework to clearly define eligibility and avoid immortal time bias.
+* Assess how inclusion/exclusion criteria affect generalizability.
+
+### Confounding
+
+* Identify confounders using domain expertise and tools like DAGs.
+* Address confounding using:
+
+  * Stratification
+  * Matching (e.g., propensity score)
+  * Multivariable regression
+  * Inverse probability of treatment weighting (IPTW)
+
+### Measurement Error
+
+* Evaluate the performance characteristics of phenotype definitions.
+* Use sensitivity and specificity estimates to adjust results or interpret limitations.
+* Conduct **quantitative bias analysis** when feasible.
+
+### Additional Tools
+
+* **Sensitivity analyses**: Test robustness of results under varying assumptions.
+* **P-value calibration**: Adjust for multiple testing and observational bias.
+* **Positive and negative controls**: Benchmark your design against known outcomes.
+
+---
+
+## Summary
+
+Designing a high-quality RWD study requires more than defining a cohort—it demands attention to bias, careful emulation of randomized trials, and thoughtful evaluation of validity. Cohort studies, supported by the TTE framework and tools like ATLAS, provide a powerful foundation for generating credible real-world evidence when designed and executed rigorously.
+
+

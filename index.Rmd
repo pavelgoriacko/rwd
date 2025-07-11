@@ -1,7 +1,9 @@
 ---
-title: "Real World Data for Clinical Research"
-author: "Pavel Goriacko and Danielle Boyce"
+title: "Guide to Real World Data for Clinical Research"
+author: "Pavel Goriacko, PharmD, MPH and Danielle Boyce, DPA, MPH"
 site: "bookdown::bookdown_site"
+bibliography: references.bib
+link-citations: true
 output:
   bookdown::gitbook:
     lib_dir: "book_assets"
@@ -12,7 +14,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Disclaimer
+# Introduction
+
+## Disclaimer
 
 This book is a **living draft** and part of an ongoing effort to make real-world data (RWD) methods more accessible to clinician-researchers. We are sharing it publicly as part of a “work in public” philosophy—prioritizing openness, collaboration, and early feedback over polished perfection.
 
@@ -26,12 +30,12 @@ As such, please be aware of the following:
 
 This draft is not intended to serve as a formal educational resource or authoritative guide—at least not yet. Instead, it is a starting point for discussion. We are sharing it early because we believe that better ideas emerge when development is open, visible, and collaborative.
 
-If you have suggestions, corrections, or feedback, we’d love to hear from you. Whether you are a researcher, educator, student, or practitioner, your perspective can help us shape this book into a more useful and rigorous resource for the community.
+If you have suggestions, corrections, or feedback, we’d love to hear from you. Whether you are a researcher, educator, student, or practitioner, your perspective can help us shape this book into a more useful and rigorous resource for the community. Please reach out to us at contact@goriacko.xyz and danielle@boycedatascience.com with your comments, suggestions, and contributions. 
 
 Thank you for joining us in this process.
 
 
-# Preface
+## Preface
 
 Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.
 
@@ -46,6 +50,25 @@ In response, we created this guide: a practical, clinician-oriented introduction
 This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.
 
 
-## Credits and Acknowledgments 
+## About the Authors
 
-(TBD)
+**Pavel Goriacko, PharmD, MPH** is the co-director of the Health Informatics Core at the Montefiore Einstein Institute of Clinical and Translational Research and serves as an Assistant Professor in the Department of Epidemiology and Population Health. His work focuses on the intersection of data science, clinical research informatics, and healthcare delivery, with a particular emphasis on learning health systems and real-world evidence generation.
+
+Pavel has served as co-investigator on a range of federally and industry-funded research projects, including the PCORI-funded INSIGHT network to support cross-institutional EHR data infrastructure. He was a scholar in the AHRQ/PCORI K12 Learning Health Systems Research Program and currently leads or collaborates on initiatives to advance the use of OMOP and Epic EHR data for observational studies, causal inference, and pragmatic quality improvement. He is also working with Clinical and Translational Science Institutes (CTSIs) to develop standardized curricula for real-world data education and training.
+
+He is an active contributor to the OHDSI community and brings experience across academic research, health system operations, and policy-oriented analytics. His background in clinical pharmacy and public health supports a pragmatic approach to using healthcare data in ways that are both methodologically rigorous and grounded in clinical practice.
+
+Pavel earned his Doctor of Pharmacy (PharmD) from Long Island University’s Arnold and Marie Schwartz College of Pharmacy, completed a pharmacy residency at Montefiore Medical Center, and earned a Master of Public Health (MPH) from Columbia University’s Mailman School of Public Health.
+
+
+**Danielle Boyce, DPA, MPH** is Principal Investigator for Real World Evidence at the ALS Therapy Development Institute, where she co-leads a CDC-funded project investigating risk factors for amyotrophic lateral sclerosis (ALS). Her expertise focuses on the intersection of data science and regulatory oversight of patient registries and EHR data.
+
+Previously, Danielle was the lead technical consultant for the CURE Drug Repurposing Collaboratory, a public-private partnership between the Critical Path Institute and the FDA. She holds part-time faculty roles as a lecturer in Biomedical Informatics and Data Science at Johns Hopkins University School of Medicine and as Education Director of the Biomedical and Health Data Sciences Collaborative at Tufts University School of Medicine. At Tufts, she leads a data science team developing reproducible methodologies for utilizing EHR data as external controls and digital twins in neonates.
+
+Danielle is actively involved in the OHDSI community, co-leading a Work Group, nominated twice for the Titan Award, and contributing to the Book of OHDSI. She has served on numerous advisory panels in academia, industry, government, and nonprofits, including the Patient-Centered Outcomes Research Institute and Duke-Margolis Center for Health Policy. Additionally, she is a member of the Leavitt Partners’ Pediatric Inclusion Alliance, which advocates for early inclusion of children in clinical trials across all conditions without compromising safety.
+
+The first woman in her family to graduate from college, Danielle earned her Master of Public Health (MPH) from SUNY Albany and Doctor of Public Administration (DPA) from West Chester University. Her work is inspired by her son, Charlie, who had a rare and severe form of epilepsy called infantile spasms and now lives with multiple disabilities.
+
+## License
+
+This book is licensed under a [Creative Commons Attribution-ShareAlike (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license. We want this content to be used, shared, and distributed as freely and widely as possible—while ensuring that no further restrictions can be placed on its use. If this license presents a barrier to using or adapting the material in your setting, please reach out to us; we welcome collaboration and will do our best to accommodate your needs.

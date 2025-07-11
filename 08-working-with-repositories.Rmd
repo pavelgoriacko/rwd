@@ -1,0 +1,186 @@
+# Working with Data Repositories
+
+## Overview
+
+As real-world data (RWD) research continues to grow, centralized **data repositories** have become critical infrastructure for enabling large-scale, multi-institutional studies. These repositories bring together data from multiple health systems, harmonize it using shared standards, and provide secure access for analysis—offering immense opportunities, but also posing logistical and methodological challenges.
+
+This chapter introduces the structure and function of data repositories, describes how to access and evaluate them, and provides guidance for selecting an appropriate repository for your research question.
+
+---
+
+## What Are Data Repositories?
+
+Data repositories are large, curated databases that aggregate health information from multiple institutions—sometimes regionally, sometimes nationwide. Examples include the NIH’s **All of Us Research Program**, the **National COVID Cohort Collaborative (N3C)**, and commercial platforms like **Epic Cosmos**.
+
+Repositories are typically built around **common data models (CDMs)**, such as OMOP or PCORnet CDM, to enable standardized analytics. Data may come from EHRs, insurance claims, laboratory systems, and external linkages such as mortality data or census information.
+
+### Advantages of Using Repositories
+
+* **Larger, More Representative Populations**
+  Access to data from across institutions enables studies with more generalizable results.
+
+* **More Complete Patient Records**
+  If a patient receives care at multiple locations, a repository may help unify their longitudinal data.
+
+* **Standardization and Harmonization**
+  Data are mapped to standard vocabularies and formats, allowing for easier study design and reproducibility.
+
+* **Analytic Tools and Collaboration Infrastructure**
+  Many repositories offer built-in analysis environments, shared protocols, and cross-institutional research communities.
+
+### Challenges and Limitations
+
+* **Access and Governance**
+  Access requires registration, training, IRB review, and approval of a formal data use request (DUR). This process can take weeks to months.
+
+* **Deidentification and Reidentification Constraints**
+  Most repositories contain deidentified data, limiting researchers' ability to trace records back to local EHRs for verification.
+
+* **Harmonization Complexities**
+  Differences in source data formats, vocabularies, and quality across sites require careful translation and cleaning.
+
+* **Restricted Analysis Environments**
+  Data often reside within secure enclaves; they cannot be downloaded, and all computation must be conducted remotely.
+
+---
+
+## The Repository Data Lifecycle
+
+Repositories implement a series of steps to ensure that contributed data are usable, privacy-preserving, and analytically sound.
+
+### Harmonization
+
+* **Common Data Models**
+  Source data are transformed into a standardized format (e.g., OMOP, PCORnet) and mapped to shared vocabularies like SNOMED, RxNorm, and LOINC.
+
+* **Terminology Translation**
+  Site-specific codes are converted to standard concepts. When multiple vocabularies exist (e.g., both LOINC and SNOMED for labs), consistent conventions must be adopted.
+
+* **Unit Standardization**
+  Numerical values (e.g., weight in lbs vs kg) are converted to standard units.
+
+### Data Quality Assurance
+
+* **Checks for Internal Consistency**
+  These include: plausible distributions of age and visit dates, no negative hospital length-of-stay, and expected domain-specific record counts.
+
+* **Site Scorecards**
+  Repositories often provide feedback to contributing institutions on data completeness and conformity.
+
+### Deduplication
+
+* **Cross-Institution Matching**
+  Patient data from multiple sources are linked and deduplicated when possible.
+
+### Deidentification
+
+* **HIPAA Safe Harbor Techniques**
+  Includes removal of direct identifiers, truncation of ZIP codes, and generalization of rare diagnoses.
+
+* **Date Shifting**
+  Dates are often shifted ±180 days (or ±180 minutes for time stamps) to preserve temporal patterns while obscuring exact dates.
+
+* **Levels of Deidentification**
+
+  * **Fully deidentified** datasets remove all 18 HIPAA identifiers.
+  * **Limited deidentified** sets retain dates and ZIP codes but are subject to restricted access.
+  * **Synthetic data** mimics real data patterns without using actual patient records.
+
+### Privacy-Preserving Linkage
+
+* Some repositories support linkage to other datasets (e.g., CMS claims, social security mortality, genomic data) without revealing individual identities.
+
+---
+
+## Gaining Access: Common Processes
+
+Although the specifics vary across repositories, most follow a general set of access steps:
+
+1. **Registration and Account Creation**
+   Researchers must register and often affiliate with a participating institution.
+
+2. **Training Requirements**
+   Mandatory training includes responsible data use, privacy protections, and use of analytic platforms.
+
+3. **Data Use Agreements (DUAs)**
+
+   * **Institutional DUAs** govern the relationship between your institution and the repository.
+   * **Individual DUAs** define the responsibilities of each researcher.
+
+4. **Project Registration**
+   Most studies require documentation of IRB approval, named collaborators, and data use limitations.
+
+5. **Data Use Request (DUR)**
+   A formal request to access data for a specific project. This includes cohort definitions, outcomes, and planned analyses.
+
+6. **Virtual Workspaces**
+   Approved users are granted access to secure computing environments that support SQL, R, and Python. Code and output stay within the enclave and may be audited.
+
+7. **Collaboration Tools**
+   Many repositories offer forums, project registries, and shared communication channels (e.g., monthly calls, Slack) to foster community and reuse.
+
+> ⚠️ **Note:** Not all repositories include every one of these features. Highly funded platforms like All of Us and N3C offer comprehensive toolsets, while others may be limited in scope or infrastructure.
+
+---
+
+## Evaluating Repository Fit for Your Study
+
+Before committing to a repository-based project, it is essential to assess whether the available data are suitable for your research question. This process typically involves:
+
+### 1. Define Your Study Needs
+
+* **Cohort Criteria**
+* **Outcomes of Interest**
+* **Key Confounders and Covariates**
+
+### 2. Assess General Fit
+
+* **Data Sources**
+  Does the repository include EHR, claims, patient-reported data, or external linkages?
+
+* **Population and Disease Focus**
+  Some repositories are disease-specific (e.g., cancer, COVID-19), while others are general.
+
+* **Deidentification Impact**
+  Date shifting or ZIP truncation may limit your ability to compute certain metrics or link to external datasets.
+
+* **Scope of Data Submission**
+  Does the repository include inpatient, outpatient, lab, pharmacy data? What is the data span over time?
+
+### 3. Conduct Feasibility and Completeness Checks
+
+* **Patient Counts**
+  Estimate how many patients meet basic inclusion criteria.
+
+* **Critical Variable Completeness**
+  Confirm that key variables (e.g., diagnoses, drug exposures) are well-populated.
+
+* **Proxy Variables for Missing Data**
+  Some elements like social needs or behaviors may be missing but can be estimated via ZIP code or demographics.
+
+* **Follow-up and Longitudinality**
+  Assess how complete the longitudinal data are: Are there regular follow-up visits, lab results, or medication refills?
+
+---
+
+## Examples of Major Data Repositories
+
+| Repository      | Coverage                            | Data Model  | Notes                                                                     |
+| --------------- | ----------------------------------- | ----------- | ------------------------------------------------------------------------- |
+| **N3C**         | National (COVID-focused)            | OMOP        | Includes linkages (e.g., mortality, viral variants)                       |
+| **All of Us**   | National, all diseases              | OMOP        | Includes genomic data, EHR, surveys, and wearable/device data             |
+| **Epic Cosmos** | Commercial (Epic customers)         | Cosmos CDM  | Includes both deidentified and limited datasets; proprietary access       |
+| **PCORnet**     | National (multi-institutional)      | PCORnet CDM | Designed for distributed queries and pragmatic trials                     |
+| **INSIGHT**     | New York regional consortium        | OMOP        | Aggregates NYC academic health system data                                |
+| **OpenSAFELY**  | UK-based national repository        | Custom      | Secure analytics on pseudonymized NHS data within the NHS firewall        |
+| **Optum**       | U.S. commercial claims + EHR        | Proprietary | Combines claims and clinical data; commonly used for pharmacoepidemiology |
+| **MarketScan**  | U.S. commercial and Medicaid claims | Proprietary | Includes employer-sponsored insurance claims; large sample sizes          |
+
+---
+
+## Summary
+
+Working with data repositories opens new doors for high-impact, large-scale RWD research. But it also introduces new responsibilities: understanding data provenance, navigating governance, and ensuring that data are fit for purpose.
+
+A successful repository-based study starts with a clear definition of data needs and ends with a thoughtful analysis in a secure, reproducible computing environment. Choose the right repository, follow the appropriate access steps, and make sure the data can support your question.
+

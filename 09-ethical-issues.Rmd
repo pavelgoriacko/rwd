@@ -1,0 +1,69 @@
+# Ethical Issues in Real-World Data Use
+
+Real-world data (RWD) offers tremendous promise for advancing clinical and translational research, but it also introduces a range of ethical challenges that differ from those in traditional randomized controlled trials (RCTs). RWD is observational by nature and is often collected for clinical, administrative, or operational purposes—not research. As such, it may be incomplete, inconsistently recorded, or subject to numerous biases. Unlike RCTs, most RWD studies do not obtain informed consent from individuals, which opens up additional challenges related to privacy, transparency, and community trust.
+
+This chapter explores the ethical dimensions of working with RWD, including methodological rigor, representation and equity, privacy, algorithmic bias, and public trust. Because RWD tends to reflect healthcare systems in wealthy, industrialized countries, and primarily includes individuals who access care at academic or large healthcare institutions, it can systematically exclude populations who face barriers to care, stigmatization, or live in under-resourced regions. Ethical stewardship of RWD therefore requires both rigorous methodological practices and community-centered governance frameworks.
+
+## Methodological Bias and Data Integrity
+
+Observational research using RWD is more prone to confounding, selection bias, and missing data compared to RCTs:
+
+* **Confounding**: Failing to adequately control for variables associated with both treatment selection and outcomes can lead to incorrect conclusions. For instance, early observational studies suggested a benefit of vitamin E supplementation for cardiovascular health, but these findings were later contradicted by RCTs. Emulating target trials and applying advanced methods such as inverse probability weighting or instrumental variables can mitigate this.
+
+* **Selection bias**: This occurs when study populations differ from the target population. A notable example is hormone replacement therapy, where initial observational data (e.g., Nurses’ Health Study) showed benefit, but later RCTs (e.g., Women’s Health Initiative) showed harm—partly because observational studies selected for healthy, adherent patients. Designing studies with representative inclusion criteria and validating findings across datasets can help address this.
+
+* **Missing data**: Missingness is not random—it often reflects disparities in access to care. For example, an undocumented health condition may indicate the event never happened—or that the person lacked access to care, and the event went unrecorded. Imputation strategies and sensitivity analyses can reduce bias but should be carefully justified.
+
+* **Data dredging (or p-hacking)**: Because RWD studies do not typically require protocol registration or pre-specification of endpoints, researchers can be tempted (intentionally or not) to analyze data in ways that confirm their hypotheses. Even when studies are pre-registered, nothing prevents researchers from exploring outcomes using different methodologies before finalizing the protocol. Strategies to address this include committing to open science practices such as pre-registration, publishing study protocols and analytic code, and using the framework of target trial emulation to define methods before seeing results.
+
+## Representation and Equity
+
+RWD can reinforce structural inequities in healthcare:
+
+* **Systematic exclusion**: Patients with poor access to care, stigmatized conditions, or who avoid healthcare systems are often missing from RWD. This limits generalizability and may entrench disparities. Researchers should assess population coverage and consider linking to supplementary data sources to improve inclusiveness.
+
+* **Non-representative sampling**: RWD often reflects WEIRD populations—Western, Educated, Industrialized, Rich, and Democratic. Non-English speakers, rural populations, and those without insurance are often underrepresented. Collaborating with diverse healthcare settings and applying sampling weights or subgroup analyses can help.
+
+* **Lack of detailed demographic data**: Important dimensions of identity—such as language preference, sexual orientation, or multi-racial identity—are often incompletely or inaccurately captured, limiting the ability to study health disparities. Researchers should transparently describe data limitations and advocate for more inclusive data collection.
+
+## Algorithmic Bias
+
+Machine learning models built on RWD can reproduce and amplify existing biases:
+
+* **Biases in proxy variables**: Convenient surrogates for outcomes or health needs can inadvertently encode structural inequities. For example, a widely cited study by Obermeyer et al. showed that healthcare spending was used as a proxy for health needs, but at the same risk score, Black patients were significantly sicker than White patients. Careful validation of proxies and consultation with domain experts and community members can mitigate this risk.
+
+* **Reinforcing unequal access**: Predictive algorithms trained on historical care patterns may limit access to future care for already-marginalized groups. Transparency about algorithm design, public model documentation, and impact audits can help ensure fairness.
+
+## Privacy and Data Protection
+
+The sensitivity of health data raises serious privacy concerns:
+
+* **Risk of re-identification**: Even deidentified data can sometimes be re-identified, especially when combined with other data sets. This is particularly concerning for stigmatized conditions such as HIV, disability, or autism. Applying rigorous deidentification techniques (e.g., date shifting, truncation of ZIP codes) and conducting re-identification risk assessments are important safeguards.
+
+* **Misuse by third parties**: Health data could be accessed or purchased by insurers, employers, or government agencies and used to discriminate. Clear data use agreements and access policies are essential.
+
+* **Building public trust**: It is essential to foster trust through rigorous data stewardship and governance processes that are transparent and inclusive. Institutions should communicate openly about data protections and provide mechanisms for concerns or opt-outs where feasible.
+
+## Informed Consent, Social License, and Public Trust
+
+Most RWD studies do not obtain informed consent from individuals, relying instead on waivers approved by institutional review boards (IRBs) under regulations like 45 CFR 46.116(d). These waivers are granted when the research poses minimal risk and cannot practicably be carried out with consent due to scale.
+
+However, this regulatory framework does not fully address broader social and ethical concerns. Patients may object to their data being used for politically motivated or stigmatizing research, even if deidentified and IRB-approved. This raises the issue of **social license**—the informal but essential approval from the public that data use aligns with community values and expectations.
+
+* **Empowering communities**: Large-scale data use should involve representative stakeholders in governance decisions, especially when studying sensitive or marginalized populations. Community advisory boards and patient representatives can guide research design and ensure cultural sensitivity.
+* **Preventing social harm**: Even deidentified data use can perpetuate stigma or discrimination, especially if the research implies that certain identities or conditions are pathological. Ethical review should assess not only individual risk but also social harm.
+* **Transparency**: Researchers must be clear about how data is used, shared, and protected—and ensure that studies do not inadvertently undermine trust in the healthcare system. Public-facing summaries and open communication can enhance accountability.
+
+### Case Study: Autism Database Proposal
+
+In 2024, Health Secretary Robert F. Kennedy Jr. faced criticism for his plan to create a national autism registry. While registries are common in RWD research, this proposal raised alarm due to its framing of autism as a disease to be tracked, fueling fears of stigma and surveillance. The controversy highlights several key ethical concerns:
+
+* **Framing and harm**: Labeling autism as a preventable disease can undermine the neurodiversity movement and harm people who identify as autistic.
+* **Consent and governance**: Many individuals do not want their data used for politically charged or scientifically unsupported research.
+* **Deidentification and fear**: Even if data is deidentified, there were concerns that individuals with autism could be tracked or targeted.
+
+**Reflection Question:**
+
+> Should individuals have a say in how their health data is used—even if the data is deidentified and the research is IRB-approved? How can we ensure ethical oversight for politically or socially sensitive studies?
+
+Real-world data holds enormous potential to advance health and equity—but only if used ethically and responsibly. This requires not only technical excellence but also moral clarity, humility, and a commitment to the communities behind the data.

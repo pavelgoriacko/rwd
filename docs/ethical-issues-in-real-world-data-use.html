@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Guide to Real World Data for Clinical Research</title>
-  <meta name="description" content="Guide to Real World Data for Clinical Research" />
+  <title>10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research</title>
+  <meta name="description" content="10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Guide to Real World Data for Clinical Research" />
+  <meta property="og:title" content="10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Guide to Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="10 Ethical Issues in Real-World Data Use | Guide to Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"/>
+<link rel="prev" href="working-with-data-repositories.html"/>
+<link rel="next" href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -260,51 +260,70 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Guide to Real World Data for Clinical Research</h1>
-<p class="author"><em>Pavel Goriacko, PharmD, MPH and Danielle Boyce, DPA, MPH</em></p>
-</div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="disclaimer" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Disclaimer<a href="index.html#disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is a <strong>living draft</strong> and part of an ongoing effort to make real-world data (RWD) methods more accessible to clinician-researchers. We are sharing it publicly as part of a “work in public” philosophy—prioritizing openness, collaboration, and early feedback over polished perfection.</p>
-<p>As such, please be aware of the following:</p>
+<div id="ethical-issues-in-real-world-data-use" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Ethical Issues in Real-World Data Use<a href="ethical-issues-in-real-world-data-use.html#ethical-issues-in-real-world-data-use" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Real-world data (RWD) offers tremendous promise for advancing clinical and translational research, but it also introduces a range of ethical challenges that differ from those in traditional randomized controlled trials (RCTs). RWD is observational by nature and is often collected for clinical, administrative, or operational purposes—not research. As such, it may be incomplete, inconsistently recorded, or subject to numerous biases. Unlike RCTs, most RWD studies do not obtain informed consent from individuals, which opens up additional challenges related to privacy, transparency, and community trust.</p>
+<p>This chapter explores the ethical dimensions of working with RWD, including methodological rigor, representation and equity, privacy, algorithmic bias, and public trust. Because RWD tends to reflect healthcare systems in wealthy, industrialized countries, and primarily includes individuals who access care at academic or large healthcare institutions, it can systematically exclude populations who face barriers to care, stigmatization, or live in under-resourced regions. Ethical stewardship of RWD therefore requires both rigorous methodological practices and community-centered governance frameworks.</p>
+<div id="methodological-bias-and-data-integrity" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Methodological Bias and Data Integrity<a href="ethical-issues-in-real-world-data-use.html#methodological-bias-and-data-integrity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Observational research using RWD is more prone to confounding, selection bias, and missing data compared to RCTs:</p>
 <ul>
-<li><strong>The content is incomplete.</strong> Many sections are still in development, and you may encounter missing examples, rough outlines, or placeholders.</li>
-<li><strong>There may be inaccuracies.</strong> Some statements have not yet been fully reviewed or fact-checked. Do not treat this draft as a definitive reference.</li>
-<li><strong>Formatting and organization are evolving.</strong> You may notice inconsistencies in layout, language, or style as we continue editing and revising the material.</li>
-<li><strong>Citations may be informal or missing.</strong> While we aim to acknowledge relevant prior work, we may reference ideas or studies without formal citations in early drafts. All sources will be properly cited in a final, polished version.</li>
-<li><strong>The content may change frequently.</strong> Sections may be restructured, rewritten, or replaced as the work progresses and as we receive input from peers and collaborators.</li>
+<li><p><strong>Confounding</strong>: Failing to adequately control for variables associated with both treatment selection and outcomes can lead to incorrect conclusions. For instance, early observational studies suggested a benefit of vitamin E supplementation for cardiovascular health, but these findings were later contradicted by RCTs. Emulating target trials and applying advanced methods such as inverse probability weighting or instrumental variables can mitigate this.</p></li>
+<li><p><strong>Selection bias</strong>: This occurs when study populations differ from the target population. A notable example is hormone replacement therapy, where initial observational data (e.g., Nurses’ Health Study) showed benefit, but later RCTs (e.g., Women’s Health Initiative) showed harm—partly because observational studies selected for healthy, adherent patients. Designing studies with representative inclusion criteria and validating findings across datasets can help address this.</p></li>
+<li><p><strong>Missing data</strong>: Missingness is not random—it often reflects disparities in access to care. For example, an undocumented health condition may indicate the event never happened—or that the person lacked access to care, and the event went unrecorded. Imputation strategies and sensitivity analyses can reduce bias but should be carefully justified.</p></li>
+<li><p><strong>Data dredging (or p-hacking)</strong>: Because RWD studies do not typically require protocol registration or pre-specification of endpoints, researchers can be tempted (intentionally or not) to analyze data in ways that confirm their hypotheses. Even when studies are pre-registered, nothing prevents researchers from exploring outcomes using different methodologies before finalizing the protocol. Strategies to address this include committing to open science practices such as pre-registration, publishing study protocols and analytic code, and using the framework of target trial emulation to define methods before seeing results.</p></li>
 </ul>
-<p>This draft is not intended to serve as a formal educational resource or authoritative guide—at least not yet. Instead, it is a starting point for discussion. We are sharing it early because we believe that better ideas emerge when development is open, visible, and collaborative.</p>
-<p>If you have suggestions, corrections, or feedback, we’d love to hear from you. Whether you are a researcher, educator, student, or practitioner, your perspective can help us shape this book into a more useful and rigorous resource for the community. Please reach out to us at <a href="mailto:contact@goriacko.xyz" class="email">contact@goriacko.xyz</a> and <a href="mailto:danielle@boycedatascience.com" class="email">danielle@boycedatascience.com</a> with your comments, suggestions, and contributions.</p>
-<p>Thank you for joining us in this process.</p>
 </div>
-<div id="preface" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.</p>
-<p>Despite this progress, much of the methodological knowledge required to conduct high-quality RWD research remains inaccessible to many clinician-researchers. The information is scattered across technical documentation, academic papers, online forums, and video lectures—often buried in mathematical notation or domain-specific jargon. For busy clinicians seeking to understand patterns in care or evaluate outcomes, this complexity can be a barrier to entry.</p>
-<p>The result is a frustrating paradox: those most familiar with the care processes we seek to study—clinicians—are often least equipped to leverage the full potential of modern RWD infrastructure. Too often, EHR-based research is equated with manual chart review, lacking systematic attention to issues like confounding, measurement error, and generalizability. Many studies fail to take advantage of harmonized, cross-institutional data sources and tools that promote transparency, reproducibility, and scalable discovery.</p>
-<p>As a result, we are missing opportunities to learn from the rich data generated every day in healthcare settings—data that, if used rigorously and ethically, could help us identify better treatments, reduce disparities, and improve patient outcomes.</p>
-<p>In response, we created this guide: a practical, clinician-oriented introduction to real-world data for clinical and translational research. Our goal is to make the field more accessible without sacrificing methodological rigor. We aim to demystify key concepts, explain the “why” behind complex workflows, and highlight modern tools and frameworks in a way that feels relevant and actionable to clinician-researchers.</p>
-<p>This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.</p>
+<div id="representation-and-equity" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Representation and Equity<a href="ethical-issues-in-real-world-data-use.html#representation-and-equity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RWD can reinforce structural inequities in healthcare:</p>
+<ul>
+<li><p><strong>Systematic exclusion</strong>: Patients with poor access to care, stigmatized conditions, or who avoid healthcare systems are often missing from RWD. This limits generalizability and may entrench disparities. Researchers should assess population coverage and consider linking to supplementary data sources to improve inclusiveness.</p></li>
+<li><p><strong>Non-representative sampling</strong>: RWD often reflects WEIRD populations—Western, Educated, Industrialized, Rich, and Democratic. Non-English speakers, rural populations, and those without insurance are often underrepresented. Collaborating with diverse healthcare settings and applying sampling weights or subgroup analyses can help.</p></li>
+<li><p><strong>Lack of detailed demographic data</strong>: Important dimensions of identity—such as language preference, sexual orientation, or multi-racial identity—are often incompletely or inaccurately captured, limiting the ability to study health disparities. Researchers should transparently describe data limitations and advocate for more inclusive data collection.</p></li>
+</ul>
 </div>
-<div id="about-the-authors" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> About the Authors<a href="index.html#about-the-authors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Pavel Goriacko, PharmD, MPH</strong> is the co-director of the Health Informatics Core at the Montefiore Einstein Institute of Clinical and Translational Research and serves as an Assistant Professor in the Department of Epidemiology and Population Health. His work focuses on the intersection of data science, clinical research informatics, and healthcare delivery, with a particular emphasis on learning health systems and real-world evidence generation.</p>
-<p>Pavel has served as co-investigator on a range of federally and industry-funded research projects, including the PCORI-funded INSIGHT network to support cross-institutional EHR data infrastructure. He was a scholar in the AHRQ/PCORI K12 Learning Health Systems Research Program and currently leads or collaborates on initiatives to advance the use of OMOP and Epic EHR data for observational studies, causal inference, and pragmatic quality improvement. He is also working with Clinical and Translational Science Institutes (CTSIs) to develop standardized curricula for real-world data education and training.</p>
-<p>He is an active contributor to the OHDSI community and brings experience across academic research, health system operations, and policy-oriented analytics. His background in clinical pharmacy and public health supports a pragmatic approach to using healthcare data in ways that are both methodologically rigorous and grounded in clinical practice.</p>
-<p>Pavel earned his Doctor of Pharmacy (PharmD) from Long Island University’s Arnold and Marie Schwartz College of Pharmacy, completed a pharmacy residency at Montefiore Medical Center, and earned a Master of Public Health (MPH) from Columbia University’s Mailman School of Public Health.</p>
-<p><strong>Danielle Boyce, DPA, MPH</strong> is Principal Investigator for Real World Evidence at the ALS Therapy Development Institute, where she co-leads a CDC-funded project investigating risk factors for amyotrophic lateral sclerosis (ALS). Her expertise focuses on the intersection of data science and regulatory oversight of patient registries and EHR data.</p>
-<p>Previously, Danielle was the lead technical consultant for the CURE Drug Repurposing Collaboratory, a public-private partnership between the Critical Path Institute and the FDA. She holds part-time faculty roles as a lecturer in Biomedical Informatics and Data Science at Johns Hopkins University School of Medicine and as Education Director of the Biomedical and Health Data Sciences Collaborative at Tufts University School of Medicine. At Tufts, she leads a data science team developing reproducible methodologies for utilizing EHR data as external controls and digital twins in neonates.</p>
-<p>Danielle is actively involved in the OHDSI community, co-leading a Work Group, nominated twice for the Titan Award, and contributing to the Book of OHDSI. She has served on numerous advisory panels in academia, industry, government, and nonprofits, including the Patient-Centered Outcomes Research Institute and Duke-Margolis Center for Health Policy. Additionally, she is a member of the Leavitt Partners’ Pediatric Inclusion Alliance, which advocates for early inclusion of children in clinical trials across all conditions without compromising safety.</p>
-<p>The first woman in her family to graduate from college, Danielle earned her Master of Public Health (MPH) from SUNY Albany and Doctor of Public Administration (DPA) from West Chester University. Her work is inspired by her son, Charlie, who had a rare and severe form of epilepsy called infantile spasms and now lives with multiple disabilities.</p>
+<div id="algorithmic-bias" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Algorithmic Bias<a href="ethical-issues-in-real-world-data-use.html#algorithmic-bias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Machine learning models built on RWD can reproduce and amplify existing biases:</p>
+<ul>
+<li><p><strong>Biases in proxy variables</strong>: Convenient surrogates for outcomes or health needs can inadvertently encode structural inequities. For example, a widely cited study by Obermeyer et al. showed that healthcare spending was used as a proxy for health needs, but at the same risk score, Black patients were significantly sicker than White patients. Careful validation of proxies and consultation with domain experts and community members can mitigate this risk.</p></li>
+<li><p><strong>Reinforcing unequal access</strong>: Predictive algorithms trained on historical care patterns may limit access to future care for already-marginalized groups. Transparency about algorithm design, public model documentation, and impact audits can help ensure fairness.</p></li>
+</ul>
 </div>
-<div id="license" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike (CC BY-SA 4.0)</a> license. We want this content to be used, shared, and distributed as freely and widely as possible—while ensuring that no further restrictions can be placed on its use. If this license presents a barrier to using or adapting the material in your setting, please reach out to us; we welcome collaboration and will do our best to accommodate your needs.</p>
+<div id="privacy-and-data-protection" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Privacy and Data Protection<a href="ethical-issues-in-real-world-data-use.html#privacy-and-data-protection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The sensitivity of health data raises serious privacy concerns:</p>
+<ul>
+<li><p><strong>Risk of re-identification</strong>: Even deidentified data can sometimes be re-identified, especially when combined with other data sets. This is particularly concerning for stigmatized conditions such as HIV, disability, or autism. Applying rigorous deidentification techniques (e.g., date shifting, truncation of ZIP codes) and conducting re-identification risk assessments are important safeguards.</p></li>
+<li><p><strong>Misuse by third parties</strong>: Health data could be accessed or purchased by insurers, employers, or government agencies and used to discriminate. Clear data use agreements and access policies are essential.</p></li>
+<li><p><strong>Building public trust</strong>: It is essential to foster trust through rigorous data stewardship and governance processes that are transparent and inclusive. Institutions should communicate openly about data protections and provide mechanisms for concerns or opt-outs where feasible.</p></li>
+</ul>
+</div>
+<div id="informed-consent-social-license-and-public-trust" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Informed Consent, Social License, and Public Trust<a href="ethical-issues-in-real-world-data-use.html#informed-consent-social-license-and-public-trust" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most RWD studies do not obtain informed consent from individuals, relying instead on waivers approved by institutional review boards (IRBs) under regulations like 45 CFR 46.116(d). These waivers are granted when the research poses minimal risk and cannot practicably be carried out with consent due to scale.</p>
+<p>However, this regulatory framework does not fully address broader social and ethical concerns. Patients may object to their data being used for politically motivated or stigmatizing research, even if deidentified and IRB-approved. This raises the issue of <strong>social license</strong>—the informal but essential approval from the public that data use aligns with community values and expectations.</p>
+<ul>
+<li><strong>Empowering communities</strong>: Large-scale data use should involve representative stakeholders in governance decisions, especially when studying sensitive or marginalized populations. Community advisory boards and patient representatives can guide research design and ensure cultural sensitivity.</li>
+<li><strong>Preventing social harm</strong>: Even deidentified data use can perpetuate stigma or discrimination, especially if the research implies that certain identities or conditions are pathological. Ethical review should assess not only individual risk but also social harm.</li>
+<li><strong>Transparency</strong>: Researchers must be clear about how data is used, shared, and protected—and ensure that studies do not inadvertently undermine trust in the healthcare system. Public-facing summaries and open communication can enhance accountability.</li>
+</ul>
+<div id="case-study-autism-database-proposal" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Case Study: Autism Database Proposal<a href="ethical-issues-in-real-world-data-use.html#case-study-autism-database-proposal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In 2024, Health Secretary Robert F. Kennedy Jr. faced criticism for his plan to create a national autism registry. While registries are common in RWD research, this proposal raised alarm due to its framing of autism as a disease to be tracked, fueling fears of stigma and surveillance. The controversy highlights several key ethical concerns:</p>
+<ul>
+<li><strong>Framing and harm</strong>: Labeling autism as a preventable disease can undermine the neurodiversity movement and harm people who identify as autistic.</li>
+<li><strong>Consent and governance</strong>: Many individuals do not want their data used for politically charged or scientifically unsupported research.</li>
+<li><strong>Deidentification and fear</strong>: Even if data is deidentified, there were concerns that individuals with autism could be tracked or targeted.</li>
+</ul>
+<p><strong>Reflection Question:</strong></p>
+<blockquote>
+<p>Should individuals have a say in how their health data is used—even if the data is deidentified and the research is IRB-approved? How can we ensure ethical oversight for politically or socially sensitive studies?</p>
+</blockquote>
+<p>Real-world data holds enormous potential to advance health and equity—but only if used ethically and responsibly. This requires not only technical excellence but also moral clarity, humility, and a commitment to the communities behind the data.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -312,8 +331,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-with-data-repositories.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="expanding-the-boundaries-of-real-world-data-special-topics-and-emerging-frontiers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Guide to Real World Data for Clinical Research</title>
-  <meta name="description" content="Guide to Real World Data for Clinical Research" />
+  <title>9 Working with Data Repositories | Guide to Real World Data for Clinical Research</title>
+  <meta name="description" content="9 Working with Data Repositories | Guide to Real World Data for Clinical Research" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Guide to Real World Data for Clinical Research" />
+  <meta property="og:title" content="9 Working with Data Repositories | Guide to Real World Data for Clinical Research" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Guide to Real World Data for Clinical Research" />
+  <meta name="twitter:title" content="9 Working with Data Repositories | Guide to Real World Data for Clinical Research" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html"/>
+<link rel="prev" href="data-science-toolkit-for-real-world-data.html"/>
+<link rel="next" href="ethical-issues-in-real-world-data-use.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -260,50 +260,239 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Guide to Real World Data for Clinical Research</h1>
-<p class="author"><em>Pavel Goriacko, PharmD, MPH and Danielle Boyce, DPA, MPH</em></p>
+<div id="working-with-data-repositories" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Working with Data Repositories<a href="working-with-data-repositories.html#working-with-data-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-7" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Overview<a href="working-with-data-repositories.html#overview-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As real-world data (RWD) research continues to grow, centralized <strong>data repositories</strong> have become critical infrastructure for enabling large-scale, multi-institutional studies. These repositories bring together data from multiple health systems, harmonize it using shared standards, and provide secure access for analysis—offering immense opportunities, but also posing logistical and methodological challenges.</p>
+<p>This chapter introduces the structure and function of data repositories, describes how to access and evaluate them, and provides guidance for selecting an appropriate repository for your research question.</p>
+<hr />
 </div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="disclaimer" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Disclaimer<a href="index.html#disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is a <strong>living draft</strong> and part of an ongoing effort to make real-world data (RWD) methods more accessible to clinician-researchers. We are sharing it publicly as part of a “work in public” philosophy—prioritizing openness, collaboration, and early feedback over polished perfection.</p>
-<p>As such, please be aware of the following:</p>
+<div id="what-are-data-repositories" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> What Are Data Repositories?<a href="working-with-data-repositories.html#what-are-data-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data repositories are large, curated databases that aggregate health information from multiple institutions—sometimes regionally, sometimes nationwide. Examples include the NIH’s <strong>All of Us Research Program</strong>, the <strong>National COVID Cohort Collaborative (N3C)</strong>, and commercial platforms like <strong>Epic Cosmos</strong>.</p>
+<p>Repositories are typically built around <strong>common data models (CDMs)</strong>, such as OMOP or PCORnet CDM, to enable standardized analytics. Data may come from EHRs, insurance claims, laboratory systems, and external linkages such as mortality data or census information.</p>
+<div id="advantages-of-using-repositories" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Advantages of Using Repositories<a href="working-with-data-repositories.html#advantages-of-using-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><strong>The content is incomplete.</strong> Many sections are still in development, and you may encounter missing examples, rough outlines, or placeholders.</li>
-<li><strong>There may be inaccuracies.</strong> Some statements have not yet been fully reviewed or fact-checked. Do not treat this draft as a definitive reference.</li>
-<li><strong>Formatting and organization are evolving.</strong> You may notice inconsistencies in layout, language, or style as we continue editing and revising the material.</li>
-<li><strong>Citations may be informal or missing.</strong> While we aim to acknowledge relevant prior work, we may reference ideas or studies without formal citations in early drafts. All sources will be properly cited in a final, polished version.</li>
-<li><strong>The content may change frequently.</strong> Sections may be restructured, rewritten, or replaced as the work progresses and as we receive input from peers and collaborators.</li>
+<li><p><strong>Larger, More Representative Populations</strong>
+Access to data from across institutions enables studies with more generalizable results.</p></li>
+<li><p><strong>More Complete Patient Records</strong>
+If a patient receives care at multiple locations, a repository may help unify their longitudinal data.</p></li>
+<li><p><strong>Standardization and Harmonization</strong>
+Data are mapped to standard vocabularies and formats, allowing for easier study design and reproducibility.</p></li>
+<li><p><strong>Analytic Tools and Collaboration Infrastructure</strong>
+Many repositories offer built-in analysis environments, shared protocols, and cross-institutional research communities.</p></li>
 </ul>
-<p>This draft is not intended to serve as a formal educational resource or authoritative guide—at least not yet. Instead, it is a starting point for discussion. We are sharing it early because we believe that better ideas emerge when development is open, visible, and collaborative.</p>
-<p>If you have suggestions, corrections, or feedback, we’d love to hear from you. Whether you are a researcher, educator, student, or practitioner, your perspective can help us shape this book into a more useful and rigorous resource for the community. Please reach out to us at <a href="mailto:contact@goriacko.xyz" class="email">contact@goriacko.xyz</a> and <a href="mailto:danielle@boycedatascience.com" class="email">danielle@boycedatascience.com</a> with your comments, suggestions, and contributions.</p>
-<p>Thank you for joining us in this process.</p>
 </div>
-<div id="preface" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Research using real-world data (RWD) is evolving at a rapid pace. A decade ago, it often meant single-institution chart reviews or loosely defined case series. Today, the landscape looks dramatically different. Advances such as common data models (CDMs), standardized vocabularies, shared repositories, powerful open-source tools (like R, Python, Git), and more sophisticated methods for causal inference and bias adjustment have transformed what is possible. Alongside these developments, we face new ethical questions about privacy, consent, transparency, and equity in the use of healthcare data.</p>
-<p>Despite this progress, much of the methodological knowledge required to conduct high-quality RWD research remains inaccessible to many clinician-researchers. The information is scattered across technical documentation, academic papers, online forums, and video lectures—often buried in mathematical notation or domain-specific jargon. For busy clinicians seeking to understand patterns in care or evaluate outcomes, this complexity can be a barrier to entry.</p>
-<p>The result is a frustrating paradox: those most familiar with the care processes we seek to study—clinicians—are often least equipped to leverage the full potential of modern RWD infrastructure. Too often, EHR-based research is equated with manual chart review, lacking systematic attention to issues like confounding, measurement error, and generalizability. Many studies fail to take advantage of harmonized, cross-institutional data sources and tools that promote transparency, reproducibility, and scalable discovery.</p>
-<p>As a result, we are missing opportunities to learn from the rich data generated every day in healthcare settings—data that, if used rigorously and ethically, could help us identify better treatments, reduce disparities, and improve patient outcomes.</p>
-<p>In response, we created this guide: a practical, clinician-oriented introduction to real-world data for clinical and translational research. Our goal is to make the field more accessible without sacrificing methodological rigor. We aim to demystify key concepts, explain the “why” behind complex workflows, and highlight modern tools and frameworks in a way that feels relevant and actionable to clinician-researchers.</p>
-<p>This book is a living project and, by nature, incomplete. We expect it to evolve over time as the field continues to grow and shift. We welcome feedback, corrections, and ideas for improvement. Our hope is that you will join us in building a shared, accessible foundation of knowledge—so that we can use the data we already have to make healthcare smarter, safer, and more equitable.</p>
+<div id="challenges-and-limitations" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Challenges and Limitations<a href="working-with-data-repositories.html#challenges-and-limitations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Access and Governance</strong>
+Access requires registration, training, IRB review, and approval of a formal data use request (DUR). This process can take weeks to months.</p></li>
+<li><p><strong>Deidentification and Reidentification Constraints</strong>
+Most repositories contain deidentified data, limiting researchers’ ability to trace records back to local EHRs for verification.</p></li>
+<li><p><strong>Harmonization Complexities</strong>
+Differences in source data formats, vocabularies, and quality across sites require careful translation and cleaning.</p></li>
+<li><p><strong>Restricted Analysis Environments</strong>
+Data often reside within secure enclaves; they cannot be downloaded, and all computation must be conducted remotely.</p></li>
+</ul>
+<hr />
 </div>
-<div id="about-the-authors" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> About the Authors<a href="index.html#about-the-authors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Pavel Goriacko, PharmD, MPH</strong> is the co-director of the Health Informatics Core at the Montefiore Einstein Institute of Clinical and Translational Research and serves as an Assistant Professor in the Department of Epidemiology and Population Health. His work focuses on the intersection of data science, clinical research informatics, and healthcare delivery, with a particular emphasis on learning health systems and real-world evidence generation.</p>
-<p>Pavel has served as co-investigator on a range of federally and industry-funded research projects, including the PCORI-funded INSIGHT network to support cross-institutional EHR data infrastructure. He was a scholar in the AHRQ/PCORI K12 Learning Health Systems Research Program and currently leads or collaborates on initiatives to advance the use of OMOP and Epic EHR data for observational studies, causal inference, and pragmatic quality improvement. He is also working with Clinical and Translational Science Institutes (CTSIs) to develop standardized curricula for real-world data education and training.</p>
-<p>He is an active contributor to the OHDSI community and brings experience across academic research, health system operations, and policy-oriented analytics. His background in clinical pharmacy and public health supports a pragmatic approach to using healthcare data in ways that are both methodologically rigorous and grounded in clinical practice.</p>
-<p>Pavel earned his Doctor of Pharmacy (PharmD) from Long Island University’s Arnold and Marie Schwartz College of Pharmacy, completed a pharmacy residency at Montefiore Medical Center, and earned a Master of Public Health (MPH) from Columbia University’s Mailman School of Public Health.</p>
-<p><strong>Danielle Boyce, DPA, MPH</strong> is Principal Investigator for Real World Evidence at the ALS Therapy Development Institute, where she co-leads a CDC-funded project investigating risk factors for amyotrophic lateral sclerosis (ALS). Her expertise focuses on the intersection of data science and regulatory oversight of patient registries and EHR data.</p>
-<p>Previously, Danielle was the lead technical consultant for the CURE Drug Repurposing Collaboratory, a public-private partnership between the Critical Path Institute and the FDA. She holds part-time faculty roles as a lecturer in Biomedical Informatics and Data Science at Johns Hopkins University School of Medicine and as Education Director of the Biomedical and Health Data Sciences Collaborative at Tufts University School of Medicine. At Tufts, she leads a data science team developing reproducible methodologies for utilizing EHR data as external controls and digital twins in neonates.</p>
-<p>Danielle is actively involved in the OHDSI community, co-leading a Work Group, nominated twice for the Titan Award, and contributing to the Book of OHDSI. She has served on numerous advisory panels in academia, industry, government, and nonprofits, including the Patient-Centered Outcomes Research Institute and Duke-Margolis Center for Health Policy. Additionally, she is a member of the Leavitt Partners’ Pediatric Inclusion Alliance, which advocates for early inclusion of children in clinical trials across all conditions without compromising safety.</p>
-<p>The first woman in her family to graduate from college, Danielle earned her Master of Public Health (MPH) from SUNY Albany and Doctor of Public Administration (DPA) from West Chester University. Her work is inspired by her son, Charlie, who had a rare and severe form of epilepsy called infantile spasms and now lives with multiple disabilities.</p>
 </div>
-<div id="license" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This book is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike (CC BY-SA 4.0)</a> license. We want this content to be used, shared, and distributed as freely and widely as possible—while ensuring that no further restrictions can be placed on its use. If this license presents a barrier to using or adapting the material in your setting, please reach out to us; we welcome collaboration and will do our best to accommodate your needs.</p>
+<div id="the-repository-data-lifecycle" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> The Repository Data Lifecycle<a href="working-with-data-repositories.html#the-repository-data-lifecycle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Repositories implement a series of steps to ensure that contributed data are usable, privacy-preserving, and analytically sound.</p>
+<div id="harmonization" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Harmonization<a href="working-with-data-repositories.html#harmonization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Common Data Models</strong>
+Source data are transformed into a standardized format (e.g., OMOP, PCORnet) and mapped to shared vocabularies like SNOMED, RxNorm, and LOINC.</p></li>
+<li><p><strong>Terminology Translation</strong>
+Site-specific codes are converted to standard concepts. When multiple vocabularies exist (e.g., both LOINC and SNOMED for labs), consistent conventions must be adopted.</p></li>
+<li><p><strong>Unit Standardization</strong>
+Numerical values (e.g., weight in lbs vs kg) are converted to standard units.</p></li>
+</ul>
+</div>
+<div id="data-quality-assurance" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Data Quality Assurance<a href="working-with-data-repositories.html#data-quality-assurance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Checks for Internal Consistency</strong>
+These include: plausible distributions of age and visit dates, no negative hospital length-of-stay, and expected domain-specific record counts.</p></li>
+<li><p><strong>Site Scorecards</strong>
+Repositories often provide feedback to contributing institutions on data completeness and conformity.</p></li>
+</ul>
+</div>
+<div id="deduplication" class="section level3 hasAnchor" number="9.3.3">
+<h3><span class="header-section-number">9.3.3</span> Deduplication<a href="working-with-data-repositories.html#deduplication" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Cross-Institution Matching</strong>
+Patient data from multiple sources are linked and deduplicated when possible.</li>
+</ul>
+</div>
+<div id="deidentification" class="section level3 hasAnchor" number="9.3.4">
+<h3><span class="header-section-number">9.3.4</span> Deidentification<a href="working-with-data-repositories.html#deidentification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>HIPAA Safe Harbor Techniques</strong>
+Includes removal of direct identifiers, truncation of ZIP codes, and generalization of rare diagnoses.</p></li>
+<li><p><strong>Date Shifting</strong>
+Dates are often shifted ±180 days (or ±180 minutes for time stamps) to preserve temporal patterns while obscuring exact dates.</p></li>
+<li><p><strong>Levels of Deidentification</strong></p>
+<ul>
+<li><strong>Fully deidentified</strong> datasets remove all 18 HIPAA identifiers.</li>
+<li><strong>Limited deidentified</strong> sets retain dates and ZIP codes but are subject to restricted access.</li>
+<li><strong>Synthetic data</strong> mimics real data patterns without using actual patient records.</li>
+</ul></li>
+</ul>
+</div>
+<div id="privacy-preserving-linkage" class="section level3 hasAnchor" number="9.3.5">
+<h3><span class="header-section-number">9.3.5</span> Privacy-Preserving Linkage<a href="working-with-data-repositories.html#privacy-preserving-linkage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Some repositories support linkage to other datasets (e.g., CMS claims, social security mortality, genomic data) without revealing individual identities.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="gaining-access-common-processes" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Gaining Access: Common Processes<a href="working-with-data-repositories.html#gaining-access-common-processes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Although the specifics vary across repositories, most follow a general set of access steps:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Registration and Account Creation</strong>
+Researchers must register and often affiliate with a participating institution.</p></li>
+<li><p><strong>Training Requirements</strong>
+Mandatory training includes responsible data use, privacy protections, and use of analytic platforms.</p></li>
+<li><p><strong>Data Use Agreements (DUAs)</strong></p>
+<ul>
+<li><strong>Institutional DUAs</strong> govern the relationship between your institution and the repository.</li>
+<li><strong>Individual DUAs</strong> define the responsibilities of each researcher.</li>
+</ul></li>
+<li><p><strong>Project Registration</strong>
+Most studies require documentation of IRB approval, named collaborators, and data use limitations.</p></li>
+<li><p><strong>Data Use Request (DUR)</strong>
+A formal request to access data for a specific project. This includes cohort definitions, outcomes, and planned analyses.</p></li>
+<li><p><strong>Virtual Workspaces</strong>
+Approved users are granted access to secure computing environments that support SQL, R, and Python. Code and output stay within the enclave and may be audited.</p></li>
+<li><p><strong>Collaboration Tools</strong>
+Many repositories offer forums, project registries, and shared communication channels (e.g., monthly calls, Slack) to foster community and reuse.</p></li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Note:</strong> Not all repositories include every one of these features. Highly funded platforms like All of Us and N3C offer comprehensive toolsets, while others may be limited in scope or infrastructure.</p>
+</blockquote>
+<hr />
+</div>
+<div id="evaluating-repository-fit-for-your-study" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Evaluating Repository Fit for Your Study<a href="working-with-data-repositories.html#evaluating-repository-fit-for-your-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before committing to a repository-based project, it is essential to assess whether the available data are suitable for your research question. This process typically involves:</p>
+<div id="define-your-study-needs" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> 1. Define Your Study Needs<a href="working-with-data-repositories.html#define-your-study-needs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Cohort Criteria</strong></li>
+<li><strong>Outcomes of Interest</strong></li>
+<li><strong>Key Confounders and Covariates</strong></li>
+</ul>
+</div>
+<div id="assess-general-fit" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> 2. Assess General Fit<a href="working-with-data-repositories.html#assess-general-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Data Sources</strong>
+Does the repository include EHR, claims, patient-reported data, or external linkages?</p></li>
+<li><p><strong>Population and Disease Focus</strong>
+Some repositories are disease-specific (e.g., cancer, COVID-19), while others are general.</p></li>
+<li><p><strong>Deidentification Impact</strong>
+Date shifting or ZIP truncation may limit your ability to compute certain metrics or link to external datasets.</p></li>
+<li><p><strong>Scope of Data Submission</strong>
+Does the repository include inpatient, outpatient, lab, pharmacy data? What is the data span over time?</p></li>
+</ul>
+</div>
+<div id="conduct-feasibility-and-completeness-checks" class="section level3 hasAnchor" number="9.5.3">
+<h3><span class="header-section-number">9.5.3</span> 3. Conduct Feasibility and Completeness Checks<a href="working-with-data-repositories.html#conduct-feasibility-and-completeness-checks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Patient Counts</strong>
+Estimate how many patients meet basic inclusion criteria.</p></li>
+<li><p><strong>Critical Variable Completeness</strong>
+Confirm that key variables (e.g., diagnoses, drug exposures) are well-populated.</p></li>
+<li><p><strong>Proxy Variables for Missing Data</strong>
+Some elements like social needs or behaviors may be missing but can be estimated via ZIP code or demographics.</p></li>
+<li><p><strong>Follow-up and Longitudinality</strong>
+Assess how complete the longitudinal data are: Are there regular follow-up visits, lab results, or medication refills?</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="examples-of-major-data-repositories" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Examples of Major Data Repositories<a href="working-with-data-repositories.html#examples-of-major-data-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="26%" />
+<col width="8%" />
+<col width="54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Repository</th>
+<th>Coverage</th>
+<th>Data Model</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>N3C</strong></td>
+<td>National (COVID-focused)</td>
+<td>OMOP</td>
+<td>Includes linkages (e.g., mortality, viral variants)</td>
+</tr>
+<tr class="even">
+<td><strong>All of Us</strong></td>
+<td>National, all diseases</td>
+<td>OMOP</td>
+<td>Includes genomic data, EHR, surveys, and wearable/device data</td>
+</tr>
+<tr class="odd">
+<td><strong>Epic Cosmos</strong></td>
+<td>Commercial (Epic customers)</td>
+<td>Cosmos CDM</td>
+<td>Includes both deidentified and limited datasets; proprietary access</td>
+</tr>
+<tr class="even">
+<td><strong>PCORnet</strong></td>
+<td>National (multi-institutional)</td>
+<td>PCORnet CDM</td>
+<td>Designed for distributed queries and pragmatic trials</td>
+</tr>
+<tr class="odd">
+<td><strong>INSIGHT</strong></td>
+<td>New York regional consortium</td>
+<td>OMOP</td>
+<td>Aggregates NYC academic health system data</td>
+</tr>
+<tr class="even">
+<td><strong>OpenSAFELY</strong></td>
+<td>UK-based national repository</td>
+<td>Custom</td>
+<td>Secure analytics on pseudonymized NHS data within the NHS firewall</td>
+</tr>
+<tr class="odd">
+<td><strong>Optum</strong></td>
+<td>U.S. commercial claims + EHR</td>
+<td>Proprietary</td>
+<td>Combines claims and clinical data; commonly used for pharmacoepidemiology</td>
+</tr>
+<tr class="even">
+<td><strong>MarketScan</strong></td>
+<td>U.S. commercial and Medicaid claims</td>
+<td>Proprietary</td>
+<td>Includes employer-sponsored insurance claims; large sample sizes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="summary-6" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Summary<a href="working-with-data-repositories.html#summary-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Working with data repositories opens new doors for high-impact, large-scale RWD research. But it also introduces new responsibilities: understanding data provenance, navigating governance, and ensuring that data are fit for purpose.</p>
+<p>A successful repository-based study starts with a clear definition of data needs and ends with a thoughtful analysis in a secure, reproducible computing environment. Choose the right repository, follow the appropriate access steps, and make sure the data can support your question.</p>
 
 </div>
 </div>
@@ -312,8 +501,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction-to-real-world-data-rwd-and-real-world-evidence-rwe.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-science-toolkit-for-real-world-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ethical-issues-in-real-world-data-use.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
