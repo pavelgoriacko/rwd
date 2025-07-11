@@ -74,3 +74,5 @@ To support research efficiently, many institutions develop **abstraction layers*
 
 This abstraction reduces complexity and enhances usability but also limits flexibility. It’s important to understand what’s included—and excluded—in these datasets.
 
+## Suggested Readings
+[Explore relational data offerings - Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/explore-relational-data-offerings/)

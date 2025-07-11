@@ -144,9 +144,21 @@ Computable phenotyping transforms messy, heterogeneous real-world data into mean
 
 Several platforms and initiatives support development and sharing of computable phenotypes:
 
-* **OHDSI Atlas**: A web-based tool for defining and executing cohorts using the OMOP CDM.
-* **PheKB (Phenotype KnowledgeBase)**: A repository of phenotyping algorithms, often for i2b2 or custom data models.
-* **eMERGE Network**: A collaborative effort to develop and validate phenotypes using EHR and genomic data.
-* **Phenotype libraries**: Many institutions maintain internal phenotype libraries, often built around their local data models.
+* **[OHDSI Atlas](https://atlas-demo.ohdsi.org/)**: A web-based tool for defining and executing cohorts using the OMOP CDM.
+* **[PheKB (Phenotype KnowledgeBase)](https://www.phekb.org/)**: A repository of phenotyping algorithms, often for i2b2 or custom data models.
+* **[eMERGE Network](https://emerge-network.org/)**: A collaborative effort to develop and validate phenotypes using EHR and genomic data.
+* **[Phenotype libraries]**: Many institutions maintain internal phenotype libraries, often built around their local data models.
 
 These tools often support cohort definition using user interfaces, standard vocabularies, and shareable JSON or SQL logic.
+
+## Phenotyping Tools and Resources
+
+Several platforms and initiatives support development and sharing of computable phenotypes:
+
+* **[OHDSI Atlas](https://atlas-demo.ohdsi.org/)**: A web-based tool for defining and executing cohorts using the OMOP CDM.
+* **[PheKB (Phenotype KnowledgeBase)](https://www.phekb.org/)**: A repository of phenotyping algorithms, often for i2b2 or custom data models.
+* **[eMERGE Network](https://emerge-network.org/)**: A collaborative effort to develop and validate phenotypes using EHR and genomic data.
+* **Phenotype libraries**: Many institutions maintain internal phenotype libraries, often built around their local data models. Larger phenotype libraries include [HDRUK phenotype library](https://phenotypes.healthdatagateway.org/) and the [OHDSI Phenotype Library](https://ohdsi.github.io/PhenotypeLibrary/).
+
+**Reference:**
+Thayer DS, Mumtaz S, Elmessary MA, Scanlon I, Zinnurov A, Coldea AI, Scanlon J, Chapman M, Curcin V, John A, DelPozo-Banos M, Davies H, Karwath A, Gkoutos GV, Fitzpatrick NK, Quint JK, Varma S, Milner C, Oliveira C, Parkinson H, Denaxas S, Hemingway H, Jefferson E. Creating a next-generation phenotype library: the health data research UK Phenotype Library. *JAMIA Open*. 2024 Jun 17;7(2)\:ooae049. [doi: 10.1093/jamiaopen/ooae049](https://doi.org/10.1093/jamiaopen/ooae049). PMID: 38895652; PMCID: PMC11182945.

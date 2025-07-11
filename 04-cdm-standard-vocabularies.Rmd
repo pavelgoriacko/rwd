@@ -74,3 +74,10 @@ Mapping can be complex and imperfect—some concepts have no exact match, and lo
 ## Summary
 
 CDMs and standardized vocabularies play a crucial role in transforming heterogeneous real-world data into a harmonized format suitable for research. While implementation is complex and not without limitations, the benefits of enabling large-scale, reproducible, and collaborative research are substantial.
+
+## Suggested Readings
+
+[Standardized Vocabularies - The Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
+
+Reich, C., Ostropolets, A., Ryan, P., Rijnbeek, P., Schuemie, M., Davydov, A., Dymshyts, D., & Hripcsak, G. (2024). OHDSI Standardized Vocabularies—a large-scale centralized reference ontology for international data harmonization. *Journal of the American Medical Informatics Association, 31*(3), 583–590. [https://doi.org/10.1093/jamia/ocad247](https://doi.org/10.1093/jamia/ocad247)
+
